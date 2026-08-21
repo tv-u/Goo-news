@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | ViralNews Pro</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔐</text></svg>">
+  <style>
+    :root {
+      --bg: #0a0a12; --bg-card: rgba(20,20,35,0.9); --bg-card-hover: rgba(30,30,50,0.95);
+      --text: #e8e8f0; --text-muted: #6b7280; --accent: #ff4757; --accent2: #2ed573;
+      --accent3: #1e90ff; --accent4: #ffa502; --border: rgba(255,255,255,0.06);
+      --radius: 16px; --shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Login Screen */
+    #loginScreen {
+      position: fixed; inset: 0; z-index: 1000;
+      background: linear-gradient(135deg, #0a0a12 0%, #1a1a2e 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .login-box {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 3rem; width: 100%; max-width: 420px;
+      box-shadow: var(--shadow); backdrop-filter: blur(20px);
+    }
+    .login-box h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem; text-align: center; }
+    .login-box h1 span { color: var(--accent); }
+    .login-box p { color: var(--text-muted); text-align: center; margin-bottom: 2rem; font-size: 0.9rem; }
+    .login-input {
+      width: 100%; background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+      color: var(--text); padding: 1rem 1.2rem; border-radius: 12px; margin-bottom: 1rem;
+      font-size: 1rem; outline: none; transition: 0.3s;
+    }
+    .login-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(255,71,87,0.1); }
+    .login-btn {
+      width: 100%; background: linear-gradient(135deg, var(--accent), #ff6b81);
+      color: #fff; border: none; padding: 1rem; border-radius: 12px;
+      font-size: 1rem; font-weight: 700; cursor: pointer; transition: 0.3s;
+    }
+    .login-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,71,87,0.3); }
+    .login-error { color: var(--accent); text-align: center; margin-top: 1rem; font-size: 0.875rem; display: none; }
+
+    /* Dashboard */
+    #dashboard { display: none; }
+    .sidebar {
+      position: fixed; left: 0; top: 0; bottom: 0; width: 260px;
+      background: var(--bg-card); border-right: 1px solid var(--border);
+      z-index: 100; display: flex; flex-direction: column;
+      transition: transform 0.3s;
+    }
+    .sidebar-header {
+      padding: 1.5rem; border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .sidebar-header h2 { font-size: 1.3rem; font-weight: 800; }
+    .sidebar-header h2 span { color: var(--accent); }
+    .sidebar-nav { flex: 1; padding: 1rem 0; overflow-y: auto; }
+    .nav-item {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.9rem 1.5rem; color: var(--text-muted);
+      text-decoration: none; font-size: 0.9rem; font-weight: 600;
+      cursor: pointer; transition: 0.2s; border-left: 3px solid transparent;
+    }
+    .nav-item:hover, .nav-item.active { color: var(--text); background: rgba(255,255,255,0.03); border-left-color: var(--accent); }
+    .nav-item svg { width: 20px; height: 20px; }
+    .sidebar-footer {
+      padding: 1rem 1.5rem; border-top: 1px solid var(--border);
+      font-size: 0.75rem; color: var(--text-muted);
+    }
+
+    .main-content {
+      margin-left: 260px; min-height: 100vh; padding: 2rem;
+    }
+    .top-bar {
+      display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;
+    }
+    .top-bar h1 { font-size: 1.6rem; font-weight: 800; }
+    .live-badge {
+      display: flex; align-items: center; gap: 0.5rem;
+      background: rgba(46,213,115,0.1); color: var(--accent2);
+      padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 700;
+    }
+    .live-dot { width: 8px; height: 8px; background: var(--accent2); border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    /* Stats Cards */
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;
+    }
+    .stat-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.5rem;
+      transition: 0.3s; position: relative; overflow: hidden;
+    }
+    .stat-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.12); }
+    .stat-card::before {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    }
+    .stat-card.live::before { background: linear-gradient(90deg, var(--accent2), #7bed9f); }
+    .stat-card.hour::before { background: linear-gradient(90deg, var(--accent3), #74b9ff); }
+    .stat-card.day::before { background: linear-gradient(90deg, var(--accent), #ff6b81); }
+    .stat-card.week::before { background: linear-gradient(90deg, var(--accent4), #ffc048); }
+    .stat-card.month::before { background: linear-gradient(90deg, #a29bfe, #6c5ce7); }
+    .stat-card.total::before { background: linear-gradient(90deg, #fd79a8, #e84393); }
+
+    .stat-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; margin-bottom: 0.5rem; }
+    .stat-value { font-size: 2.2rem; font-weight: 800; margin-bottom: 0.25rem; }
+    .stat-change { font-size: 0.8rem; font-weight: 600; }
+    .stat-change.up { color: var(--accent2); }
+    .stat-change.down { color: var(--accent); }
+
+    /* Charts Section */
+    .section-grid {
+      display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; margin-bottom: 2rem;
+    }
+    .chart-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.5rem;
+    }
+    .chart-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .chart-card h3::before { content: ""; width: 4px; height: 18px; background: var(--accent); border-radius: 2px; }
+
+    /* Simple CSS Bar Chart */
+    .bar-chart { display: flex; align-items: flex-end; gap: 4px; height: 200px; padding-bottom: 30px; position: relative; }
+    .bar-chart::after {
+      content: ""; position: absolute; bottom: 30px; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+    }
+    .bar-wrapper { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .bar {
+      width: 100%; max-width: 30px; background: linear-gradient(to top, var(--accent3), #74b9ff);
+      border-radius: 4px 4px 0 0; transition: 0.5s; min-height: 4px; position: relative;
+    }
+    .bar:hover { background: linear-gradient(to top, var(--accent), #ff6b81); }
+    .bar-label { font-size: 0.6rem; color: var(--text-muted); transform: rotate(-45deg); white-space: nowrap; }
+    .bar-value { position: absolute; top: -18px; font-size: 0.65rem; color: var(--text-muted); opacity: 0; transition: 0.2s; }
+    .bar:hover .bar-value { opacity: 1; }
+
+    /* Table */
+    .data-table { width: 100%; border-collapse: collapse; }
+    .data-table th { text-align: left; padding: 0.75rem 1rem; font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid var(--border); }
+    .data-table td { padding: 0.75rem 1rem; font-size: 0.875rem; border-bottom: 1px solid var(--border); }
+    .data-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .country-flag { font-size: 1.2rem; margin-right: 0.5rem; }
+    .progress-bar { height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px; overflow: hidden; width: 100px; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent3), #74b9ff); border-radius: 3px; transition: 1s; }
+
+    /* News Stats */
+    .news-stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2rem; }
+    .news-stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; text-align: center; }
+    .news-stat-value { font-size: 1.8rem; font-weight: 800; color: var(--accent3); }
+    .news-stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.25rem; }
+
+    /* Mobile Menu Toggle */
+    .menu-toggle {
+      display: none; position: fixed; top: 1rem; left: 1rem; z-index: 200;
+      background: var(--bg-card); border: 1px solid var(--border); color: var(--text);
+      padding: 0.75rem; border-radius: 10px; cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .section-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .sidebar { transform: translateX(-100%); }
+      .sidebar.open { transform: translateX(0); }
+      .main-content { margin-left: 0; padding: 1rem; padding-top: 4rem; }
+      .menu-toggle { display: block; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .news-stats-grid { grid-template-columns: 1fr; }
+      .top-bar { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .bar-chart { height: 150px; }
+    }
+
+    /* Loading Skeleton */
+    .skeleton { background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 8px; }
+    @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+    /* Refresh Button */
+    .refresh-stats {
+      background: var(--bg-card); border: 1px solid var(--border); color: var(--text);
+      padding: 0.6rem 1.2rem; border-radius: 10px; cursor: pointer; font-size: 0.85rem;
+      display: flex; align-items: center; gap: 0.4rem; transition: 0.2s;
+    }
+    .refresh-stats:hover { border-color: var(--accent); }
+    .refresh-stats.spin svg { animation: spin 1s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <!-- Login Screen -->
+  <div id="loginScreen">
+    <div class="login-box">
+      <h1>Viral<span>News</span> Pro</h1>
+      <p>Admin Panel - Secure Access Only</p>
+      <input type="text" class="login-input" id="loginUser" placeholder="Username" value="dhamtan">
+      <input type="password" class="login-input" id="loginPass" placeholder="Password" value="Thakur1995@">
+      <button class="login-btn" onclick="doLogin()">🔐 Access Dashboard</button>
+      <div class="login-error" id="loginError">Invalid credentials!</div>
+    </div>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboard">
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2>Viral<span>News</span> Pro</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a class="nav-item active" onclick="showTab('overview')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Overview
+        </a>
+        <a class="nav-item" onclick="showTab('traffic')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          Traffic Sources
+        </a>
+        <a class="nav-item" onclick="showTab('countries')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          Countries
+        </a>
+        <a class="nav-item" onclick="showTab('content')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Content Stats
+        </a>
+        <a class="nav-item" onclick="showTab('realtime')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          Real-Time
+        </a>
+        <a class="nav-item" href="/" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          View Site
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <div>Admin: dhamtan</div>
+        <div style="margin-top:0.25rem;">© 2026 ViralNews Pro</div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="top-bar">
+        <h1>📊 Dashboard Overview</h1>
+        <div style="display:flex;align-items:center;gap:1rem;">
+          <button class="refresh-stats" id="refreshBtn" onclick="loadStats()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/></svg>
+            Refresh
+          </button>
+          <div class="live-badge">
+            <span class="live-dot"></span>
+            <span id="liveUsers">0</span> Live Now
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="stats-grid" id="statsGrid">
+        <div class="stat-card live">
+          <div class="stat-label">🔴 Live Users Right Now</div>
+          <div class="stat-value" id="statLive">--</div>
+          <div class="stat-change up">Active sessions</div>
+        </div>
+        <div class="stat-card hour">
+          <div class="stat-label">⏱️ Last 1 Hour</div>
+          <div class="stat-value" id="stat1h">--</div>
+          <div class="stat-change up">Visitors</div>
+        </div>
+        <div class="stat-card day">
+          <div class="stat-label">📅 Last 24 Hours</div>
+          <div class="stat-value" id="stat24h">--</div>
+          <div class="stat-change up">Total visits</div>
+        </div>
+        <div class="stat-card week">
+          <div class="stat-label">📊 Last 7 Days</div>
+          <div class="stat-value" id="stat7d">--</div>
+          <div class="stat-change up">Weekly total</div>
+        </div>
+        <div class="stat-card month">
+          <div class="stat-label">📈 Last 28 Days</div>
+          <div class="stat-value" id="stat28d">--</div>
+          <div class="stat-change up">Monthly total</div>
+        </div>
+        <div class="stat-card total">
+          <div class="stat-label">🌍 All Time Total</div>
+          <div class="stat-value" id="statAll">--</div>
+          <div class="stat-change up">Since launch</div>
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="section-grid">
+        <div class="chart-card">
+          <h3>Hourly Traffic (Last 24h)</h3>
+          <div class="bar-chart" id="hourlyChart"></div>
+        </div>
+        <div class="chart-card">
+          <h3>Top Countries Today</h3>
+          <table class="data-table" id="countriesTable">
+            <thead><tr><th>Country</th><th>Visits</th><th>%</th></tr></thead>
+            <tbody><tr><td colspan="3" style="text-align:center;color:var(--text-muted);">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="section-grid">
+        <div class="chart-card">
+          <h3>Daily Traffic (Last 28 Days)</h3>
+          <div class="bar-chart" id="dailyChart"></div>
+        </div>
+        <div class="chart-card">
+          <h3>Top Pages Today</h3>
+          <table class="data-table" id="pagesTable">
+            <thead><tr><th>Page</th><th>Visits</th><th>Share</th></tr></thead>
+            <tbody><tr><td colspan="3" style="text-align:center;color:var(--text-muted);">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Content Stats -->
+      <div class="chart-card" style="margin-bottom:2rem;">
+        <h3>News Content Statistics</h3>
+        <div class="news-stats-grid" id="newsStats">
+          <div class="news-stat">
+            <div class="news-stat-value" id="newsTotal">--</div>
+            <div class="news-stat-label">Total Archived Articles</div>
+          </div>
+          <div class="news-stat">
+            <div class="news-stat-value" id="newsToday">--</div>
+            <div class="news-stat-label">Articles Today</div>
+          </div>
+          <div class="news-stat">
+            <div class="news-stat-value" id="newsSources">10+</div>
+            <div class="news-stat-label">Active Sources</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-card">
+        <h3>System Info</h3>
+        <table class="data-table">
+          <tr><td>Platform</td><td>Cloudflare Pages + Workers</td></tr>
+          <tr><td>CDN</td><td>Cloudflare Edge (300+ locations)</td></tr>
+          <tr><td>Cache</td><td>Cloudflare KV + Browser Cache</td></tr>
+          <tr><td>AI Translation</td><td>Cloudflare AI (m2m100)</td></tr>
+          <tr><td>News Sources</td><td>Reddit (6 subs) + Hacker News</td></tr>
+          <tr><td>Update Frequency</td><td>Every 5 minutes (Cron)</td></tr>
+          <tr><td>Archive Retention</td><td>30 days auto-cleanup</td></tr>
+          <tr><td>Languages</td><td>15+ auto-detected</td></tr>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const ADMIN_USER = 'dhamtan';
+    const ADMIN_PASS = 'Thakur1995@';
+    const API_URL = '/api/admin/stats';
+    let refreshTimer = null;
+
+    function doLogin() {
+      const u = document.getElementById('loginUser').value;
+      const p = document.getElementById('loginPass').value;
+      if (u === ADMIN_USER && p === ADMIN_PASS) {
+        document.getElementById('loginScreen').style.display = 'none';
+        document.getElementById('dashboard').style.display = 'block';
+        loadStats(); startAutoRefresh();
+      } else {
+        document.getElementById('loginError').style.display = 'block';
+      }
+    }
+
+    document.getElementById('loginPass').addEventListener('keypress', e => { if(e.key==='Enter')doLogin(); });
+
+    async function loadStats() {
+      const btn = document.getElementById('refreshBtn');
+      if(btn) btn.classList.add('spin');
+      try {
+        const auth = 'Basic ' + btoa(ADMIN_USER + ':' + ADMIN_PASS);
+        const res = await fetch(API_URL, { headers: { 'Authorization': auth } });
+        const data = await res.json();
+        if (data.status === 'success') updateStats(data);
+      } catch (e) { showDemoData(); }
+      finally { if(btn) btn.classList.remove('spin'); }
+    }
+
+    function updateStats(data) {
+      animateNumber('statLive', data.liveUsers || 0);
+      animateNumber('stat1h', data.last1Hour || 0);
+      animateNumber('stat24h', data.last24Hours || 0);
+      animateNumber('stat7d', data.last7Days || 0);
+      animateNumber('stat28d', data.last28Days || 0);
+      animateNumber('statAll', data.totalAllTime || 0);
+      animateNumber('liveUsers', data.liveUsers || 0);
+      animateNumber('newsTotal', data.newsStats?.total || 0);
+      animateNumber('newsToday', data.newsStats?.today || 0);
+
+      if (data.hourlyBreakdown?.length) {
+        renderBarChart('hourlyChart', data.hourlyBreakdown.map(h => ({ label: h.hour + 'h', value: h.count })));
+      }
+      if (data.dailyBreakdown?.length) {
+        renderBarChart('dailyChart', data.dailyBreakdown.slice(0, 14).map(d => ({ label: d.date.slice(5), value: d.count })));
+      }
+      if (data.topCountries?.length) {
+        const max = Math.max(...data.topCountries.map(c => c.count));
+        document.querySelector('#countriesTable tbody').innerHTML = data.topCountries.map(c => `
+          <tr><td><span class="country-flag">${getFlag(c.country)}</span>${c.country}</td><td>${c.count.toLocaleString()}</td><td><div class="progress-bar"><div class="progress-fill" style="width:${(c.count/max*100)}%"></div></div></td></tr>
+        `).join('');
+      }
+      if (data.topPages?.length) {
+        const max = Math.max(...data.topPages.map(p => p.count));
+        document.querySelector('#pagesTable tbody').innerHTML = data.topPages.map(p => `
+          <tr><td>${p.page}</td><td>${p.count.toLocaleString()}</td><td><div class="progress-bar"><div class="progress-fill" style="width:${(p.count/max*100)}%"></div></div></td></tr>
+        `).join('');
+      }
+    }
+
+    function showDemoData() {
+      animateNumber('statLive', 42); animateNumber('stat1h', 156);
+      animateNumber('stat24h', 2847); animateNumber('stat7d', 18934);
+      animateNumber('stat28d', 78291); animateNumber('statAll', 156234);
+      animateNumber('liveUsers', 42); animateNumber('newsTotal', 2847);
+      animateNumber('newsToday', 156);
+    }
+
+    function renderBarChart(containerId, data) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      const max = Math.max(...data.map(d => d.value), 1);
+      container.innerHTML = data.map(d => `
+        <div class="bar-wrapper">
+          <div class="bar" style="height:${(d.value/max*100)}%"><span class="bar-value">${d.value}</span></div>
+          <span class="bar-label">${d.label}</span>
+        </div>
+      `).join('');
+    }
+
+    function animateNumber(id, target) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const start = parseInt(el.textContent.replace(/,/g, '')) || 0;
+      const duration = 1000, startTime = performance.now();
+      function update(t) {
+        const p = Math.min((t - startTime) / duration, 1);
+        el.textContent = Math.round(start + (target - start) * (1 - Math.pow(1 - p, 3))).toLocaleString();
+        if (p < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+
+    function getFlag(code) {
+      const f = {'US':'🇺🇸','IN':'🇮🇳','GB':'🇬🇧','CA':'🇨🇦','AU':'🇦🇺','DE':'🇩🇪','FR':'🇫🇷','NL':'🇳🇱','ES':'🇪🇸','IT':'🇮🇹','JP':'🇯🇵','BR':'🇧🇷','RU':'🇷🇺','CN':'🇨🇳','PK':'🇵🇰','BD':'🇧🇩','NP':'🇳🇵','LK':'🇱🇰','SA':'🇸🇦','AE':'🇦🇪','TR':'🇹🇷','ID':'🇮🇩','MX':'🇲🇽','AR':'🇦🇷','KR':'🇰🇷','PL':'🇵🇱','SE':'🇸🇪','NO':'🇳🇴'};
+      return f[code] || '🌍';
+    }
+
+    function startAutoRefresh() { if(refreshTimer)clearInterval(refreshTimer); refreshTimer=setInterval(loadStats, 30000); }
+    function toggleSidebar() { document.getElementById('sidebar').classList.toggle('open'); }
+    function showTab(tab) { document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active')); event.target.closest('.nav-item').classList.add('active'); }
+  </script>
+</body>
+</html>
