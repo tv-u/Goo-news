@@ -1,0 +1,10 @@
+---
+
+### 2. `_routes.json`
+
+```json
+{
+  "version": 1,
+  "include": ["/api/", "/article/", "/admin/*", "/sitemap", "/rss", "/search"],
+  "exclude": ["/", "/admin/index.html", "/robots.txt"]
+}
