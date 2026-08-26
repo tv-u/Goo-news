@@ -1,0 +1,21 @@
+{
+  "name": "GO-NEWS AI v9.0 Pro Worldwide Enterprise Portal",
+  "short_name": "GO-NEWS Pro",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05070c",
+  "theme_color": "#7c3aed",
+  "description": "Worldwide 24/7 auto-sync global news & Adsterra monetization network with dollar earnings tracker and 3D animated interface.",
+  "icons": [
+    {
+      "src": "https://picsum.photos/seed/gonews192/192",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://picsum.photos/seed/gonews512/512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
