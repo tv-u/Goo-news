@@ -25,10 +25,12 @@ jobs:
 
       - name: Install Dependencies & Build
         run: |
-          if [ -f "package.json" ]; then
+          if [ -f "package-lock.json" ]; then
+            npm ci
+          else
             npm install
-            npm run build --if-present
           fi
+          npm run build --if-present
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@1
