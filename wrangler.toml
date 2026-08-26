@@ -1,20 +1,7 @@
-name = "viral-news-pro"
-compatibility_date = "2026-08-20"
-compatibility_flags = ["nodejs_compat"]
+name = "gonews-enterprise-v9"
+compatibility_date = "2026-08-26"
+pages_build_output_dir = "dist"
 
-# KV Namespace — News Cache & Archive
-[[kv_namespaces]]
-binding = "MY_KV"
-id = "de9fa6e9800a45e9a5d5ad8c24cbe3fd"
-
-# Cloudflare Workers AI
-[ai]
-binding = "AI"
-
-# Cron — every 20 minutes
-[triggers]
-crons = ["*/20 * * * *"]
-
-# Static assets
-[site]
-bucket = "./"
+[vars]
+ENVIRONMENT = "production"
+SITE_NAME = "GO-NEWS AI v9.0 Pro"
