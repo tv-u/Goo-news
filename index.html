@@ -4,67 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#7c3aed">
-    <title id="meta-title">GO-NEWS AI v9.0 Pro | Worldwide 24/7 Auto-Sync Global News & Adsterra Monetization Portal</title>
-    <meta name="description" content="GO-NEWS AI v9.0 Pro is the ultimate enterprise multi-language news portal featuring 60+ active RSS feeds, NewsData.io live API sync, Adsterra Smart Links monetization with dollar earnings tracker, 3D animated background, dual side navigation bars, professional dashboard, and zero-key AI intelligence." id="meta-desc">
-    <meta name="keywords" content="global news, breaking news, viral news, world news, finance news, sports news, bollywood hollywood, education news, rss news feed, multilingual news portal, go-news, zero competition news, auto sync news, adsterra monetization, dollar earnings">
+    <meta name="theme-color" content="#db2777">
+    <title id="meta-title">GO-NEWS AI v11.0 Pro | Global News & Monetization Portal</title>
+    <meta name="description" content="Professional global news portal featuring 60+ active RSS feeds, NewsData.io live API sync, dollar earnings dashboard, 3D animated background, dual side navigation bars, and AI intelligence." id="meta-desc">
+    <meta name="keywords" content="global news, breaking news, viral news, world news, finance news, sports news, rss news feed, multilingual news portal, go-news, auto sync news, dollar earnings">
     <link rel="canonical" href="https://go-news.github.io/">
     <link rel="manifest" href="/manifest.json">
     
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
     <script>
         window.SYNC_CONFIG = {
             NEWS_DATA_API_KEY: 'pub_c4e4a11d1db0495bb142a843c7ce31c9',
-            QUICK_SYNC_INTERVAL: 10 * 60 * 1000, // 10 minutes
-            FULL_SYNC_INTERVAL: 24 * 60 * 60 * 1000 // 24 hours
+            QUICK_SYNC_INTERVAL: 10 * 60 * 1000,
+            FULL_SYNC_INTERVAL: 24 * 60 * 60 * 1000
         };
         window.ADSTERRA_CONFIG = {
             SMART_LINK_1: 'https://www.effectivecpmnetwork.com/x0wcj4zk?key=c2b46070b44982014166acafd6074c3d',
-            SMART_LINK_2: 'https://www.effectivecpmnetwork.com/sa8mca36sv?key=3711015d24018cf89ccb362976c4a2e0',
-            POPUNDER_ENABLED: true
+            SMART_LINK_2: 'https://www.effectivecpmnetwork.com/sa8mca36sv?key=3711015d24018cf89ccb362976c4a2e0'
         };
     </script>
 
     <style>
         :root {
-            --primary: #d32f2f;
-            --primary-dark: #b71c1c;
-            --primary-light: #ffcdd2;
-            --secondary: #1976d2;
-            --accent: #ff9800;
-            --ai-purple: #7c3aed;
-            --ai-bg: #f5f3ff;
-            --success: #4caf50;
-            --dark: #0f172a;
-            --lighter: #f8fafc;
+            --primary: #ec4899;
+            --primary-dark: #db2777;
+            --secondary: #f43f5e;
+            --accent: #fbbf24;
+            --pink-glow: rgba(236, 72, 153, 0.25);
+            --dark: #09050d;
+            --lighter: #130a1c;
+            --white: #1a1025;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border-color: #2e1d45;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.7);
+            --radius: 12px;
+            --radius-lg: 20px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-main: 'Inter', 'Noto Sans Devanagari', sans-serif;
+        }
+        [data-theme="light"] {
+            --dark: #ffffff;
+            --lighter: #fdf2f8;
             --white: #ffffff;
             --text-primary: #0f172a;
             --text-secondary: #475569;
-            --text-muted: #94a3b8;
-            --border-color: #e2e8f0;
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.12);
-            --radius: 10px;
-            --radius-lg: 18px;
-            --radius-full: 9999px;
-            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            --font-main: 'Inter', 'Noto Sans Devanagari', 'Noto Sans Arabic', 'Noto Sans SC', sans-serif;
-        }
-        [data-theme="dark"] {
-            --lighter: #05070c;
-            --white: #0f172a;
-            --ai-bg: #1e1b4b;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
             --text-muted: #64748b;
-            --border-color: #1e293b;
-            --shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
-            --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.7);
+            --border-color: #fce7f3;
+            --shadow: 0 4px 16px rgba(236, 72, 153, 0.08);
+            --shadow-lg: 0 12px 36px rgba(236, 72, 153, 0.15);
         }
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
@@ -80,7 +75,6 @@
             overflow-x: hidden;
         }
 
-        /* 3D Animated Background Canvas */
         #bg-canvas {
             position: fixed;
             top: 0;
@@ -89,70 +83,66 @@
             height: 100vh;
             pointer-events: none;
             z-index: -1;
-            opacity: 0.45;
+            opacity: 0.5;
         }
 
-        a { color: var(--secondary); text-decoration: none; }
-        a:hover { color: var(--primary); }
+        a { color: var(--primary); text-decoration: none; }
+        a:hover { color: var(--secondary); }
         img { max-width: 100%; height: auto; display: block; }
         .container { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 20px; }
 
-        #reading-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--ai-purple)); z-index: 99999; width: 0%; transition: width 0.1s linear; }
+        #reading-progress { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--primary), var(--secondary)); z-index: 99999; width: 0%; transition: width 0.1s linear; }
 
         #preloader {
-            position: fixed; inset: 0; background: var(--white); z-index: 99999;
+            position: fixed; inset: 0; background: var(--dark); z-index: 99999;
             display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px;
             transition: opacity 0.4s ease, visibility 0.4s ease;
         }
         #preloader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
         .preloader-logo { font-size: 2.5rem; font-weight: 900; color: var(--primary); letter-spacing: -1px; }
-        .preloader-logo span { color: var(--ai-purple); }
-        .preloader-spinner { width: 40px; height: 40px; border: 3px solid var(--border-color); border-top-color: var(--ai-purple); border-radius: 50%; animation: spin 0.8s linear infinite; }
+        .preloader-logo span { color: #fff; }
+        .preloader-spinner { width: 40px; height: 40px; border: 3px solid var(--border-color); border-top-color: var(--primary); border-radius: 50%; animation: spin 0.8s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
 
-        .top-bar { background: var(--dark); color: #fff; padding: 8px 0; font-size: 0.8rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .top-bar { background: var(--dark); color: var(--text-secondary); padding: 8px 0; font-size: 0.8rem; border-bottom: 1px solid var(--border-color); }
         .top-bar-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
         .top-bar-left, .top-bar-right { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-        .lang-select { background: rgba(255,255,255,0.1); color: #fff; border: 1px solid rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 6px; font-weight: 600; cursor: pointer; outline: none; font-size: 0.8rem; }
-        .lang-select option { background: var(--dark); color: #fff; }
+        .lang-select { background: var(--white); color: var(--text-primary); border: 1px solid var(--border-color); padding: 4px 10px; border-radius: 6px; font-weight: 600; cursor: pointer; outline: none; font-size: 0.8rem; }
+        .lang-select option { background: var(--dark); color: var(--text-primary); }
 
-        .ai-banner-strip { background: linear-gradient(135deg, #4f46e5, #7c3aed, #db2777); color: #fff; padding: 10px 0; font-size: 0.85rem; font-weight: 600; text-align: center; box-shadow: var(--shadow); }
-        .ai-banner-strip a { color: #ffeb3b; text-decoration: underline; font-weight: 700; cursor: pointer; }
-
-        .breaking-ticker { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff; padding: 10px 0; overflow: hidden; box-shadow: var(--shadow); }
+        .breaking-ticker { background: var(--white); color: var(--text-primary); border-bottom: 1px solid var(--border-color); padding: 10px 0; overflow: hidden; box-shadow: var(--shadow); }
         .ticker-inner { display: flex; align-items: center; }
-        .ticker-label { background: var(--ai-purple); color: #fff; font-weight: 800; font-size: 0.75rem; padding: 4px 12px; border-radius: 6px; margin-right: 14px; white-space: nowrap; text-transform: uppercase; letter-spacing: 0.5px; }
+        .ticker-label { background: var(--primary); color: #fff; font-weight: 800; font-size: 0.75rem; padding: 4px 12px; border-radius: 6px; margin-right: 14px; white-space: nowrap; text-transform: uppercase; }
         .ticker-track { display: flex; gap: 40px; animation: tickerScroll 45s linear infinite; white-space: nowrap; }
         .ticker-track:hover { animation-play-state: paused; }
         @keyframes tickerScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .ticker-item { font-size: 0.9rem; cursor: pointer; font-weight: 500; transition: opacity 0.2s; }
-        .ticker-item:hover { opacity: 0.8; text-decoration: underline; }
+        .ticker-item:hover { opacity: 0.8; color: var(--primary); text-decoration: underline; }
 
         .main-header { background: var(--white); box-shadow: var(--shadow); position: sticky; top: 0; z-index: 999; backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-color); }
         .header-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 20px; }
         .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-        .logo-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--ai-purple), var(--primary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; font-size: 1.3rem; box-shadow: 0 4px 12px rgba(124,58,237,0.3); }
-        .logo-main { font-size: 1.5rem; font-weight: 900; color: var(--primary); line-height: 1; letter-spacing: -0.5px; }
-        .logo-main span { color: var(--ai-purple); }
+        .logo-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 900; font-size: 1.3rem; box-shadow: 0 4px 14px var(--pink-glow); }
+        .logo-main { font-size: 1.5rem; font-weight: 900; color: var(--text-primary); line-height: 1; letter-spacing: -0.5px; }
+        .logo-main span { color: var(--primary); }
         .logo-tagline { font-size: 0.65rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
 
         .search-bar { position: relative; flex: 1; max-width: 500px; }
-        .search-bar input { width: 100%; height: 44px; padding: 0 48px 0 20px; border: 2px solid var(--border-color); border-radius: var(--radius-full); background: var(--lighter); color: var(--text-primary); font-size: 0.9rem; outline: none; transition: all 0.2s; }
-        .search-bar input:focus { border-color: var(--ai-purple); background: var(--white); box-shadow: 0 0 0 4px rgba(124,58,237,0.1); }
-        .search-bar button { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); width: 34px; height: 34px; border-radius: var(--radius-full); background: var(--ai-purple); color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .search-bar input { width: 100%; height: 44px; padding: 0 48px 0 20px; border: 2px solid var(--border-color); border-radius: var(--radius-lg); background: var(--dark); color: var(--text-primary); font-size: 0.9rem; outline: none; transition: all 0.2s; }
+        .search-bar input:focus { border-color: var(--primary); background: var(--white); box-shadow: 0 0 0 4px var(--pink-glow); }
+        .search-bar button { position: absolute; right: 6px; top: 50%; transform: translateY(-50%); width: 34px; height: 34px; border-radius: 8px; background: var(--primary); color: #fff; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; }
 
         .header-actions { display: flex; align-items: center; gap: 10px; }
-        .header-btn { width: 40px; height: 40px; border-radius: var(--radius-full); background: var(--lighter); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); cursor: pointer; transition: all 0.2s; position: relative; }
-        .header-btn:hover { background: var(--ai-purple); color: #fff; border-color: var(--ai-purple); }
+        .header-btn { width: 40px; height: 40px; border-radius: 50%; background: var(--dark); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--text-secondary); cursor: pointer; transition: all 0.2s; position: relative; }
+        .header-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
         .badge-count { position: absolute; top: -4px; right: -4px; background: var(--primary); color: #fff; font-size: 0.65rem; font-weight: 800; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
 
         .main-nav { background: var(--white); border-bottom: 1px solid var(--border-color); position: sticky; top: 72px; z-index: 998; }
         .nav-inner { display: flex; align-items: center; gap: 8px; overflow-x: auto; padding: 10px 0; scrollbar-width: none; }
         .nav-inner::-webkit-scrollbar { display: none; }
-        .nav-link { padding: 8px 18px; border-radius: var(--radius-full); font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); white-space: nowrap; cursor: pointer; transition: all 0.2s; }
-        .nav-link:hover, .nav-link.active { color: #fff; background: var(--ai-purple); box-shadow: 0 4px 12px rgba(124,58,237,0.25); }
+        .nav-link { padding: 8px 18px; border-radius: var(--radius-lg); font-size: 0.9rem; font-weight: 600; color: var(--text-secondary); white-space: nowrap; cursor: pointer; transition: all 0.2s; }
+        .nav-link:hover, .nav-link.active { color: #fff; background: var(--primary); box-shadow: 0 4px 14px var(--pink-glow); }
 
-        /* Dual Side Navigation Layout */
         .layout-grid { display: grid; grid-template-columns: 260px 1fr 300px; gap: 24px; align-items: start; margin-top: 24px; }
         @media(max-width: 1200px) {
             .layout-grid { grid-template-columns: 1fr; }
@@ -160,27 +150,26 @@
         }
 
         .sidebar-card { background: var(--white); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 20px; box-shadow: var(--shadow); margin-bottom: 24px; }
-        .sidebar-card h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; color: var(--ai-purple); border-bottom: 2px solid var(--ai-purple); padding-bottom: 8px; }
+        .sidebar-card h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 8px; }
         .sidebar-menu { list-style: none; display: flex; flex-direction: column; gap: 8px; }
         .sidebar-menu li a { display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; border-radius: 8px; color: var(--text-secondary); font-size: 0.9rem; font-weight: 600; transition: all 0.2s; }
-        .sidebar-menu li a:hover { background: var(--ai-bg); color: var(--ai-purple); padding-left: 16px; }
+        .sidebar-menu li a:hover { background: var(--dark); color: var(--primary); padding-left: 14px; }
 
-        /* Dollar Earnings Dashboard Widget */
-        .earnings-widget { background: linear-gradient(135deg, #0f172a, #3b82f6); color: #fff; border-radius: var(--radius-lg); padding: 20px; box-shadow: var(--shadow-lg); text-align: center; }
+        .earnings-widget { background: linear-gradient(135deg, #09050d, #2e1d45); color: #fff; border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 20px; box-shadow: var(--shadow-lg); text-align: center; }
         .earnings-amount { font-size: 2.2rem; font-weight: 900; color: #4ade80; margin: 10px 0; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
 
         .section { padding: 16px 0 32px; }
-        .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; border-bottom: 3px solid var(--ai-purple); padding-bottom: 10px; position: relative; }
+        .section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; border-bottom: 3px solid var(--primary); padding-bottom: 10px; position: relative; }
         .section-header::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 100px; height: 3px; background: var(--accent); border-radius: 99px; }
         .section-title { font-size: 1.4rem; font-weight: 800; color: var(--text-primary); display: flex; align-items: center; gap: 10px; }
         
         .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
         .news-card { background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; display: flex; flex-direction: column; border: 1px solid var(--border-color); position: relative; }
-        .news-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--ai-purple); }
-        .news-card-img { aspect-ratio: 16/10; overflow: hidden; position: relative; background: #e2e8f0; }
+        .news-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: var(--primary); }
+        .news-card-img { aspect-ratio: 16/10; overflow: hidden; position: relative; background: var(--dark); }
         .news-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
         .news-card:hover .news-card-img img { transform: scale(1.08); }
-        .news-card-badge { position: absolute; top: 12px; left: 12px; background: var(--ai-purple); color: #fff; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px; z-index: 2; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+        .news-card-badge { position: absolute; top: 12px; left: 12px; background: var(--primary); color: #fff; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px; z-index: 2; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
         .news-card-badge.viral { background: var(--accent); color: #000; }
         .bookmark-btn { position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.6); color: #fff; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: none; cursor: pointer; z-index: 3; transition: all 0.2s; }
         .bookmark-btn:hover { background: var(--primary); transform: scale(1.1); }
@@ -191,16 +180,16 @@
         .news-card-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; flex: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
         .news-card-footer { display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 12px; font-weight: 500; }
 
-        .ai-widget-box { background: var(--ai-bg); border: 2px solid var(--ai-purple); border-radius: var(--radius-lg); padding: 24px; margin: 24px 0; box-shadow: var(--shadow); position: relative; overflow: hidden; }
-        .ai-widget-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; border-bottom: 1px solid rgba(124,58,237,0.2); padding-bottom: 12px; flex-wrap: wrap; gap: 10px; }
-        .ai-badge { background: var(--ai-purple); color: #fff; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: var(--radius-full); text-transform: uppercase; letter-spacing: 1px; display: inline-flex; align-items: center; gap: 6px; }
-        .ai-btn { background: var(--ai-purple); color: #fff; border: none; padding: 10px 20px; border-radius: var(--radius-full); font-weight: 700; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(124,58,237,0.3); }
-        .ai-btn:hover { background: #6d28d9; transform: translateY(-2px); }
+        .ai-widget-box { background: var(--dark); border: 2px solid var(--primary); border-radius: var(--radius-lg); padding: 24px; margin: 24px 0; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+        .ai-widget-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; flex-wrap: wrap; gap: 10px; }
+        .ai-badge { background: var(--primary); color: #fff; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: var(--radius-lg); text-transform: uppercase; letter-spacing: 1px; display: inline-flex; align-items: center; gap: 6px; }
+        .ai-btn { background: var(--primary); color: #fff; border: none; padding: 10px 20px; border-radius: var(--radius-lg); font-weight: 700; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 14px var(--pink-glow); }
+        .ai-btn:hover { background: var(--secondary); transform: translateY(-2px); }
 
         .pagination-container { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 40px; flex-wrap: wrap; }
         .page-btn { background: var(--white); color: var(--text-primary); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; box-shadow: var(--shadow); }
-        .page-btn:hover { background: var(--ai-purple); border-color: var(--ai-purple); color: #fff; }
-        .page-btn.active { background: var(--ai-purple); color: #fff; border-color: var(--ai-purple); }
+        .page-btn:hover { background: var(--primary); border-color: var(--primary); color: #fff; }
+        .page-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
         .page-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
         .article-page { max-width: 900px; margin: 40px auto; background: var(--white); padding: 40px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border: 1px solid var(--border-color); }
@@ -210,38 +199,38 @@
         .article-content { font-size: 1.1rem; line-height: 1.85; color: var(--text-primary); }
         .article-content p { margin-bottom: 1.5rem; }
 
-        .poll-box { background: var(--lighter); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 20px; margin: 25px 0; }
+        .poll-box { background: var(--dark); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 20px; margin: 25px 0; }
         .poll-option { background: var(--white); border: 1px solid var(--border-color); padding: 10px 16px; border-radius: 8px; margin-top: 8px; cursor: pointer; font-weight: 600; transition: all 0.2s; display: block; text-align: left; width: 100%; color: var(--text-primary); }
-        .poll-option:hover { background: var(--ai-purple); color: #fff; border-color: var(--ai-purple); }
+        .poll-option:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
 
         .comments-section { margin-top: 35px; border-top: 1px solid var(--border-color); padding-top: 25px; }
-        .comment-input { width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--lighter); color: var(--text-primary); margin-bottom: 10px; resize: none; font-family: var(--font-main); }
-        .comment-card { background: var(--lighter); padding: 12px 16px; border-radius: 8px; margin-bottom: 10px; border-left: 3px solid var(--ai-purple); }
+        .comment-input { width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--dark); color: var(--text-primary); margin-bottom: 10px; resize: none; font-family: var(--font-main); }
+        .comment-card { background: var(--dark); padding: 12px 16px; border-radius: 8px; margin-bottom: 10px; border-left: 3px solid var(--primary); }
 
-        .embed-box { background: var(--lighter); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 16px; margin-top: 30px; }
+        .embed-box { background: var(--dark); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 16px; margin-top: 30px; }
         .embed-box h4 { margin-bottom: 8px; font-size: 0.95rem; }
         .embed-box textarea { width: 100%; height: 70px; background: var(--white); color: var(--text-primary); border: 1px solid var(--border-color); border-radius: 6px; padding: 8px; font-family: monospace; font-size: 0.8rem; resize: none; }
 
-        .newsletter-box { background: linear-gradient(135deg, var(--dark), #2d1b69); color: #fff; padding: 40px; border-radius: var(--radius-lg); margin: 50px 0; text-align: center; box-shadow: var(--shadow-lg); }
-        .newsletter-input { max-width: 450px; width: 100%; height: 46px; padding: 0 20px; border-radius: var(--radius-full); border: none; outline: none; font-size: 0.9rem; margin-right: 8px; }
+        .newsletter-box { background: linear-gradient(135deg, var(--dark), #2e1d45); border: 1px solid var(--border-color); color: #fff; padding: 40px; border-radius: var(--radius-lg); margin: 50px 0; text-align: center; box-shadow: var(--shadow-lg); }
+        .newsletter-input { max-width: 450px; width: 100%; height: 46px; padding: 0 20px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); background: var(--white); color: var(--text-primary); outline: none; font-size: 0.9rem; margin-right: 8px; }
 
-        .main-footer { background: var(--dark); color: #fff; padding: 50px 0 24px; margin-top: 60px; text-align: center; font-size: 0.9rem; border-top: 4px solid var(--ai-purple); }
+        .main-footer { background: var(--dark); color: var(--text-secondary); padding: 50px 0 24px; margin-top: 60px; text-align: center; font-size: 0.9rem; border-top: 4px solid var(--primary); }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; margin-bottom: 40px; text-align: left; }
-        .footer-col h4 { font-size: 1.1rem; margin-bottom: 16px; color: var(--accent); }
+        .footer-col h4 { font-size: 1.1rem; margin-bottom: 16px; color: var(--primary); }
         .footer-col ul { list-style: none; }
         .footer-col ul li { margin-bottom: 10px; }
-        .footer-col ul li a { color: rgba(255,255,255,0.7); transition: color 0.2s; }
-        .footer-col ul li a:hover { color: #fff; text-decoration: underline; }
+        .footer-col ul li a { color: var(--text-secondary); transition: color 0.2s; }
+        .footer-col ul li a:hover { color: var(--primary); text-decoration: underline; }
 
         #toast-container { position: fixed; bottom: 24px; right: 24px; z-index: 99999; display: flex; flex-direction: column; gap: 10px; }
-        .toast { background: var(--white); color: var(--text-primary); padding: 14px 22px; border-radius: var(--radius); box-shadow: var(--shadow-lg); border-left: 5px solid var(--ai-purple); font-size: 0.9rem; font-weight: 600; border: 1px solid var(--border-color); animation: slideIn 0.3s ease; }
+        .toast { background: var(--white); color: var(--text-primary); padding: 14px 22px; border-radius: var(--radius); box-shadow: var(--shadow-lg); border-left: 5px solid var(--primary); font-size: 0.9rem; font-weight: 600; border: 1px solid var(--border-color); animation: slideIn 0.3s ease; }
         @keyframes slideIn { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
 
-        #lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 999999; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s; }
+        #lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 999999; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s; }
         #lightbox.active { opacity: 1; visibility: visible; }
         #lightbox img { max-width: 90%; max-height: 90vh; border-radius: var(--radius); box-shadow: var(--shadow-lg); }
 
-        #cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: var(--dark); color: #fff; padding: 16px 20px; z-index: 99999; display: flex; justify-content: space-between; align-items: center; gap: 16px; box-shadow: 0 -4px 20px rgba(0,0,0,0.3); }
+        #cookie-banner { position: fixed; bottom: 0; left: 0; right: 0; background: var(--dark); color: var(--text-primary); border-top: 1px solid var(--border-color); padding: 16px 20px; z-index: 99999; display: flex; justify-content: space-between; align-items: center; gap: 16px; box-shadow: 0 -4px 20px rgba(0,0,0,0.5); }
 
         @media(max-width: 768px) {
             .header-inner { height: 64px; }
@@ -256,23 +245,19 @@
     <div id="reading-progress"></div>
 
     <div id="preloader">
-        <div class="preloader-logo">GO<span>-NEWS AI</span> v9.0</div>
+        <div class="preloader-logo">GO<span>-NEWS AI</span></div>
         <div class="preloader-spinner"></div>
-        <p id="preloader-txt" style="font-weight: 600; color: var(--text-secondary);">Initializing 60+ RSS Feeds, Adsterra Smart Links & Dollar Monetization...</p>
-    </div>
-
-    <div class="ai-banner-strip">
-        💎 <strong>Adsterra Monetization Active:</strong> Click any article or <a href="https://www.effectivecpmnetwork.com/x0wcj4zk?key=c2b46070b44982014166acafd6074c3d" target="_blank" onclick="app.trackDollarEarnings(0.005)">Sponsored Smart Link</a> to earn real dollars! Track live in your Dashboard.
+        <p style="font-weight: 600; color: var(--text-secondary);">Initializing global news feeds & intelligence...</p>
     </div>
 
     <div class="top-bar">
         <div class="container top-bar-inner">
             <div class="top-bar-left">
-                <span id="lbl-location">🌍 Worldwide 24/7 Auto-Sync & Adsterra Dollar Earning Engine</span>
+                <span>🌍 Worldwide 24/7 Global News Portal</span>
                 <span id="live-clock">--:--:--</span>
             </div>
             <div class="top-bar-right">
-                <label for="global-lang-select" style="font-size:0.75rem; opacity:0.8; font-weight:600;" id="lbl-select-lang">Language (16):</label>
+                <label for="global-lang-select" style="font-size:0.75rem; opacity:0.8; font-weight:600;">Language:</label>
                 <select id="global-lang-select" class="lang-select" onchange="app.changeLanguage(this.value)">
                     <option value="en">English</option>
                     <option value="hi">हिन्दी (Hindi)</option>
@@ -293,18 +278,18 @@
                     <option value="ko">한국어</option>
                     <option value="pl">Polski</option>
                 </select>
-                <button class="lang-select" onclick="app.syncNow()" style="background:var(--ai-purple); border:none;" id="btn-sync">🔄 Live Sync</button>
+                <button class="lang-select" onclick="app.syncNow()" style="background:var(--primary); border:none; color:#fff;">🔄 Sync</button>
             </div>
         </div>
     </div>
 
     <div class="breaking-ticker">
         <div class="container ticker-inner">
-            <span class="ticker-label" id="ticker-breaking">💰 Adsterra Live</span>
+            <span class="ticker-label">Breaking</span>
             <div style="overflow:hidden; flex:1;">
                 <div class="ticker-track" id="ticker-track">
-                    <div class="ticker-item" onclick="app.openSmartLink(1)">🚀 Adsterra Smart Link 1 Active: Click here to monetize traffic instantly ($CPM Optimized)...</div>
-                    <div class="ticker-item" onclick="app.openSmartLink(2)">🔥 Adsterra Smart Link 2 Active: High conversion worldwide popunder & banner network...</div>
+                    <div class="ticker-item" onclick="app.openSmartLink(1)">⚡ Global markets experience bullish surge across major indexes...</div>
+                    <div class="ticker-item" onclick="app.openSmartLink(2)">🚀 Next-generation AI models revolutionize international media syndication...</div>
                 </div>
             </div>
         </div>
@@ -313,14 +298,14 @@
     <header class="main-header">
         <div class="container header-inner">
             <a href="#/" class="logo" onclick="app.navigate('home'); return false;">
-                <div class="logo-icon">AI</div>
+                <div class="logo-icon"><i class="fa-solid fa-globe"></i></div>
                 <div class="logo-text">
                     <span class="logo-main">GO<span>-NEWS AI</span></span>
-                    <span class="logo-tagline" id="tagline-text">v9.0 Pro Monetization</span>
+                    <span class="logo-tagline">Pro Enterprise Edition</span>
                 </div>
             </a>
             <div class="search-bar">
-                <input type="text" id="search-input" placeholder="Search news with AI keyword filtering (Press '/' to focus)..." oninput="app.handleSearch(this.value)">
+                <input type="text" id="search-input" placeholder="Search news with AI keyword filtering..." oninput="app.handleSearch(this.value)">
                 <button><svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></button>
             </div>
             <div class="header-actions">
@@ -328,75 +313,71 @@
                     <i class="fa-solid fa-bookmark"></i>
                     <span class="badge-count" id="bookmark-count">0</span>
                 </button>
-                <button class="header-btn" onclick="app.toggleTheme()" title="Toggle Dark/Light Mode (Ctrl+B)">🌓</button>
+                <button class="header-btn" onclick="app.toggleTheme()" title="Toggle Dark/Light Mode">🌓</button>
             </div>
         </div>
     </header>
 
     <nav class="main-nav">
         <div class="container nav-inner" id="nav-categories">
-            <a class="nav-link active" data-cat="all" onclick="app.filterCategory('all', this)" id="cat-all">Home</a>
-            <a class="nav-link" data-cat="viral" onclick="app.filterCategory('viral', this)" id="cat-viral">🔥 Viral AI</a>
-            <a class="nav-link" data-cat="politics" onclick="app.filterCategory('politics', this)" id="cat-politics">Politics</a>
-            <a class="nav-link" data-cat="sports" onclick="app.filterCategory('sports', this)" id="cat-sports">Sports</a>
-            <a class="nav-link" data-cat="entertainment" onclick="app.filterCategory('entertainment', this)" id="cat-entertainment">Entertainment</a>
-            <a class="nav-link" data-cat="technology" onclick="app.filterCategory('technology', this)" id="cat-technology">Technology</a>
-            <a class="nav-link" data-cat="business" onclick="app.filterCategory('business', this)" id="cat-business">Business</a>
-            <a class="nav-link" data-cat="finance" onclick="app.filterCategory('finance', this)" id="cat-finance">Finance</a>
-            <a class="nav-link" data-cat="world" onclick="app.filterCategory('world', this)" id="cat-world">World News</a>
-            <a class="nav-link" data-cat="health" onclick="app.filterCategory('health', this)" id="cat-health">Health</a>
-            <a class="nav-link" data-cat="education" onclick="app.filterCategory('education', this)" id="cat-education">Education</a>
-            <a class="nav-link" data-cat="trending" onclick="app.filterCategory('trending', this)" id="cat-trending">Trending</a>
-            <a class="nav-link" data-cat="videos" onclick="app.filterCategory('videos', this)" id="cat-videos">Videos</a>
+            <a class="nav-link active" data-cat="all" onclick="app.filterCategory('all', this)">Home</a>
+            <a class="nav-link" data-cat="viral" onclick="app.filterCategory('viral', this)">🔥 Viral</a>
+            <a class="nav-link" data-cat="politics" onclick="app.filterCategory('politics', this)">Politics</a>
+            <a class="nav-link" data-cat="sports" onclick="app.filterCategory('sports', this)">Sports</a>
+            <a class="nav-link" data-cat="entertainment" onclick="app.filterCategory('entertainment', this)">Entertainment</a>
+            <a class="nav-link" data-cat="technology" onclick="app.filterCategory('technology', this)">Technology</a>
+            <a class="nav-link" data-cat="business" onclick="app.filterCategory('business', this)">Business</a>
+            <a class="nav-link" data-cat="finance" onclick="app.filterCategory('finance', this)">Finance</a>
+            <a class="nav-link" data-cat="world" onclick="app.filterCategory('world', this)">World</a>
+            <a class="nav-link" data-cat="health" onclick="app.filterCategory('health', this)">Health</a>
+            <a class="nav-link" data-cat="education" onclick="app.filterCategory('education', this)">Education</a>
+            <a class="nav-link" data-cat="trending" onclick="app.filterCategory('trending', this)">Trending</a>
+            <a class="nav-link" data-cat="videos" onclick="app.filterCategory('videos', this)">Videos</a>
         </div>
     </nav>
 
-    <!-- Dual Side Navigation & Main Content Layout -->
     <div class="container">
         <div class="layout-grid">
             
-            <!-- Left Side Navigation Bar -->
             <aside class="side-nav-left">
                 <div class="sidebar-card earnings-widget">
-                    <span style="font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; opacity:0.9;">Adsterra Live Earnings</span>
+                    <span style="font-size:0.8rem; text-transform:uppercase; letter-spacing:1px; opacity:0.9;">Live Earnings Dashboard</span>
                     <div class="earnings-amount" id="dashboard-dollars">$0.00</div>
-                    <span style="font-size:0.75rem; color:#93c5fd;" id="dashboard-clicks">0 Ad Clicks / Impressions</span>
-                    <button class="ai-btn" style="margin-top:14px; width:100%; justify-content:center; background:#10b981;" onclick="app.openSmartLink(1)">
-                        <i class="fa-solid fa-dollar-sign"></i> Boost Earnings
+                    <span style="font-size:0.75rem; color:#f472b6;" id="dashboard-clicks">0 Impressions / Interactions</span>
+                    <button class="ai-btn" style="margin-top:14px; width:100%; justify-content:center;" onclick="app.openSmartLink(1)">
+                        <i class="fa-solid fa-bolt"></i> Boost Campaign
                     </button>
                 </div>
 
                 <div class="sidebar-card">
                     <h3><i class="fa-solid fa-fire"></i> Trending Topics</h3>
                     <ul class="sidebar-menu">
-                        <li><a href="#/" onclick="app.filterCategory('politics')"><span>🏛️ Politics & Elections</span> <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i></a></li>
-                        <li><a href="#/" onclick="app.filterCategory('sports')"><span>⚽ Sports World</span> <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i></a></li>
-                        <li><a href="#/" onclick="app.filterCategory('finance')"><span>📈 Stock Market</span> <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i></a></li>
-                        <li><a href="#/" onclick="app.filterCategory('technology')"><span>💻 AI & Tech</span> <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i></a></li>
+                        <li><a href="#/" onclick="app.filterCategory('politics')"><span>🏛️ Politics</span> <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i></a></li>
+                        <li><a href="#/" onclick="app.filterCategory('sports')"><span>⚽ Sports</span> <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i></a></li>
+                        <li><a href="#/" onclick="app.filterCategory('finance')"><span>📈 Markets</span> <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i></a></li>
+                        <li><a href="#/" onclick="app.filterCategory('technology')"><span>💻 Tech AI</span> <i class="fa-solid fa-chevron-right" style="font-size:0.7rem;"></i></a></li>
                     </ul>
                 </div>
             </aside>
 
-            <!-- Main Dynamic Content Center -->
             <main id="app-root" style="min-height: 65vh;"></main>
 
-            <!-- Right Side Navigation Bar & Sponsored Widgets -->
             <aside class="side-nav-right">
                 <div class="sidebar-card">
-                    <h3><i class="fa-solid fa-bullhorn"></i> Sponsored Adsterra</h3>
-                    <div style="background:var(--ai-bg); border:1px dashed var(--ai-purple); padding:14px; border-radius:8px; text-align:center; cursor:pointer;" onclick="app.openSmartLink(1)">
-                        <img src="https://picsum.photos/seed/adsterra1/300/150" alt="Adsterra Ad" style="border-radius:6px; margin-bottom:10px;">
-                        <strong style="font-size:0.9rem; color:var(--ai-purple);">High CPM Smart Link</strong>
-                        <p style="font-size:0.75rem; color:var(--text-secondary); margin-top:4px;">Click to unlock premium global rewards.</p>
+                    <h3><i class="fa-solid fa-bullhorn"></i> Sponsored Spotlight</h3>
+                    <div style="background:var(--dark); border:1px dashed var(--primary); padding:14px; border-radius:8px; text-align:center; cursor:pointer;" onclick="app.openSmartLink(1)">
+                        <img src="https://picsum.photos/seed/spotlight1/300/150" alt="Spotlight" style="border-radius:6px; margin-bottom:10px;">
+                        <strong style="font-size:0.9rem; color:var(--primary);">High Performance Link</strong>
+                        <p style="font-size:0.75rem; color:var(--text-secondary); margin-top:4px;">Click to explore global campaigns.</p>
                     </div>
                 </div>
 
                 <div class="sidebar-card">
-                    <h3><i class="fa-solid fa-shield-halved"></i> Pro Dashboard</h3>
+                    <h3><i class="fa-solid fa-shield-halved"></i> Pro Control Panel</h3>
                     <ul class="sidebar-menu">
-                        <li><a href="#/" onclick="app.syncNow()"><span>🔄 Force Auto-Sync</span> <i class="fa-solid fa-rotate" style="font-size:0.7rem;"></i></a></li>
+                        <li><a href="#/" onclick="app.syncNow()"><span>🔄 Force Sync Feeds</span> <i class="fa-solid fa-rotate" style="font-size:0.7rem;"></i></a></li>
                         <li><a href="#/" onclick="app.toggleBookmarksView()"><span>🔖 Saved Bookmarks</span> <i class="fa-solid fa-bookmark" style="font-size:0.7rem;"></i></a></li>
-                        <li><a href="https://www.effectivecpmnetwork.com/x0wcj4zk?key=c2b46070b44982014166acafd6074c3d" target="_blank" onclick="app.trackDollarEarnings(0.01)"><span>💵 Claim Ad Reward</span> <i class="fa-solid fa-coins" style="font-size:0.7rem; color:#10b981;"></i></a></li>
+                        <li><a href="#/" onclick="app.openSmartLink(2)"><span>💵 Claim Reward</span> <i class="fa-solid fa-coins" style="font-size:0.7rem; color:#4ade80;"></i></a></li>
                     </ul>
                 </div>
             </aside>
@@ -406,7 +387,7 @@
 
     <section class="container">
         <div class="newsletter-box">
-            <h3 style="font-size: 1.8rem; font-weight: 900; margin-bottom: 12px;">Subscribe to GO-NEWS AI Global Digest</h3>
+            <h3 style="font-size: 1.8rem; font-weight: 900; margin-bottom: 12px;">Subscribe to Global AI Digest</h3>
             <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 24px; font-size: 0.95rem;">Receive top AI-summarized headlines directly to your inbox every morning with zero spam.</p>
             <form onsubmit="event.preventDefault(); app.subscribeNewsletter(this);" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
                 <input type="email" name="email" placeholder="Enter your email address..." class="newsletter-input" required>
@@ -415,16 +396,15 @@
         </div>
     </section>
 
-    <!-- Professional Footer with Essential Pages and Links -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <div class="logo-main" style="color:#fff; font-size:1.5rem; margin-bottom:10px;">GO<span style="color:var(--ai-purple);">-NEWS AI</span></div>
-                    <p style="color:rgba(255,255,255,0.7); font-size:0.85rem;" id="footer-desc">Worldwide enterprise news portal delivering auto-synced breaking news via 60+ RSS feeds & NewsData.io API in 16+ languages with Adsterra dollar monetization.</p>
+                    <div class="logo-main" style="color:var(--text-primary); font-size:1.5rem; margin-bottom:10px;">GO<span style="color:var(--primary);">-NEWS AI</span></div>
+                    <p style="color:var(--text-secondary); font-size:0.85rem;">Worldwide enterprise news portal delivering auto-synced breaking news via 60+ RSS feeds & NewsData.io API in 16+ languages.</p>
                 </div>
                 <div class="footer-col">
-                    <h4 id="footer-categories">Essential Pages</h4>
+                    <h4>Essential Pages</h4>
                     <ul>
                         <li><a href="#/" onclick="app.showStaticPage('about')">About Us</a></li>
                         <li><a href="#/" onclick="app.showStaticPage('privacy')">Privacy Policy</a></li>
@@ -434,16 +414,16 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4 id="footer-global">Adsterra Smart Links</h4>
+                    <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="https://www.effectivecpmnetwork.com/x0wcj4zk?key=c2b46070b44982014166acafd6074c3d" target="_blank" onclick="app.trackDollarEarnings(0.005)">Smart Link CPM 1</a></li>
-                        <li><a href="https://www.effectivecpmnetwork.com/sa8mca36sv?key=3711015d24018cf89ccb362976c4a2e0" target="_blank" onclick="app.trackDollarEarnings(0.005)">Smart Link CPM 2</a></li>
-                        <li><a href="#/" onclick="app.openSmartLink(1)">Popunder Network</a></li>
-                        <li><a href="#/" onclick="app.openSmartLink(2)">Social Bar Monetization</a></li>
+                        <li><a href="#/" onclick="app.openSmartLink(1)">Global Network 1</a></li>
+                        <li><a href="#/" onclick="app.openSmartLink(2)">Global Network 2</a></li>
+                        <li><a href="#/" onclick="app.syncNow()">Auto-Sync Feeds</a></li>
+                        <li><a href="#/" onclick="app.toggleBookmarksView()">Saved Bookmarks</a></li>
                     </ul>
                 </div>
             </div>
-            <p>&copy; 2026 GO-NEWS Worldwide AI Network v9.0 Pro. All Rights Reserved. 100% Verified & Auto-Sync Active.</p>
+            <p>&copy; 2026 GO-NEWS Worldwide AI Network Pro. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -454,12 +434,11 @@
     </div>
 
     <div id="cookie-banner">
-        <span>We use cookies and Adsterra monetization to ensure you get the best experience on GO-NEWS AI v9.0 Pro. <a href="#/" style="color:var(--accent); text-decoration:underline;" onclick="app.showStaticPage('privacy')">Learn more</a></span>
-        <button class="ai-btn" style="padding: 6px 16px; font-size: 0.8rem;" onclick="document.getElementById('cookie-banner').style.display='none'; app.showToast('Cookie preferences accepted.');">Accept GDPR</button>
+        <span>We use cookies to ensure you get the best experience on our portal. <a href="#/" style="color:var(--primary); text-decoration:underline;" onclick="app.showStaticPage('privacy')">Learn more</a></span>
+        <button class="ai-btn" style="padding: 6px 16px; font-size: 0.8rem;" onclick="document.getElementById('cookie-banner').style.display='none'; app.showToast('Preferences accepted.');">Accept</button>
     </div>
 
     <script>
-        // 3D Animated Particle Background Generator
         const canvas = document.getElementById('bg-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
@@ -471,20 +450,20 @@
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
 
-        for (let i = 0; i < 60; i++) {
+        for (let i = 0; i < 50; i++) {
             particles.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
                 radius: Math.random() * 2 + 1,
-                vx: (Math.random() - 0.5) * 0.5,
-                vy: (Math.random() - 0.5) * 0.5
+                vx: (Math.random() - 0.5) * 0.4,
+                vy: (Math.random() - 0.5) * 0.4
             });
         }
 
         function animateBg() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = document.documentElement.getAttribute('data-theme') === 'dark' ? 'rgba(124, 58, 237, 0.15)' : 'rgba(124, 58, 237, 0.1)';
-            ctx.strokeStyle = document.documentElement.getAttribute('data-theme') === 'dark' ? 'rgba(124, 58, 237, 0.08)' : 'rgba(124, 58, 237, 0.05)';
+            ctx.fillStyle = document.documentElement.getAttribute('data-theme') === 'light' ? 'rgba(236, 72, 153, 0.08)' : 'rgba(236, 72, 153, 0.12)';
+            ctx.strokeStyle = document.documentElement.getAttribute('data-theme') === 'light' ? 'rgba(236, 72, 153, 0.04)' : 'rgba(236, 72, 153, 0.06)';
 
             particles.forEach((p, index) => {
                 p.x += p.vx;
@@ -513,24 +492,24 @@
 
         const TRANSLATIONS = {
             en: {
-                breaking: "💰 Adsterra Monetization Active",
+                breaking: "Breaking",
                 searchPlaceholder: "Search news with AI keyword filtering...",
                 latestNews: "Latest AI-Synced Global Feeds (60+ RSS & NewsData)",
                 loading: "Syncing 60+ feeds & initializing AI models...",
                 readMore: "Read Full Report",
                 syncSuccess: "Successfully synced 60+ feeds & NewsData.io!",
-                syncBtn: "🔄 Live Sync",
-                categories: { all: "Home", viral: "🔥 Viral AI", politics: "Politics", sports: "Sports", entertainment: "Entertainment", technology: "Technology", business: "Business", finance: "Finance", world: "World News", health: "Health", education: "Education", trending: "Trending", videos: "Videos" }
+                syncBtn: "🔄 Sync",
+                categories: { all: "Home", viral: "🔥 Viral", politics: "Politics", sports: "Sports", entertainment: "Entertainment", technology: "Technology", business: "Business", finance: "Finance", world: "World", health: "Health", education: "Education", trending: "Trending", videos: "Videos" }
             },
             hi: {
-                breaking: "💰 एडस्टेरा डॉलर कमाई सक्रिय",
-                searchPlaceholder: "एआई फिल्टर के साथ खबरें खोजें...",
-                latestNews: "ताज़ा एआई-सिंक ग्लोबल खबरें (60+ RSS और NewsData)",
+                breaking: "ब्रेकिंग",
+                searchPlaceholder: "एआई फ़िल्टर के साथ खबरें खोजें...",
+                latestNews: "ताज़ा ग्लोबल खबरें (60+ RSS और NewsData)",
                 loading: "60+ RSS और NewsData सिंक हो रहे हैं...",
                 readMore: "पूरी रिपोर्ट पढ़ें",
                 syncSuccess: "60+ फ़ीड और NewsData सफलतापूर्वक सिंक हो गए!",
-                syncBtn: "🔄 लाइव सिंक",
-                categories: { all: "होम", viral: "🔥 वायरल एआई", politics: "राजनीति", sports: "खेल", entertainment: "मनोरंजन", technology: "टेक्नोलॉजी", business: "बिजनेस", finance: "फाइनेंस", world: "विश्व समाचार", health: "स्वास्थ्य", education: "शिक्षा", trending: "ट्रेंडिंग", videos: "वीडियो" }
+                syncBtn: "🔄 सिंक",
+                categories: { all: "होम", viral: "🔥 वायरल", politics: "राजनीति", sports: "खेल", entertainment: "मनोरंजन", technology: "टेक्नोलॉजी", business: "बिजनेस", finance: "फाइनेंस", world: "विश्व", health: "स्वास्थ्य", education: "शिक्षा", trending: "ट्रेंडिंग", videos: "वीडियो" }
             }
         };
 
@@ -576,12 +555,12 @@
                 this.updateBookmarkCount();
                 this.updateEarningsUI();
 
-                setTimeout(() => document.getElementById('preloader').classList.add('hidden'), 800);
+                setTimeout(() => document.getElementById('preloader').classList.add('hidden'), 700);
                 this.startClock();
                 this.initScrollProgress();
                 this.initKeyboardShortcuts();
 
-                const cached = localStorage.getItem('gonews_cache_v9');
+                const cached = localStorage.getItem('gonews_cache_v11');
                 if (cached) {
                     try {
                         this.articles = JSON.parse(cached);
@@ -637,14 +616,14 @@
                 localStorage.setItem('gonews_dollars', this.dollarsEarned.toFixed(3));
                 localStorage.setItem('gonews_clicks', this.adClicks);
                 this.updateEarningsUI();
-                this.showToast(`+$${amount.toFixed(3)} credited to Adsterra Dashboard! Total: $${this.dollarsEarned.toFixed(2)}`);
+                this.showToast(`+$${amount.toFixed(3)} credited! Total Balance: $${this.dollarsEarned.toFixed(2)}`);
             },
 
             updateEarningsUI() {
                 const el = document.getElementById('dashboard-dollars');
                 const cl = document.getElementById('dashboard-clicks');
                 if(el) el.textContent = `$${this.dollarsEarned.toFixed(2)}`;
-                if(cl) cl.textContent = `${this.adClicks} Ad Clicks / Impressions`;
+                if(cl) cl.textContent = `${this.adClicks} Impressions / Interactions`;
             },
 
             openSmartLink(num) {
@@ -658,16 +637,14 @@
                 document.documentElement.lang = this.lang;
                 document.documentElement.dir = ['ar','ur'].includes(this.lang) ? 'rtl' : 'ltr';
 
-                document.getElementById('ticker-breaking').textContent = t.breaking;
+                const breakingLabel = document.querySelector('.ticker-label');
+                if(breakingLabel) breakingLabel.textContent = t.breaking;
                 document.getElementById('search-input').placeholder = t.searchPlaceholder;
-                document.getElementById('btn-sync').textContent = t.syncBtn;
-                document.getElementById('preloader-txt').textContent = t.loading;
-                document.getElementById('footer-desc').textContent = "Worldwide enterprise news portal delivering auto-synced breaking news via 60+ RSS feeds & NewsData.io API with Adsterra dollar monetization.";
-                document.getElementById('footer-categories').textContent = "Essential Pages";
+                document.getElementById('preloader').querySelector('p').textContent = t.loading;
 
                 const cats = t.categories;
                 for (const [key, val] of Object.entries(cats)) {
-                    const el = document.getElementById(`cat-${key}`);
+                    const el = document.querySelector(`[data-cat="${key}"]`);
                     if (el) el.textContent = val;
                 }
             },
@@ -758,7 +735,7 @@
                 allArticles.forEach(a => uniqueMap.set(a.title, a));
                 this.articles = Array.from(uniqueMap.values()).sort((a,b) => new Date(b.date) - new Date(a.date));
 
-                localStorage.setItem('gonews_cache_v9', JSON.stringify(this.articles));
+                localStorage.setItem('gonews_cache_v11', JSON.stringify(this.articles));
 
                 if(!isBackground) this.showToast(t.syncSuccess);
                 this.render();
@@ -769,8 +746,8 @@
 
             getDefaultArticles() {
                 return [
-                    { id: 'e1', title: "GO-NEWS AI v9.0 Pro: Adsterra Smart Links & Dollar Earnings Integrated", description: "Automated high-speed live news syndication powered by NewsData.io API and Adsterra high CPM monetization...", content: "GO-NEWS enterprise portal actively syncs real-time international articles, financial markets, sports, and viral media updates with Adsterra smart links...", category: "viral", author: "AI Syndicate v9.0", date: new Date().toISOString(), image: "https://picsum.photos/seed/gonewsv9/800/450", source: "NewsData.io Enterprise", sentiment: "Bullish (AI Score: 99%)" },
-                    { id: 'e2', title: "Global Sports Championship: AI Neural Models Forecast Record Finals", description: "In an electrifying showdown, world champions secure historic victory in front of packed stadium...", content: "Sports history was rewritten today as top athletes delivered breathtaking performances under immense pressure...", category: "sports", author: "Sports AI Desk", date: new Date().toISOString(), image: "https://picsum.photos/seed/sportsnews9/800/450", source: "ESPN Live", sentiment: "Positive (AI Score: 94%)" }
+                    { id: 'e1', title: "Global AI Enterprise Portal v11.0: Real-Time Syndication Active", description: "Automated high-speed live news syndication powered by NewsData.io API and secure CPM monetization...", content: "GO-NEWS enterprise portal actively syncs real-time international articles, financial markets, sports, and viral media updates...", category: "viral", author: "AI Syndicate v11.0", date: new Date().toISOString(), image: "https://picsum.photos/seed/gonewsv11/800/450", source: "NewsData.io Enterprise", sentiment: "Bullish (AI Score: 99%)" },
+                    { id: 'e2', title: "Global Sports Championship: AI Neural Models Forecast Record Finals", description: "In an electrifying showdown, world champions secure historic victory in front of packed stadium...", content: "Sports history was rewritten today as top athletes delivered breathtaking performances under immense pressure...", category: "sports", author: "Sports AI Desk", date: new Date().toISOString(), image: "https://picsum.photos/seed/sportsnews11/800/450", source: "ESPN Live", sentiment: "Positive (AI Score: 94%)" }
                 ];
             },
 
@@ -778,8 +755,8 @@
                 const track = document.getElementById('ticker-track');
                 if(!track) return;
                 track.innerHTML = `
-                    <div class="ticker-item" onclick="app.openSmartLink(1)">🚀 Adsterra Smart Link 1 Active: Click here to monetize traffic instantly ($CPM Optimized)...</div>
-                    <div class="ticker-item" onclick="app.openSmartLink(2)">🔥 Adsterra Smart Link 2 Active: High conversion worldwide popunder & banner network...</div>
+                    <div class="ticker-item" onclick="app.openSmartLink(1)">⚡ Global markets experience bullish surge across major indexes...</div>
+                    <div class="ticker-item" onclick="app.openSmartLink(2)">🚀 Next-generation AI models revolutionize international media syndication...</div>
                     ` + this.articles.slice(0, 8).map(a => `<div class="ticker-item" onclick="app.openArticle('${a.id}')">🤖 ${a.title}</div>`).join('');
             },
 
@@ -792,7 +769,7 @@
                     this.render();
                 } else {
                     this.isBookmarksView = false;
-                    document.getElementById('meta-title').textContent = "GO-NEWS AI v9.0 Pro | Worldwide News Network";
+                    document.getElementById('meta-title').textContent = "GO-NEWS AI v11.0 Pro | Global News Network";
                     this.render();
                 }
             },
@@ -848,29 +825,29 @@
             showStaticPage(pageType) {
                 const root = document.getElementById('app-root');
                 let title = "About Us";
-                let content = "GO-NEWS AI v9.0 Pro is the world's leading automated news aggregation and monetization network.";
+                let content = "GO-NEWS AI v11.0 Pro is the world's leading automated news aggregation and publishing network.";
 
                 if(pageType === 'privacy') {
                     title = "Privacy Policy";
-                    content = "At GO-NEWS AI v9.0 Pro, we respect your privacy. We use Adsterra smart links and cookies to serve high CPM advertisements and measure traffic engagement securely.";
+                    content = "At GO-NEWS AI Pro, we respect your privacy and secure all user engagement with advanced encryption and analytics.";
                 } else if(pageType === 'terms') {
                     title = "Terms & Conditions";
-                    content = "By accessing GO-NEWS AI, you agree to abide by our global publishing standards and monetization guidelines.";
+                    content = "By accessing GO-NEWS AI, you agree to abide by our global publishing standards and editorial guidelines.";
                 } else if(pageType === 'contact') {
                     title = "Contact & Support";
-                    content = "For editorial inquiries, partnerships, or Adsterra publisher assistance, contact our 24/7 global desk at support@gonews-ai.org.";
+                    content = "For editorial inquiries or partnerships, contact our 24/7 global desk at support@gonews-ai.org.";
                 } else if(pageType === 'advertise') {
                     title = "Advertise with Us";
-                    content = "Reach millions of global readers with Adsterra high CPM placement and sponsored news syndication.";
+                    content = "Reach millions of global readers with targeted high-performance campaigns and news syndication.";
                 }
 
                 root.innerHTML = `
                     <div class="article-page">
-                        <a href="#/" onclick="location.hash='#/'; return false;" style="display:inline-block; margin-bottom:20px; font-weight:700; color:var(--ai-purple);">&larr; Back to Home</a>
+                        <a href="#/" onclick="location.hash='#/'; return false;" style="display:inline-block; margin-bottom:20px; font-weight:700; color:var(--primary);">&larr; Back to Home</a>
                         <h1 class="article-title">${title}</h1>
                         <div class="article-content">
                             <p>${content}</p>
-                            <p>Our autonomous auto-sync engine ensures 24/7 uptime and robust delivery across Cloudflare Edge and GitHub Pages.</p>
+                            <p>Our autonomous auto-sync engine ensures 24/7 uptime and robust delivery across global edge networks.</p>
                         </div>
                     </div>
                 `;
@@ -897,14 +874,13 @@
 
                 root.innerHTML = `
                     <section class="section">
-                        <!-- Ad Banner Box in Feed -->
-                        <div style="background:linear-gradient(135deg, var(--ai-purple), #3b82f6); color:#fff; padding:16px 20px; border-radius:var(--radius-lg); margin-bottom:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; box-shadow:var(--shadow);">
+                        <div style="background:linear-gradient(135deg, var(--primary), #2e1d45); color:#fff; padding:16px 20px; border-radius:var(--radius-lg); margin-bottom:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; box-shadow:var(--shadow);">
                             <div>
-                                <h4 style="font-size:1.1rem; font-weight:800;">💎 Sponsored Adsterra Smart Campaign</h4>
-                                <p style="font-size:0.85rem; opacity:0.9;">Click to support global journalism and increase publisher dollar revenue.</p>
+                                <h4 style="font-size:1.1rem; font-weight:800;">⚡ Global Campaign Spotlight</h4>
+                                <p style="font-size:0.85rem; opacity:0.9;">Explore sponsored feeds and high-yield publisher campaigns.</p>
                             </div>
                             <button class="ai-btn" style="background:#10b981;" onclick="app.openSmartLink(1)">
-                                <i class="fa-solid fa-coins"></i> Visit Sponsor ($CPM)
+                                <i class="fa-solid fa-coins"></i> Explore Partner Offer
                             </button>
                         </div>
 
@@ -959,7 +935,7 @@
 
             generateAiSummary(title, content) {
                 const box = document.getElementById('ai-summary-output');
-                box.innerHTML = `<p style="color:var(--ai-purple); font-weight:600;"><i class="fa-solid fa-spinner fa-spin"></i> AI Neural Engine synthesizing key takeaways...</p>`;
+                box.innerHTML = `<p style="color:var(--primary); font-weight:600;"><i class="fa-solid fa-spinner fa-spin"></i> AI Neural Engine synthesizing key takeaways...</p>`;
                 
                 setTimeout(() => {
                     const sentences = (content || title).split('. ').filter(s => s.length > 10);
@@ -1039,7 +1015,7 @@
                 const existing = JSON.parse(localStorage.getItem(commentsKey) || '[{"user":"Global Reader","text":"Very informative and well-analyzed report!","time":"2h ago"}]');
                 listEl.innerHTML = existing.map(c => `
                     <div class="comment-card">
-                        <div style="font-weight:700; font-size:0.85rem; color:var(--ai-purple); margin-bottom:4px;">${c.user} <span style="font-weight:400; color:var(--text-muted); font-size:0.75rem; float:right;">${c.time}</span></div>
+                        <div style="font-weight:700; font-size:0.85rem; color:var(--primary); margin-bottom:4px;">${c.user} <span style="font-weight:400; color:var(--text-muted); font-size:0.75rem; float:right;">${c.time}</span></div>
                         <div style="font-size:0.9rem; color:var(--text-primary);">${c.text}</div>
                     </div>
                 `).join('');
@@ -1050,7 +1026,7 @@
                 const article = this.articles.find(a => a.id === id) || this.articles[0];
                 if(!article) return;
 
-                document.getElementById('meta-title').textContent = `${article.title} | GO-NEWS AI v9.0`;
+                document.getElementById('meta-title').textContent = `${article.title} | GO-NEWS AI`;
                 document.getElementById('meta-desc').content = article.description;
 
                 const embedCode = `<iframe src="${window.location.origin}/#/article/${article.id}" width="100%" height="500px" style="border:none;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.1);"></iframe>`;
@@ -1058,7 +1034,7 @@
 
                 document.getElementById('app-root').innerHTML = `
                     <div class="article-page">
-                        <a href="#/" onclick="location.hash='#/'; return false;" style="display:inline-block; margin-bottom:20px; font-weight:700; color:var(--ai-purple);">&larr; Back to AI Feed</a>
+                        <a href="#/" onclick="location.hash='#/'; return false;" style="display:inline-block; margin-bottom:20px; font-weight:700; color:var(--primary);">&larr; Back to AI Feed</a>
                         <span class="news-card-badge ${article.category === 'viral' ? 'viral' : ''}" style="position:static; display:inline-block; margin-bottom:12px;">${t.categories[article.category] || article.category}</span>
                         <h1 class="article-title">${article.title}</h1>
                         <div class="article-meta">
@@ -1073,15 +1049,14 @@
                             <button id="ai-voice-btn" class="ai-btn" onclick="app.toggleAiVoice('${article.title}. ${article.description}')">
                                 <i class="fa-solid fa-volume-high"></i> Listen with AI Voice
                             </button>
-                            <button class="ai-btn" style="background:${isSaved ? 'var(--primary)' : 'var(--secondary)'};" onclick="app.toggleBookmark('${article.id}')">
+                            <button class="ai-btn" style="background:${isSaved ? 'var(--secondary)' : 'var(--primary)'};" onclick="app.toggleBookmark('${article.id}')">
                                 <i class="fa-solid fa-bookmark"></i> ${isSaved ? 'Saved in Bookmarks' : 'Save Bookmark'}
                             </button>
                             <button class="ai-btn" style="background:#10b981;" onclick="app.openSmartLink(1)">
-                                <i class="fa-solid fa-coins"></i> Unlock Adsterra Reward
+                                <i class="fa-solid fa-coins"></i> Explore Partner Offer
                             </button>
                         </div>
 
-                        <!-- AI Smart Summarizer Box -->
                         <div class="ai-widget-box">
                             <div class="ai-widget-header">
                                 <span class="ai-badge"><i class="fa-solid fa-brain"></i> AI Smart Summarizer</span>
@@ -1099,7 +1074,6 @@
                             <div>${article.content}</div>
                         </div>
 
-                        <!-- Interactive Poll Box -->
                         <div class="poll-box">
                             <h4 style="margin-bottom: 12px; font-size: 1.05rem;"><i class="fa-solid fa-square-poll-vertical"></i> Reader Poll: How impactful is this news report?</h4>
                             <button class="poll-option" onclick="app.votePoll('Extremely Impactful')">🚀 Extremely Impactful</button>
@@ -1107,7 +1081,6 @@
                             <button class="poll-option" onclick="app.votePoll('Neutral / Informational')">📌 Neutral / Informational</button>
                         </div>
 
-                        <!-- Comments Section -->
                         <div class="comments-section">
                             <h3 style="font-size: 1.2rem; margin-bottom: 16px;"><i class="fa-solid fa-comments"></i> Reader Discussions</h3>
                             <form onsubmit="event.preventDefault(); app.submitComment('${article.id}', this);">
@@ -1131,14 +1104,16 @@
                 const email = form.email.value;
                 if(!email) return;
                 form.reset();
-                this.showToast(`Successfully subscribed ${email} to GO-NEWS AI Digest!`);
+                this.showToast(`Successfully subscribed ${email} to Global AI Digest!`);
                 this.trackDollarEarnings(0.005);
             },
 
             toggleTheme() {
-                const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-                document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
-                this.showToast(isDark ? 'Light mode activated' : 'Dark mode activated');
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+                localStorage.setItem('gonews_theme', newTheme);
+                this.showToast(newTheme === 'light' ? 'Light theme activated' : 'Dark theme activated');
             },
 
             showToast(msg) {
@@ -1152,7 +1127,11 @@
             }
         };
 
-        window.addEventListener('DOMContentLoaded', () => app.init());
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('gonews_theme') || 'dark';
+            if(savedTheme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+            app.init();
+        });
     </script>
 </body>
 </html>
