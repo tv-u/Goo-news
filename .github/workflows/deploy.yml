@@ -2,41 +2,55 @@ name: Deploy to Cloudflare Pages & Auto-Sync
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches:
+      - main
+
   schedule:
-    - cron: '*/30 * * * *' # Fully auto-sync trigger every 30 minutes
+    - cron: "*/30 * * * *"
+
   workflow_dispatch:
+
+permissions:
+  contents: read
+  deployments: write
+
+concurrency:
+  group: goo-news-cloudflare-deploy
+  cancel-in-progress: true
 
 jobs:
   deploy:
+    name: Build & Deploy to Cloudflare Pages
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
+
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
         with:
           node-version: 20
-          cache: 'npm'
+          cache: npm
 
-      - name: Install Dependencies & Build
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Application
+        run: npm run build
+
+      - name: Verify Production Build
         run: |
-          if [ -f "package-lock.json" ]; then
-            npm ci
-          else
-            npm install
-          fi
-          npm run build --if-present
+          set -Eeuo pipefail
+          test -d dist
+          test -f dist/index.html
+          echo "Production build verified."
+          du -sh dist
 
-      - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@1
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: gonews-enterprise-v9
-          directory: dist
+          command: pages deploy dist --project-name=gonews-enterprise-v9
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
