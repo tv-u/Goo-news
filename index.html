@@ -366,7 +366,7 @@
     <div id="preloader">
         <div class="preloader-logo">GO<span>-NEWS AI</span></div>
         <div class="preloader-spinner"></div>
-        <p style="font-weight: 600; color: var(--text-secondary); font-size: 0.9rem;">Auto-syncing global intelligence feeds...</p>
+        <p style="font-weight: 600; color: var(--text-secondary); font-size: 0.9rem;">Auto-syncing global intelligence feeds...
     </div>
 
     <div class="top-utility-bar">
@@ -484,7 +484,7 @@
                     <div style="background:var(--dark); border:1px dashed var(--primary); padding:12px; border-radius:8px; text-align:center; cursor:pointer;" onclick="app.openSmartLink(1)">
                         <img src="https://picsum.photos/seed/spotlight99/260/140" alt="Spotlight" style="border-radius:6px; margin-bottom:8px;">
                         <strong style="font-size:0.85rem; color:var(--primary);">High Yield Campaign</strong>
-                        <p style="font-size:0.7rem; color:var(--text-secondary); margin-top:3px;">Click to explore global partner rewards.</p>
+                        <p style="font-size:0.7rem; color:var(--text-secondary); margin-top:3px;">Click to explore global partner rewards.
                     </div>
                 </div>
 
@@ -503,7 +503,7 @@
     <section class="container">
         <div style="background:linear-gradient(135deg, var(--card-bg), #241135); border:1px solid var(--border-color); border-radius:var(--radius-lg); padding:32px; margin:40px 0; text-align:center; box-shadow:var(--shadow-lg);">
             <h3 style="font-size:1.6rem; font-weight:900; margin-bottom:10px;">Subscribe to GO-NEWS AI Global Digest</h3>
-            <p style="color:var(--text-secondary); max-width:550px; margin:0 auto 20px; font-size:0.9rem;">Receive top AI-summarized international headlines directly to your inbox every morning with zero spam.</p>
+            <p style="color:var(--text-secondary); max-width:550px; margin:0 auto 20px; font-size:0.9rem;">Receive top AI-summarized international headlines directly to your inbox every morning with zero spam.
             <form onsubmit="event.preventDefault(); app.subscribeNewsletter(this);" style="display:flex; justify-content:center; gap:8px; flex-wrap:wrap;">
                 <input type="email" name="email" placeholder="Enter your email address..." style="max-width:400px; width:100%; height:42px; padding:0 16px; border-radius:8px; border:1px solid var(--border-color); background:var(--dark); color:var(--text-primary); outline:none;" required>
                 <button type="submit" class="btn-ai" style="height:42px; padding:0 24px;">Subscribe</button>
@@ -516,7 +516,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="logo-title" style="font-size:1.3rem; margin-bottom:8px;">GO<span style="color:var(--primary);">-NEWS AI</span></div>
-                    <p style="color:var(--text-secondary); font-size:0.8rem;">World-class multi-language news aggregation portal delivering real-time auto-synced intelligence across global edge networks.</p>
+                    <p style="color:var(--text-secondary); font-size:0.8rem;">World-class multi-language news aggregation portal delivering real-time auto-synced intelligence across global edge networks.
                 </div>
                 <div class="footer-col">
                     <h4>Essential Pages</h4>
@@ -538,7 +538,7 @@
                     </ul>
                 </div>
             </div>
-            <p style="font-size:0.75rem; color:var(--text-muted);">&copy; 2026 GO-NEWS Worldwide AI Network Pro. All Rights Reserved. 100% Verified Auto-Sync Active.</p>
+            <p style="font-size:0.75rem; color:var(--text-muted);">&copy; 2026 GO-NEWS Worldwide AI Network Pro. All Rights Reserved. 100% Verified Auto-Sync Active.
         </div>
     </main-footer>
 
@@ -924,8 +924,8 @@
                         <a href="#/" onclick="location.hash='#/'; return false;" style="display:inline-block; margin-bottom:16px; font-weight:700; color:var(--primary);">&larr; Back to Home</a>
                         <h1 class="reader-title">${title}</h1>
                         <div class="reader-content">
-                            <p>${text}</p>
-                            <p>Our autonomous background auto-sync engine guarantees 24/7 reliability and instant edge delivery.</p>
+                            <p>${text}
+                            <p>Our autonomous background auto-sync engine guarantees 24/7 reliability and instant edge delivery.
                         </div>
                     </div>
                 `;
@@ -971,7 +971,7 @@
                                         </div>
                                         <div class="news-body">
                                             <h3 class="news-title">${a.title}</h3>
-                                            <p class="news-snippet">${(a.description || "").replace(/<[^>]+>/g, "").trim()}</p>
+                                            <p class="news-snippet">${(a.description || "").replace(/<[^>]+>/g, "").trim()}
                                             <div class="news-footer">
                                                 <span>🌐 ${a.source}</span>
                                                 <span>🕒 ${new Date(a.date).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
@@ -992,7 +992,7 @@
                             </div>
                         ` : ''}
 
-                        ${list.length === 0 ? '<p style="text-align:center; padding:50px; color:var(--text-muted);">No reports found in this category.</p>' : ''}
+                        ${list.length === 0 ? '<p style="text-align:center; padding:50px; color:var(--text-muted);">No reports found in this category.' : ''}
                     </section>
                 `;
             },
@@ -1041,14 +1041,14 @@
                                 <button class="btn-ai" style="padding:5px 12px; font-size:0.75rem;" onclick="app.generateSummary('${article.title.replace(/'/g, "")}', '${article.content.replace(/'/g, "")}')">Generate Summary</button>
                             </div>
                             <div id="ai-summary-box">
-                                <p style="color:var(--text-secondary); font-style:italic; font-size:0.85rem;">Click 'Generate Summary' to extract instant AI bullet points.</p>
+                                <p style="color:var(--text-secondary); font-style:italic; font-size:0.85rem;">Click 'Generate Summary' to extract instant AI bullet points.
                             </div>
                         </div>
 
                         <div class="reader-content">
-                            <p><strong>${(article.description || "").replace(/<[^>]+>/g, "").trim()}</strong></p>
-                            <p>${article.content}</p>
-                            <p>Additional global telemetry indicates robust ongoing developments across international sectors with high engagement metrics.</p>
+                            <p><strong>${(article.description || "").replace(/<[^>]+>/g, "").trim()}</strong>
+                            <p>${article.content}
+                            <p>Additional global telemetry indicates robust ongoing developments across international sectors with high engagement metrics.
                         </div>
 
                         <div style="margin-top:30px; border-top:1px solid var(--border-color); padding-top:20px;">
@@ -1072,7 +1072,7 @@
 
             generateSummary(title, content) {
                 const box = document.getElementById('ai-summary-box');
-                box.innerHTML = `<p style="color:var(--primary); font-weight:600;"><i class="fa-solid fa-spinner fa-spin"></i> Synthesizing takeaways...</p>`;
+                box.innerHTML = `<p style="color:var(--primary); font-weight:600;"><i class="fa-solid fa-spinner fa-spin"></i> Synthesizing takeaways...`;
                 setTimeout(() => {
                     box.innerHTML = `
                         <ul style="padding-left:18px; line-height:1.7; font-size:0.9rem;">
