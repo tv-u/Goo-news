@@ -1163,5 +1163,21 @@
             app.init();
         });
     </script>
+
+  <!-- World Top 10 News Proxy & Auto-Sync Engine -->
+  <script>
+    window.worldProxyConfig = {
+  "category": "world",
+  "feedUrl": "https://www.abplive.com/news/world/feed",
+  "proxyEndpoints": [
+    "https://api.allorigins.win/raw?url=",
+    "https://api.codetabs.com/v1/proxy?quest="
+  ],
+  "limit": 10,
+  "autoSyncIntervalMinutes": 1440
+};
+    console.log("World Top 10 News Proxy & Daily Auto-Sync Initialized successfully.");
+  </script>
+  
 </body>
 </html>
