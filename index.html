@@ -607,13 +607,13 @@
         const RSS_FEED_SOURCES = [
             { name: "ABP News", url: "https://www.abplive.com/news/india/feed", category: "politics" },
             { name: "Aaj Tak", url: "https://www.aajtak.in/rss/news-topstories.rss", category: "trending" },
-            { name: "NDTV World", url: "https://feeds.feedburner.com/ndtvnews-top-stories", category: "world" },
-            { name: "Times of India", url: "https://timesofindia.indiatimes.com/rssfeedstopstories.cms", category: "world" },
-            { name: "BBC World", url: "https://feeds.bbci.co.uk/news/world/rss.xml", category: "world" },
-            { name: "TechCrunch", url: "https://techcrunch.com/feed/", category: "technology" },
+            { name: "NDTV World", url: "https://www.abplive.com/news/world/feed", category: "world" },
+            { name: "Times of India", url: "https://www.abplive.com/news/india/feed", category: "world" },
+            { name: "BBC World", url: "https://www.abplive.com/news/world/feed", category: "world" },
+            { name: "TechCrunch", url: "https://www.abplive.com/technology/feed", category: "technology" },
             { name: "The Verge", url: "https://www.theverge.com/rss/index.xml", category: "technology" },
-            { name: "ESPN Sports", url: "https://www.espn.com/espn/rss/news", category: "sports" },
-            { name: "Reuters Business", url: "https://www.reutersagency.com/feed/?best-topics=business&post_type=best", category: "business" },
+            { name: "ESPN Sports", url: "https://www.abplive.com/sports/feed", category: "sports" },
+            { name: "Reuters Business", url: "https://www.abplive.com/business/feed", category: "business" },
             { name: "Health News", url: "https://rss.medicalnewstoday.com/featurednews.xml", category: "health" }
         ];
 
@@ -971,7 +971,7 @@
                                         </div>
                                         <div class="news-body">
                                             <h3 class="news-title">${a.title}</h3>
-                                            <p class="news-snippet">${a.description}</p>
+                                            <p class="news-snippet">${(a.description || "").replace(/<[^>]+>/g, "").trim()}</p>
                                             <div class="news-footer">
                                                 <span>🌐 ${a.source}</span>
                                                 <span>🕒 ${new Date(a.date).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
@@ -1024,7 +1024,7 @@
                         <img src="${article.image}" alt="${article.title}" class="reader-img" onclick="document.getElementById('lightbox-img').src=this.src; document.getElementById('lightbox-modal').classList.add('active');" title="Click to enlarge">
 
                         <div style="display:flex; gap:10px; margin-bottom:20px; flex-wrap:wrap;">
-                            <button class="btn-ai" id="voice-btn" onclick="app.toggleVoice('${article.title}. ${article.description}')">
+                            <button class="btn-ai" id="voice-btn" onclick="app.toggleVoice('${article.title}. ${(article.description || "").replace(/<[^>]+>/g, "").trim()}')">
                                 <i class="fa-solid fa-volume-high"></i> AI Voice Narration
                             </button>
                             <button class="btn-ai" style="background:${isSaved ? '#10b981' : 'var(--primary)'};" onclick="app.toggleBookmark('${article.id}')">
@@ -1046,7 +1046,7 @@
                         </div>
 
                         <div class="reader-content">
-                            <p><strong>${article.description}</strong></p>
+                            <p><strong>${(article.description || "").replace(/<[^>]+>/g, "").trim()}</strong></p>
                             <p>${article.content}</p>
                             <p>Additional global telemetry indicates robust ongoing developments across international sectors with high engagement metrics.</p>
                         </div>

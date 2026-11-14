@@ -59,7 +59,14 @@ export async function onRequest(context) {
   });
 }
 
-function escXml(text) {
-  if (!text) return '';
-  return text.replace(/&/g, '&').replace(/</g, '<').replace(/>/g, '>').replace(/"/g, '"').replace(/'/g, ''');
+function escXml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, function (char) {
+    return {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    }[char];
+  });
 }
