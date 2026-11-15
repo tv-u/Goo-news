@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>AI GO-NEWS | Premium Portal</title>
+    <title>AI GO-NEWS | Unlimited Feed</title>
     <style>
         :root { --bg: #09090b; --card: #18181b; --pink: #ff2a75; --text: #f4f4f5; --muted: #a1a1aa; --border: #27272a; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
@@ -36,6 +36,10 @@
         .modal-title { font-size: 1.4rem; margin-bottom: 12px; font-weight: 800; }
         .modal-text { font-size: 1rem; line-height: 1.6; color: var(--muted); margin-bottom: 20px; white-space: pre-wrap; }
         .btn-full { display: block; text-align: center; background: var(--pink); color: white; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1rem; }
+        
+        /* Infinite Scroll Sentinel & Loader */
+        #sentinel { height: 50px; width: 100%; }
+        .loader { text-align: center; padding: 20px; display: none; font-weight: bold; color: var(--pink); }
     </style>
 </head>
 <body>
@@ -48,6 +52,11 @@
     </header>
     <nav id="navContainer"></nav>
     <div class="grid" id="newsGrid"></div>
+    
+    <!-- Infinite Scroll Trigger -->
+    <div id="sentinel"></div>
+    <div class="loader" id="loader">Loading more news...</div>
+
     <div class="modal" id="newsModal">
         <div class="modal-header">
             <div style="font-weight: bold; font-size: 0.9rem;">Article Reader</div>
@@ -60,11 +69,14 @@
             <a href="#" target="_blank" class="btn-full" id="modalLink">Read Full Article ↗</a>
         </div>
     </div>
+
     <script>
-        let allNews = [], filteredNews = [], page = 1, limit = 15, currentCat = 'all';
+        let allNews = [], filteredNews = [], page = 1, limit = 12, currentCat = 'all', isLoading = false;
         const grid = document.getElementById('newsGrid');
         const navContainer = document.getElementById('navContainer');
         const searchInput = document.getElementById('searchInput');
+        const loader = document.getElementById('loader');
+        const sentinel = document.getElementById('sentinel');
 
         async function init() {
             try {
@@ -74,7 +86,7 @@
                 buildNav();
                 handleRouting();
             } catch(e) {
-                grid.innerHTML = '<p style="text-align:center;color:red;grid-column:1/-1;padding:20px;">डेटा लोड नहीं हो पाया। कृपया 1 मिनट बाद रिफ्रेश करें।</p>';
+                grid.innerHTML = '<p style="text-align:center;color:red;grid-column:1/-1;padding:20px;">डेटा लोड नहीं हो पाया। कृपया रिफ्रेश करें।</p>';
             }
         }
 
@@ -91,19 +103,28 @@
             currentCat = cat;
             window.location.hash = '';
             document.querySelectorAll('.nav-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === cat));
+            
             let temp = allNews.filter(n => cat === 'all' || (n.category && n.category.toLowerCase() === cat.toLowerCase()));
             const query = searchInput.value.toLowerCase();
             if (query) temp = temp.filter(n => n.title.toLowerCase().includes(query));
+            
             filteredNews = temp;
-            page = 1; grid.innerHTML = ''; renderGrid();
+            page = 1; 
+            grid.innerHTML = ''; 
+            loadMore(); // Load first page
         }
 
-        function renderGrid() {
+        function loadMore() {
+            if (isLoading) return;
+            isLoading = true;
+            
             const toShow = filteredNews.slice((page - 1) * limit, page * limit);
             if(toShow.length === 0 && page === 1) {
                 grid.innerHTML = '<p style="text-align:center;color:gray;grid-column:1/-1;">No news found.</p>';
+                isLoading = false;
                 return;
             }
+
             toShow.forEach(n => {
                 const card = document.createElement('div'); card.className = 'card';
                 card.onclick = () => { window.location.hash = `article/${n.id}`; };
@@ -118,8 +139,23 @@
                     </div>`;
                 grid.appendChild(card);
             });
+            
             page++;
+            isLoading = false;
         }
+
+        // INTERSECTION OBSERVER (Unlimited Scroll Core Logic)
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !isLoading && filteredNews.length > (page - 1) * limit) {
+                loader.style.display = 'block';
+                setTimeout(() => {
+                    loadMore();
+                    loader.style.display = 'none';
+                }, 300); // Slight delay for smooth loading
+            }
+        }, { rootMargin: '200px' }); // Triggers when user is 200px away from bottom
+
+        observer.observe(sentinel);
 
         function openModal(news) {
             document.getElementById('modalImg').src = news.image || '';
@@ -153,11 +189,7 @@
 
         searchInput.addEventListener('input', () => filterCategory(currentCat));
         window.addEventListener('hashchange', handleRouting);
-        window.addEventListener('scroll', () => {
-            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 && filteredNews.length > (page - 1) * limit) {
-                renderGrid();
-            }
-        });
+        
         init();
     </script>
 </body>

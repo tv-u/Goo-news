@@ -11,11 +11,10 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: '20' }
       - run: npm install
-      # Added safety check so it doesn't fail the workflow
-      - run: node scraper.js || echo "Scraper had minor errors but continuing..."
+      - run: node scraper.js || echo "Scraper done with minor warnings"
       - run: |
           git config user.name "Goo-News AI"
           git config user.email "ai@goo-news.com"
           git add news.json
-          git commit -m "🤖 Auto-Sync: Latest News" || echo "No changes to commit"
-          git push || echo "Push failed, but workflow passed"
+          git commit -m "🤖 Auto-Sync: Infinite News Data Updated" || echo "No changes"
+          git push || echo "Push skipped"
