@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#09090b">
     <title>AI GO-NEWS | Premium Portal</title>
-    <meta name="description" id="pageDesc" content="Live HD News Aggregator from top 100 RSS feeds worldwide in 10 languages.">
     <style>
         :root { --bg: #09090b; --card: #18181b; --pink: #ff2a75; --text: #f4f4f5; --muted: #a1a1aa; --border: #27272a; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
@@ -56,14 +55,11 @@
         <button class="nav-btn" data-cat="science" onclick="filterCategory('science')">🔬 Science</button>
         <button class="nav-btn" data-cat="health" onclick="filterCategory('health')">🏥 Health</button>
         <button class="nav-btn" data-cat="entertainment" onclick="filterCategory('entertainment')">🎬 Movies</button>
-        <button class="nav-btn" data-cat="hindi" onclick="filterCategory('hindi')">🇮🇳 Hindi</button>
-        <button class="nav-btn" data-cat="spanish" onclick="filterCategory('spanish')">🇪🇸 Spanish</button>
     </nav>
     <div class="grid" id="newsGrid"></div>
     
     <div class="bottom-nav">
         <div class="active" onclick="window.location.hash=''"><span>🏠</span>Home</div>
-        <div onclick="alert('Coming soon!')"><span>🔖</span>Saved</div>
     </div>
 
     <div class="modal" id="newsModal">
@@ -89,7 +85,7 @@
                 allNews = await res.json();
                 handleRouting();
             } catch(e) {
-                grid.innerHTML = '<p style="text-align:center;color:red;grid-column:1/-1;">Error loading news data. Please check GitHub Actions.</p>';
+                grid.innerHTML = '<p style="text-align:center;color:red;grid-column:1/-1;">Error loading news data.</p>';
             }
         }
 
@@ -105,8 +101,12 @@
             toShow.forEach(n => {
                 const card = document.createElement('div'); card.className = 'card';
                 card.onclick = () => { window.location.hash = `article/${n.id}`; };
+                
+                // Unique fallback using Picsum (seeded by news ID) so no two images are ever the same
+                const uniqueFallback = `https://picsum.photos/seed/${n.id}/800/400`;
+
                 card.innerHTML = `
-                    <img src="${n.image}" class="card-img" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=800&q=80'">
+                    <img src="${n.image}" class="card-img" loading="lazy" onerror="this.src='${uniqueFallback}'">
                     <div class="card-body">
                         <span class="badge">${n.category}</span>
                         <div class="card-title">${n.title}</div>
@@ -125,14 +125,12 @@
             document.getElementById('modalLink').href = news.link;
             document.getElementById('newsModal').style.display = 'block';
             document.body.style.overflow = 'hidden';
-            document.title = news.title + ' | AI GO-NEWS';
         }
 
         function closeModal() {
             document.getElementById('newsModal').style.display = 'none';
             document.body.style.overflow = 'auto';
             window.location.hash = ''; 
-            document.title = 'AI GO-NEWS | Premium Portal';
         }
 
         function handleRouting() {
