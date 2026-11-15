@@ -1,0 +1,36 @@
+name: Mass Multi-Source Viral News Auto Sync
+
+on:
+  schedule:
+    - cron: '0 */4 * * *' # हर 4 घंटे में ऑटोमैटिक सिंक होगा
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: pip install feedparser requests
+
+      - name: Run Mass News Bot
+        env:
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+        run: python news_bot.py
+
+      - name: Auto Commit and Live Deploy
+        run: |
+          git config --global user.name "Goo News Mega Bot"
+          git config --global user.email "bot@geonews.internal"
+          git add news.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-sync massive multi-source viral news with posters" && git push)
