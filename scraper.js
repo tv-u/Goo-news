@@ -3,104 +3,89 @@ import fetch from 'node-fetch';
 import Parser from 'rss-parser';
 const parser = new Parser();
 
+// Complete i18n + Multi-Category Feed Structure
 const FEEDS = {
-  world: ['https://feeds.bbci.co.uk/news/world/rss.xml', 'https://rss.nytimes.com/services/xml/rss/nyt/World.xml', 'https://www.aljazeera.com/xml/rss/all.xml', 'https://timesofindia.indiatimes.com/rssfeedstopstories.cms'],
-  politics: ['https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml', 'https://feeds.bbci.co.uk/news/politics/rss.xml', 'https://www.politico.com/rss/politicopicks.xml', 'https://indianexpress.com/section/india/feed/'],
-  technology: ['https://techcrunch.com/feed/', 'https://www.theverge.com/rss/index.xml', 'https://www.wired.com/feed/rss', 'https://www.engadget.com/rss.xml', 'https://www.gadgets360.com/rss/news'],
-  sports: ['https://www.espn.com/espn/rss/news', 'https://www.skysports.com/rss/12040', 'https://www.bbc.com/sport/rss.xml', 'https://indianexpress.com/section/sports/feed/'],
-  business: ['https://feeds.bbci.co.uk/news/business/rss.xml', 'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml', 'https://www.forbes.com/business/feed/', 'https://economictimes.indiatimes.com/rssfeedstopstories.cms'],
-  science: ['https://feeds.bbci.co.uk/news/science_and_environment/rss.xml', 'https://rss.nytimes.com/services/xml/rss/nyt/Science.xml', 'https://www.sciencedaily.com/rss/all.xml'],
-  health: ['https://feeds.bbci.co.uk/news/health/rss.xml', 'https://rss.nytimes.com/services/xml/rss/nyt/Health.xml', 'https://www.medicalnewstoday.com/rss'],
-  entertainment: ['https://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml', 'https://variety.com/feed/', 'https://www.hollywoodreporter.com/feed/']
+  world: { lang: 'en', urls: ['https://feeds.bbci.co.uk/news/world/rss.xml', 'https://rss.nytimes.com/services/xml/rss/nyt/World.xml', 'https://www.aljazeera.com/xml/rss/all.xml'] },
+  politics: { lang: 'en', urls: ['https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml', 'https://feeds.bbci.co.uk/news/politics/rss.xml', 'https://www.politico.com/rss/politicopicks.xml'] },
+  technology: { lang: 'en', urls: ['https://techcrunch.com/feed/', 'https://www.theverge.com/rss/index.xml', 'https://www.wired.com/feed/rss'] },
+  sports: { lang: 'en', urls: ['https://www.espn.com/espn/rss/news', 'https://www.skysports.com/rss/12040', 'https://www.bbc.com/sport/rss.xml'] },
+  business: { lang: 'en', urls: ['https://feeds.bbci.co.uk/news/business/rss.xml', 'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml', 'https://www.forbes.com/business/feed/'] },
+  science: { lang: 'en', urls: ['https://feeds.bbci.co.uk/news/science_and_environment/rss.xml', 'https://rss.nytimes.com/services/xml/rss/nyt/Science.xml'] },
+  health: { lang: 'en', urls: ['https://feeds.bbci.co.uk/news/health/rss.xml', 'https://rss.nytimes.com/services/xml/rss/nyt/Health.xml'] },
+  entertainment: { lang: 'en', urls: ['https://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml', 'https://variety.com/feed/'] },
+  hindi: { lang: 'hi', urls: ['https://feeds.feedburner.com/ndtvnews-latest', 'https://www.amarujala.com/rss/breaking-news.xml', 'https://navbharattimes.indiatimes.com/rssfeedstopstories.cms'] },
+  spanish: { lang: 'es', urls: ['https://e00-elmundo.uecdn.es/elmundo/rss/portada.xml', 'https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada'] },
+  french: { lang: 'fr', urls: ['https://www.lefigaro.fr/rss/figaro_actualites.xml', 'https://www.france24.com/fr/rss'] },
+  german: { lang: 'de', urls: ['https://rss.sueddeutsche.de/rss/Topthemen'] },
+  arabic: { lang: 'ar', urls: ['https://www.aljazeera.net/aljazeerarss/a7c186be-1baa-4bd4-9d80-a84db769f779/73d0e1b4-532f-45ef-b135-bfdff8b8cab9'] },
+  chinese: { lang: 'zh', urls: ['https://feeds.bbci.co.uk/zhongwen/simp/rss.xml'] },
+  russian: { lang: 'ru', urls: ['https://tass.com/rss/v2.xml'] },
+  portuguese: { lang: 'pt', urls: ['https://feeds.folha.uol.com.br/emcimadahora/rss091.xml'] },
+  japanese: { lang: 'ja', urls: ['https://www3.nhk.or.jp/rss/news/cat0.xml'] }
 };
 
-let usedImages = new Set(); // ग्लोबल सेट ताकि कोई इमेज डुप्लीकेट न हो
+let usedImages = new Set();
 
-function getHighQualityOriginal(item, content, id) {
+function getPoster(item, content, id) {
     let img = null;
+    if (item['media:content']?.$?.url) img = item['media:content'].$.url;
+    else if (item.enclosure?.url) img = item.enclosure.url;
+    else if (item['media:thumbnail']?.$?.url) img = item['media:thumbnail'].$.url;
     
-    // 1. Media Content (Usually Best HD Image)
-    if (item['media:content'] && item['media:content'].$ && item['media:content'].$.url) {
-        img = item['media:content'].$.url;
-    }
-    // 2. Enclosure
-    else if (item.enclosure && item.enclosure.url) {
-        img = item.enclosure.url;
-    }
-    // 3. Media Thumbnail
-    else if (item['media:thumbnail'] && item['media:thumbnail'].$ && item['media:thumbnail'].$.url) {
-        img = item['media:thumbnail'].$.url;
-    }
-    // 4. Extract from HTML Content (Find the first valid image)
     if (!img && content) {
-        const imgMatches = [...content.matchAll(/<img[^>]+src=["']([^"']+)["']/gi)];
-        for (let match of imgMatches) {
-            let url = match[1];
-            // Filter out tiny logos, icons, or tracking pixels
-            if (!url.includes('logo') && !url.includes('icon') && !url.includes('1x1') && !url.includes('pixel') && url.startsWith('http')) {
-                img = url;
-                break;
+        const m = [...content.matchAll(/<img[^>]+src=["']([^"']+)["']/gi)];
+        for (let match of m) {
+            if (!match[1].match(/logo|icon|1x1|pixel|avatar/i) && match[1].startsWith('http')) {
+                img = match[1]; break;
             }
         }
     }
-
-    // Clean URL
+    
     if (img) img = img.replace(/&amp;/g, '&');
-
-    // If image exists and is NOT a duplicate, use it
     if (img && !usedImages.has(img)) {
         usedImages.add(img);
         return img;
     }
-    
-    // Fallback: If no image OR it's a duplicate, generate a unique HD image using the article ID
-    // This ensures 100% no duplicate posters ever!
-    return `https://picsum.photos/seed/${id}-${Math.floor(Math.random()*1000)}/800/450`;
+    return `https://picsum.photos/seed/${id}-${Math.random()}/800/450`;
 }
 
 (async () => {
-    console.log('🚀 HD ओरिजिनल पोस्टर स्क्रैपर शुरू...');
-    let categorizedNews = {};
-    let idCounter = 1;
+    console.log('🚀 Scraping with i18n + Unique Posters...');
+    let data = [];
+    let counter = 1;
     
-    for (const [category, urls] of Object.entries(FEEDS)) {
-        categorizedNews[category] = [];
-        for (const url of urls) {
+    for (const [cat, config] of Object.entries(FEEDS)) {
+        for (const url of config.urls) {
             try {
-                const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 10000 });
+                const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 12000 });
                 const xml = await res.text();
                 const feed = await parser.parseString(xml);
                 
-                feed.items.slice(0, 20).forEach(item => {
-                    if (categorizedNews[category].length >= 100) return;
-                    
+                feed.items.slice(0, 15).forEach(item => {
                     const content = item['content:encoded'] || item.content || item.description || '';
-                    const cleanDesc = content.replace(/<[^>]*>?/gm, '').trim();
-                    if(!item.title || !cleanDesc) return;
-
-                    const newsId = `news-${idCounter++}`;
-                    const posterUrl = getHighQualityOriginal(item, content, newsId);
-
-                    categorizedNews[category].push({
-                        id: newsId,
+                    const clean = content.replace(/<[^>]*>?/gm, '').trim();
+                    if (!item.title || !clean) return;
+                    
+                    const id = `news-${counter++}`;
+                    data.push({
+                        id: id,
                         title: item.title,
                         link: item.link,
                         pubDate: item.pubDate || new Date().toISOString(),
-                        snippet: cleanDesc.substring(0, 160) + '...',
-                        fullText: cleanDesc.substring(0, 3000),
-                        image: posterUrl,
+                        snippet: clean.substring(0, 160) + '...',
+                        fullText: clean.substring(0, 3000),
+                        image: getPoster(item, content, id),
                         source: feed.title || 'Goo-News',
-                        category: category
+                        category: cat,
+                        language: config.lang
                     });
                 });
-                console.log(`✅ ${category}: ${url.split('/')[2]} (Total: ${categorizedNews[category].length})`);
-            } catch(e) { console.log(`❌ Skip: ${url.split('/')[2]}`); }
+                console.log(`✅ [${config.lang}] ${cat}: ${feed.items.length} items`);
+            } catch(e) { console.log(`❌ Skip: ${url.substring(0, 40)}`); }
         }
     }
     
-    let all = Object.values(categorizedNews).flat();
-    const unique = Array.from(new Map(all.map(a => [a.title, a])).values());
-    
+    const unique = Array.from(new Map(data.map(a => [a.title, a])).values());
     fs.writeFileSync('news.json', JSON.stringify(unique, null, 2));
-    console.log(`🎉 सफल! कुल ${unique.length} न्यूज़ (100% यूनिक HD पोस्टर्स के साथ) सेव हो गईं।`);
+    console.log(`🎉 Done! ${unique.length} news (i18n + unique posters) saved.`);
 })();
