@@ -8,7 +8,7 @@ PERPLEXITY_API_KEY = os.environ.get("PERPLEXITY_API_KEY")
 RSS_URL = "http://feeds.bbci.co.uk/news/rss.xml"
 
 if not PERPLEXITY_API_KEY:
-    print("ERROR: PERPLEXITY_API_KEY not found in environment variables!")
+    print("ERROR: PERPLEXITY_API_KEY not found!")
     sys.exit(1)
 
 def rewrite_with_perplexity(title, summary):
@@ -36,16 +36,11 @@ def rewrite_with_perplexity(title, summary):
         response.raise_for_status()
         return response.json()["choices"][0]["message"]["content"].strip()
     except Exception as e:
-        print(f"API Error for '{title}': {e}")
+        print(f"API Error: {e}")
         return summary
 
 def main():
-    print("Fetching BBC RSS Feed...")
     feed = feedparser.parse(RSS_URL)
-    if not feed.entries:
-        print("No entries found in RSS feed.")
-        sys.exit(1)
-
     news_list = []
     for entry in feed.entries[:6]:
         title = entry.get("title", "No Title")
@@ -53,9 +48,7 @@ def main():
         link = entry.get("link", "")
         published = entry.get("published", "")
         
-        print(f"Rewriting: {title}")
         human_content = rewrite_with_perplexity(title, summary)
-        
         news_list.append({
             "title": title,
             "content": human_content,
@@ -65,7 +58,7 @@ def main():
 
     with open("news.json", "w", encoding="utf-8") as f:
         json.dump(news_list, f, ensure_ascii=False, indent=4)
-    print("SUCCESS: news.json updated safely!")
+    print("SUCCESS: news.json updated!")
 
 if __name__ == "__main__":
     main()
