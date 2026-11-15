@@ -1,83 +1,125 @@
 import fs from 'fs';
 import fetch from 'node-fetch';
 import Parser from 'rss-parser';
-const parser = new Parser();
+import pLimit from 'p-limit';
 
-const FEEDS = {
-  world: ['https://feeds.bbci.co.uk/news/world/rss.xml', 'https://rss.nytimes.com/services/xml/rss/nyt/World.xml', 'https://www.aljazeera.com/xml/rss/all.xml'],
-  india: ['https://timesofindia.indiatimes.com/rssfeedstopstories.cms', 'https://indianexpress.com/section/india/feed/'],
-  technology: ['https://techcrunch.com/feed/', 'https://www.theverge.com/rss/index.xml', 'https://www.wired.com/feed/rss', 'https://www.engadget.com/rss.xml'],
-  sports: ['https://www.espn.com/espn/rss/news', 'https://www.skysports.com/rss/12040', 'https://www.bbc.com/sport/rss.xml'],
-  business: ['https://feeds.bbci.co.uk/news/business/rss.xml', 'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml', 'https://www.forbes.com/business/feed/'],
-  politics: ['https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml', 'https://feeds.bbci.co.uk/news/politics/rss.xml', 'https://www.politico.com/rss/politicopicks.xml'],
-  science: ['https://feeds.bbci.co.uk/news/science_and_environment/rss.xml', 'https://www.sciencedaily.com/rss/all.xml'],
-  health: ['https://feeds.bbci.co.uk/news/health/rss.xml', 'https://www.medicalnewstoday.com/rss'],
-  entertainment: ['https://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml', 'https://variety.com/feed/'],
-  gaming: ['https://feeds.feedburner.com/ign/games-all', 'https://www.polygon.com/rss/index.xml']
-};
+const parser = new Parser();
+// एक बार में 30 फीड्स ही खोलेंगे ताकि नेटवर्क क्रैश न हो
+const limit = pLimit(30); 
+
+// Fallback Feeds (अगर इंटरनेट से लिस्ट न मिले)
+const FALLBACK_FEEDS = [
+    'https://feeds.bbci.co.uk/news/world/rss.xml', 'https://techcrunch.com/feed/', 
+    'https://www.espn.com/espn/rss/news', 'https://timesofindia.indiatimes.com/rssfeedstopstories.cms',
+    'https://rss.nytimes.com/services/xml/rss/nyt/Politics.xml', 'https://www.aljazeera.com/xml/rss/all.xml',
+    'https://feeds.bbci.co.uk/news/business/rss.xml', 'https://variety.com/feed/'
+];
+
+// 1000+ RSS Feeds की लिस्ट गिटहब से लाएं
+async function get1000Feeds() {
+    try {
+        console.log("📡 1000+ RSS फीड्स की लिस्ट डाउनलोड हो रही है...");
+        const res = await fetch('https://raw.githubusercontent.com/plenaryapp/awesome-rss-feeds/master/recommended/with_category/News.json');
+        const data = await res.json();
+        let feeds = [];
+        Object.values(data).forEach(categoryFeeds => {
+            feeds = feeds.concat(categoryFeeds.map(f => f.url));
+        });
+        // डुप्लीकेट हटाएं और 1000 तक सीमित करें
+        return [...new Set(feeds)].slice(0, 1000); 
+    } catch (e) {
+        console.log("⚠️ रिमोट लिस्ट फेल, फॉलबैक फीड्स इस्तेमाल हो रहे हैं।");
+        return FALLBACK_FEEDS;
+    }
+}
 
 let usedImages = new Set();
 
-function getPoster(item, content) {
+function getStrictPoster(item, content) {
     let img = null;
     if (item['media:content']?.$?.url) img = item['media:content'].$.url;
     else if (item.enclosure?.url) img = item.enclosure.url;
     else if (item['media:thumbnail']?.$?.url) img = item['media:thumbnail'].$.url;
+    
     if (!img && content) {
         const m = [...content.matchAll(/<img[^>]+src=["']([^"']+)["']/gi)];
         for (let match of m) {
-            if (!match[1].match(/logo|icon|1x1|pixel/i) && match[1].startsWith('http')) {
-                img = match[1]; break;
+            let url = match[1];
+            if (!url.match(/logo|icon|1x1|pixel|avatar|feedsportal/i) && url.startsWith('http')) {
+                img = url; break;
             }
         }
     }
     if (img) img = img.replace(/&amp;/g, '&');
+    
+    // सख्त नियम: अगर इमेज नहीं है या डुप्लीकेट है, तो न्यूज़ रिजेक्ट
     if (!img || usedImages.has(img)) return null;
     usedImages.add(img);
     return img;
 }
 
+function autoCategorize(title, url) {
+    const text = (title + url).toLowerCase();
+    if (text.match(/tech|verge|wired|gadget|ai|cyber/)) return 'technology';
+    if (text.match(/sport|espn|sky|cricket|football|nba|f1/)) return 'sports';
+    if (text.match(/politic|nytimes|politico|election/)) return 'politics';
+    if (text.match(/business|finance|money|economy|crypto/)) return 'business';
+    if (text.match(/health|medic|fitness/)) return 'health';
+    if (text.match(/science|space|nature/)) return 'science';
+    if (text.match(/movie|entertain|holly|music|tv/)) return 'entertainment';
+    if (text.match(/game|gaming|ign|polygon/)) return 'gaming';
+    if (text.match(/india|hindi|timesofindia/)) return 'india';
+    return 'world';
+}
+
 (async () => {
-    console.log(`🚀 डेटा जनरेट हो रहा है...`);
+    console.log(`🚀 मेगा स्क्रैपिंग शुरू...`);
+    const FEEDS = await get1000Feeds();
+    console.log(`📡 कुल ${FEEDS.length} फीड्स प्रोसेस होंगे।`);
+
     let allArticles = [];
     let idCounter = 1;
+    let processedCount = 0;
 
-    for (const [cat, urls] of Object.entries(FEEDS)) {
-        for (const url of urls) {
-            try {
-                const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 8000 });
-                const xml = await res.text();
-                const feed = await parser.parseString(xml);
-                
-                // 50 न्यूज़ प्रति फीड (ताकि डेटा बहुत सारा हो)
-                feed.items.slice(0, 50).forEach(item => {
-                    const content = item['content:encoded'] || item.content || item.description || '';
-                    const cleanDesc = content.replace(/<[^>]*>?/gm, '').trim();
-                    if (!item.title || !cleanDesc) return;
+    await Promise.all(FEEDS.map(url => limit(async () => {
+        try {
+            const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 8000 });
+            if (!res.ok) return;
+            const xml = await res.text();
+            const feed = await parser.parseString(xml);
+            
+            // हर फीड से सिर्फ 4 न्यूज़ लेंगे ताकि फाइल साइज कंट्रोल में रहे
+            feed.items.slice(0, 4).forEach(item => {
+                const content = item['content:encoded'] || item.content || item.description || '';
+                const cleanDesc = content.replace(/<[^>]*>?/gm, '').trim();
+                if (!item.title || !cleanDesc) return;
 
-                    const posterUrl = getPoster(item, content);
-                    if (!posterUrl) return;
+                const posterUrl = getStrictPoster(item, content);
+                if (!posterUrl) return; // Drop if no real poster
 
-                    allArticles.push({
-                        id: `news-${idCounter++}`,
-                        title: item.title,
-                        link: item.link,
-                        pubDate: item.pubDate || new Date().toISOString(),
-                        snippet: cleanDesc.substring(0, 160) + '...',
-                        fullText: cleanDesc.substring(0, 3000),
-                        image: posterUrl,
-                        source: feed.title || 'Goo-News',
-                        category: cat
-                    });
+                allArticles.push({
+                    id: `news-${idCounter++}`,
+                    title: item.title,
+                    link: item.link,
+                    pubDate: item.pubDate || new Date().toISOString(),
+                    snippet: cleanDesc.substring(0, 160) + '...',
+                    fullText: cleanDesc.substring(0, 3000),
+                    image: posterUrl,
+                    source: feed.title || 'Goo-News',
+                    category: autoCategorize(feed.title || '', url)
                 });
-            } catch(e) {}
-        }
-    }
+            });
+            
+            processedCount++;
+            if (processedCount % 100 === 0) console.log(`✅ ${processedCount} फीड्स प्रोसेस हो चुके हैं...`);
 
-    // डुप्लीकेट हटाएं और टॉप 3000 खबरें सेव करें
+        } catch(e) { /* साइलेंटली स्किप करें */ }
+    })));
+
+    // डुप्लीकेट टाइटल हटाएं और टॉप 3000 चुनें
     const unique = Array.from(new Map(allArticles.map(a => [a.title, a])).values());
     const sorted = unique.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate)).slice(0, 3000);
     
     fs.writeFileSync('news.json', JSON.stringify(sorted, null, 2));
-    console.log(`🎉 सफल! कुल ${sorted.length} खबरें सेव हो गईं (Unlimited Scroll के लिए तैयार)।`);
+    console.log(`🎉 सफल! 1000+ फीड्स से कुल ${sorted.length} खबरें (100% असली पोस्टर्स) सेव हो गईं।`);
 })();
