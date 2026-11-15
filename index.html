@@ -49,6 +49,70 @@
         .bottom-nav div.active { color: var(--pink); }
         .bottom-nav div span { font-size: 1.2rem; }
     </style>
+
+<!-- GOO_UNIQUE_ORIGINAL_POSTER_V1 -->
+<script>
+(function(){
+  const used = new Map();
+  const owners = new Map();
+
+  window.gooUniquePoster = function(article){
+    if(!article || typeof article !== 'object') return '';
+
+    const key = String(
+      article.id || article.article_id ||
+      article.url || article.link ||
+      article.title || ''
+    ).trim();
+
+    if(!key) return '';
+
+    if(owners.has(key)) return owners.get(key);
+
+    const candidates = [
+      article.image_url,
+      article.image,
+      article.urlToImage,
+      article.thumbnail,
+      article.featured_image,
+      article.media_url
+    ];
+
+    let selected = '';
+
+    for(const candidate of candidates){
+      if(typeof candidate !== 'string') continue;
+
+      const url = candidate.trim();
+      if(!/^https?:\/\//i.test(url)) continue;
+
+      // फेक/डमी इमेजेस को ब्लॉक करें
+      if(/picsum\.photos|placeholder|dummyimage|via\.placeholder/i.test(url))
+        continue;
+
+      let normalized;
+      try {
+        normalized = new URL(url).href;
+      } catch(e) {
+        continue;
+      }
+
+      const existing = used.get(normalized);
+
+      // अगर इमेज पहले से इस्तेमाल हो चुकी है, तो स्किप करें
+      if(existing && existing !== key) continue;
+
+      selected = normalized;
+      used.set(normalized, key);
+      break;
+    }
+
+    owners.set(key, selected);
+    return selected;
+  };
+})();
+</script>
+
 </head>
 <body>
     <header>
@@ -137,7 +201,7 @@
                 const card = document.createElement('div'); card.className = 'card';
                 card.onclick = () => { window.location.hash = `article/${n.id}`; };
                 card.innerHTML = `
-                    <img src="${n.image}" class="card-img" loading="lazy" onerror="this.style.display='none'">
+                    <img src="${window.gooUniquePoster(n)}" onerror="this.style.display=\'none\'" class="card-img" loading="lazy" onerror="this.style.display='none'">
                     <div class="card-body">
                         <span class="badge">${n.category.replace('_',' ')}</span>
                         <div class="card-title">${n.title}</div>
