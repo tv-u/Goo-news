@@ -73,26 +73,27 @@
         const loader = document.getElementById('loader');
         let currentCategory = 'general';
         
-        // Noozra API (No Key required, CORS enabled, supports images)
-        const API_BASE_URL = 'https://noozra.com/api/articles';
+        // CORS Proxy + Noozra API
+        const PROXY = 'https://api.allorigins.win/raw?url=';
+        const API_BASE = 'https://noozra.com/api/articles';
 
         async function fetchNews(category) {
             loader.style.display = 'block';
             newsContainer.innerHTML = '';
             currentCategory = category;
             
-            // Map our categories to Noozra's categories
             let apiCategory = category;
             if(category === 'general') apiCategory = 'world';
             if(category === 'politics') apiCategory = 'politics';
             if(category === 'technology') apiCategory = 'tech';
 
+            const targetUrl = `${API_BASE}?category=${apiCategory}&limit=20`;
+            const finalUrl = PROXY + encodeURIComponent(targetUrl);
+
             try {
-                const response = await fetch(`${API_BASE_URL}?category=${apiCategory}&limit=20`);
+                const response = await fetch(finalUrl);
                 if(!response.ok) throw new Error("API Failed");
                 const data = await response.json();
-                
-                // Noozra returns articles in data.articles or directly as array
                 const articles = data.articles || data;
                 loader.style.display = 'none';
                 renderNews(articles);
@@ -113,14 +114,12 @@
 
             articles.forEach(article => {
                 if(!article.headline) return;
-                
                 let cleanDesc = article.description || "No description available for this news.";
                 if (cleanDesc.includes('<')) {
                     const tempDiv = document.createElement("div");
                     tempDiv.innerHTML = cleanDesc;
                     cleanDesc = tempDiv.textContent || tempDiv.innerText || "";
                 }
-
                 const imageUrl = article.image_url || 'https://via.placeholder.com/400x200?text=News+Image';
                 const source = article.source || 'Goo-News';
                 const pubDate = article.published_at ? new Date(article.published_at).toLocaleTimeString() : 'Just now';
