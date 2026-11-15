@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#09090b">
-    <title>AI GO-NEWS | 50+ Categories</title>
+    <title>AI GO-NEWS | Premium Portal</title>
     <style>
         :root { --bg: #09090b; --card: #18181b; --pink: #ff2a75; --text: #f4f4f5; --muted: #a1a1aa; --border: #27272a; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, sans-serif; -webkit-tap-highlight-color: transparent; }
         body { background: var(--bg); color: var(--text); overflow-x: hidden; padding-bottom: 80px; }
-        header { display: flex; flex-direction: column; padding: 12px 16px; background: rgba(9,9,11,0.9); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); gap: 10px; }
-        .top-bar { display: flex; align-items: center; justify-content: space-between; }
-        .logo { font-size: 1.2rem; font-weight: 900; display: flex; align-items: center; gap: 6px; cursor: pointer; }
+        header { padding: 12px 16px; background: rgba(9,9,11,0.9); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); }
+        .logo { font-size: 1.2rem; font-weight: 900; display: flex; align-items: center; gap: 6px; }
         .logo span { background: var(--pink); padding: 3px 6px; border-radius: 4px; font-size: 0.8rem; color: white; }
-        .search-box { display: flex; align-items: center; background: var(--card); border: 1px solid var(--border); padding: 8px 12px; border-radius: 20px; width: 100%; }
-        .search-box input { background: transparent; border: none; color: white; outline: none; width: 100%; font-size: 0.9rem; }
-        nav { display: flex; overflow-x: auto; padding: 12px 16px; gap: 8px; scrollbar-width: none; position: sticky; top: 93px; background: rgba(9,9,11,0.9); backdrop-filter: blur(12px); z-index: 99; border-bottom: 1px solid var(--border); }
+        nav { display: flex; overflow-x: auto; padding: 12px 16px; gap: 8px; scrollbar-width: none; position: sticky; top: 57px; background: rgba(9,9,11,0.9); backdrop-filter: blur(12px); z-index: 99; border-bottom: 1px solid var(--border); }
         nav::-webkit-scrollbar { display: none; }
         .nav-btn { padding: 6px 14px; border-radius: 20px; background: var(--card); border: 1px solid var(--border); color: var(--muted); cursor: pointer; white-space: nowrap; font-size: 0.85rem; font-weight: 600; text-transform: capitalize; }
         .nav-btn.active { background: var(--pink); color: white; border-color: var(--pink); }
@@ -29,39 +25,22 @@
         .card-title { font-size: 1rem; line-height: 1.4; margin-bottom: 8px; font-weight: 700; }
         .card-desc { font-size: 0.8rem; color: var(--muted); margin-bottom: 12px; flex: 1; }
         .card-footer { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 8px; }
-        .source { color: #3b82f6; font-weight: 700; }
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg); z-index: 1000; overflow-y: auto; }
         .modal-header { position: sticky; top: 0; background: var(--card); padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); z-index: 10; }
         .modal-close { background: transparent; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 5px; }
         .modal-content { padding: 20px; max-width: 800px; margin: 0 auto; }
         .modal-img { width: 100%; border-radius: 12px; margin-bottom: 16px; }
-        .modal-title { font-size: 1.4rem; margin-bottom: 12px; line-height: 1.3; font-weight: 800; }
+        .modal-title { font-size: 1.4rem; margin-bottom: 12px; font-weight: 800; }
         .modal-text { font-size: 1rem; line-height: 1.6; color: var(--muted); margin-bottom: 20px; white-space: pre-wrap; }
         .btn-full { display: block; text-align: center; background: var(--pink); color: white; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1rem; }
-        .bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%; background: var(--card); border-top: 1px solid var(--border); display: flex; justify-content: space-around; padding: 10px 0; z-index: 100; }
-        .bottom-nav div { color: var(--muted); font-size: 0.75rem; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; }
-        .bottom-nav div.active { color: var(--pink); }
-        .bottom-nav div span { font-size: 1.2rem; }
     </style>
 </head>
 <body>
     <header>
-        <div class="top-bar">
-            <div class="logo" onclick="window.location.hash=''"><span>AI</span> GO-NEWS</div>
-        </div>
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search news...">
-            <span>🔍</span>
-        </div>
+        <div class="logo" onclick="window.location.hash=''"><span>AI</span> GO-NEWS</div>
     </header>
-    
     <nav id="navContainer"></nav>
-    
     <div class="grid" id="newsGrid"></div>
-    
-    <div class="bottom-nav">
-        <div class="active" onclick="filterCategory('all')"><span>🏠</span>Home</div>
-    </div>
 
     <div class="modal" id="newsModal">
         <div class="modal-header">
@@ -69,7 +48,7 @@
             <button class="modal-close" onclick="closeModal()">✕</button>
         </div>
         <div class="modal-content">
-            <img src="" id="modalImg" class="modal-img" onerror="this.style.display='none'">
+            <img src="" id="modalImg" class="modal-img">
             <h2 class="modal-title" id="modalTitle"></h2>
             <div class="modal-text" id="modalText"></div>
             <a href="#" target="_blank" class="btn-full" id="modalLink">Read Full Article ↗</a>
@@ -77,19 +56,19 @@
     </div>
 
     <script>
-        let allNews = [], filteredNews = [], page = 1, limit = 15, currentCat = 'all';
+        let allNews = [], filteredNews = [], page = 1, limit = 15;
         const grid = document.getElementById('newsGrid');
         const navContainer = document.getElementById('navContainer');
-        const searchInput = document.getElementById('searchInput');
 
         async function init() {
             try {
                 const res = await fetch('./news.json?t=' + new Date().getTime());
                 allNews = await res.json();
+                if(!allNews || allNews.length === 0) throw new Error("No Data");
                 buildNav();
                 handleRouting();
             } catch(e) {
-                grid.innerHTML = '<p style="text-align:center;color:red;grid-column:1/-1;">Error loading news data. Please run the scraper.</p>';
+                grid.innerHTML = '<p style="text-align:center;color:red;grid-column:1/-1;padding:20px;">डेटा लोड नहीं हो पाया। कृपया 1 मिनट बाद रिफ्रेश करें या टर्मक्स में स्क्रैपर दोबारा चलाएं।</p>';
             }
         }
 
@@ -103,38 +82,34 @@
         }
 
         function filterCategory(cat) {
-            currentCat = cat;
             window.location.hash = '';
             document.querySelectorAll('.nav-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === cat));
-            
-            let temp = allNews.filter(n => cat === 'all' || (n.category && n.category.toLowerCase() === cat.toLowerCase()));
-            const query = searchInput.value.toLowerCase();
-            if (query) temp = temp.filter(n => n.title.toLowerCase().includes(query));
-            
-            filteredNews = temp;
+            filteredNews = allNews.filter(n => cat === 'all' || (n.category && n.category.toLowerCase() === cat.toLowerCase()));
             page = 1; grid.innerHTML = ''; renderGrid();
         }
 
         function renderGrid() {
             const toShow = filteredNews.slice((page - 1) * limit, page * limit);
+            
             if(toShow.length === 0 && page === 1) {
-                grid.innerHTML = '<p style="text-align:center;color:gray;grid-column:1/-1;">No news found.</p>';
+                grid.innerHTML = '<p style="text-align:center;color:gray;grid-column:1/-1;">No news found for this category.</p>';
                 return;
             }
+
             toShow.forEach(n => {
                 const card = document.createElement('div'); card.className = 'card';
                 card.onclick = () => { window.location.hash = `article/${n.id}`; };
                 
-                // Display image safely
-                const imgTag = n.image ? `<img src="${n.image}" class="card-img" loading="lazy" onerror="this.style.display='none'">` : '';
+                // Using the real image, if it fails, a random unique fallback is used
+                const fallback = `https://picsum.photos/seed/${n.id}/800/450`;
 
                 card.innerHTML = `
-                    ${imgTag}
+                    <img src="${n.image || fallback}" class="card-img" loading="lazy" onerror="this.src='${fallback}'">
                     <div class="card-body">
-                        <span class="badge">${n.category.replace('_',' ')}</span>
+                        <span class="badge">${n.category}</span>
                         <div class="card-title">${n.title}</div>
                         <div class="card-desc">${n.snippet}</div>
-                        <div class="card-footer"><span class="source">${n.source}</span><span>${new Date(n.pubDate).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span></div>
+                        <div class="card-footer"><span style="color:#3b82f6;font-weight:700;">${n.source}</span><span>${new Date(n.pubDate).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span></div>
                     </div>`;
                 grid.appendChild(card);
             });
@@ -142,8 +117,7 @@
         }
 
         function openModal(news) {
-            document.getElementById('modalImg').src = news.image || '';
-            document.getElementById('modalImg').style.display = news.image ? 'block' : 'none';
+            document.getElementById('modalImg').src = news.image;
             document.getElementById('modalTitle').innerText = news.title;
             document.getElementById('modalText').innerText = news.fullText || news.snippet;
             document.getElementById('modalLink').href = news.link;
@@ -171,7 +145,6 @@
             }
         }
 
-        searchInput.addEventListener('input', () => filterCategory(currentCat));
         window.addEventListener('hashchange', handleRouting);
         window.addEventListener('scroll', () => {
             if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 && filteredNews.length > (page - 1) * limit) {
