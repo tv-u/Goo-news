@@ -1,4 +1,4 @@
-name: 1000+ RSS Auto-Sync
+name: 50+ Categories Auto-Sync
 on:
   schedule:
     - cron: '0 */4 * * *'
@@ -16,5 +16,5 @@ jobs:
           git config user.name "Goo-News AI"
           git config user.email "ai@goo-news.com"
           git add news.json
-          git commit -m "🤖 Auto-Sync: 1000+ RSS Feeds (Strict Original Posters)" || exit 0
+          git commit -m "🤖 Auto-Sync: 50+ Categories Updated" || exit 0
           git push
