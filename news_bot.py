@@ -18,14 +18,14 @@ def rewrite_with_perplexity(title, summary):
         "messages": [
             {
                 "role": "system",
-                "content": "You are a professional news journalist. Rewrite the given news headline and summary into an engaging, detailed, human-like news report in simple, clear English. Do not include citations like [1] or [2]."
+                "content": "You are an elite, viral news journalist. Rewrite the given news headline and summary into an engaging, comprehensive, highly readable, human-like viral news story in simple English. Make it catchy and trending. Do not include citations like [1] or [2]."
             },
             {
                 "role": "user",
                 "content": f"Headline: {title}\nDetails: {summary}"
             }
         ],
-        "temperature": 0.4
+        "temperature": 0.5
     }
     headers = {
         "Authorization": f"Bearer {PERPLEXITY_API_KEY}",
@@ -36,19 +36,27 @@ def rewrite_with_perplexity(title, summary):
         response.raise_for_status()
         return response.json()["choices"][0]["message"]["content"].strip()
     except Exception as e:
-        print(f"API Error: {e}")
+        print(f"API Error for '{title}': {e}")
         return summary
 
 def main():
+    print("Fetching top stories from BBC RSS...")
     feed = feedparser.parse(RSS_URL)
+    if not feed.entries:
+        print("No entries found in RSS.")
+        sys.exit(0)
+
     news_list = []
-    for entry in feed.entries[:6]:
+    # यहाँ आप चाहें तो संख्या बढ़ा सकते हैं (जैसे 100 तक, हालांकि API लिमिट का ध्यान रखें)
+    for entry in feed.entries[:20]:
         title = entry.get("title", "No Title")
         summary = entry.get("summary", "")
         link = entry.get("link", "")
         published = entry.get("published", "")
         
+        print(f"Processing & Humanizing: {title}")
         human_content = rewrite_with_perplexity(title, summary)
+        
         news_list.append({
             "title": title,
             "content": human_content,
@@ -58,7 +66,7 @@ def main():
 
     with open("news.json", "w", encoding="utf-8") as f:
         json.dump(news_list, f, ensure_ascii=False, indent=4)
-    print("SUCCESS: news.json updated!")
+    print("SUCCESS: news.json generated with humanized viral news!")
 
 if __name__ == "__main__":
     main()

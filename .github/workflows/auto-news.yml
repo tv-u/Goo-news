@@ -1,15 +1,15 @@
-name: Auto Sync & Rewrite News
+name: Daily Auto Viral News Sync
 
 on:
   schedule:
-    - cron: '0 */3 * * *'
+    - cron: '0 0,6,12,18 * * *' # दिन में 4 बार (हर 6 घंटे में) ऑटोमैटिक सिंक होगा
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  update-news:
+  sync-news:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -23,14 +23,14 @@ jobs:
       - name: Install Dependencies
         run: pip install feedparser requests
 
-      - name: Run News Bot
+      - name: Run Viral News Bot
         env:
           PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
         run: python news_bot.py
 
-      - name: Commit and Push Changes
+      - name: Auto Commit and Live Deploy
         run: |
-          git config --global user.name "GitHub Actions Bot"
-          git config --global user.email "actions@github.com"
+          git config --global user.name "Goo News Automation Bot"
+          git config --global user.email "bot@geonews.internal"
           git add news.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update humanized news" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-sync and humanize trending viral news" && git push)
