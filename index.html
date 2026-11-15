@@ -3,154 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI GO-NEWS | Premium News Aggregator</title>
+    <title>AI GO-NEWS | 100x Advanced Portal</title>
     <style>
-        :root { --bg-color: #0f0f13; --card-bg: #1e1e24; --primary-pink: #ff2a75; --text-main: #ffffff; --text-muted: #a0a0a5; --border-color: #2d2d35; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-main); overflow-x: hidden; }
-        header { display: flex; align-items: center; justify-content: space-between; padding: 15px 20px; background: var(--bg-color); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border-color); }
-        .logo-area { display: flex; align-items: center; gap: 10px; font-size: 1.2rem; font-weight: bold; }
-        .logo-ai { background: var(--primary-pink); padding: 4px 8px; border-radius: 6px; font-size: 0.9rem; }
-        .search-bar { display: flex; align-items: center; background: var(--card-bg); padding: 8px 15px; border-radius: 20px; flex: 1; max-width: 400px; margin: 0 15px; }
-        .search-bar input { background: transparent; border: none; color: white; outline: none; width: 100%; }
-        .icon-btn { background: var(--card-bg); border: none; color: white; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; }
+        :root { --bg: #0a0a0f; --card: rgba(30,30,40,0.7); --pink: #ff2a75; --text: #fff; --muted: #9ca3af; --border: rgba(255,255,255,0.1); }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+        body { background: var(--bg); color: var(--text); overflow-x: hidden; }
+        
+        /* Header & Glassmorphism */
+        header { display: flex; align-items: center; justify-content: space-between; padding: 15px 20px; background: rgba(10,10,15,0.8); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); }
+        .logo { font-size: 1.3rem; font-weight: 800; display: flex; align-items: center; gap: 8px; }
+        .logo span { background: var(--pink); padding: 4px 8px; border-radius: 6px; font-size: 0.9rem; }
+        .search-box { display: flex; align-items: center; background: var(--card); border: 1px solid var(--border); padding: 8px 15px; border-radius: 20px; width: 40%; max-width: 400px; }
+        .search-box input { background: transparent; border: none; color: white; outline: none; width: 100%; }
+        
+        /* Navbar */
         nav { display: flex; overflow-x: auto; padding: 15px 20px; gap: 10px; scrollbar-width: none; }
         nav::-webkit-scrollbar { display: none; }
-        .nav-item { padding: 8px 18px; border-radius: 20px; background: var(--card-bg); color: var(--text-muted); cursor: pointer; white-space: nowrap; font-size: 0.9rem; transition: 0.3s; border: 1px solid transparent; }
-        .nav-item.active { background: var(--primary-pink); color: white; font-weight: bold; }
-        .top-section { padding: 0 20px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
-        #clk { font-size: 0.9rem; color: var(--primary-pink); font-weight: bold; letter-spacing: 1px; }
-        .trending { display: flex; gap: 15px; overflow-x: auto; padding: 0 20px 15px 20px; scrollbar-width: none; }
-        .trending::-webkit-scrollbar { display: none; }
-        .ti { background: linear-gradient(45deg, #1e1e24, #2a2a35); padding: 12px 20px; border-radius: 12px; min-width: 250px; border-left: 4px solid var(--primary-pink); box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        .ti h4 { font-size: 0.85rem; color: var(--primary-pink); margin-bottom: 5px; }
-        .ti p { font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .news-container { padding: 20px; display: grid; grid-template-columns: 1fr; gap: 20px; }
-        @media(min-width: 768px) { .news-container { grid-template-columns: repeat(2, 1fr); } }
-        .news-card { background: var(--card-bg); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: transform 0.3s; display: flex; flex-direction: column; }
-        .news-card:hover { transform: translateY(-5px); }
-        .card-img { width: 100%; height: 200px; object-fit: cover; background: #333; }
-        .card-content { padding: 15px; flex: 1; display: flex; flex-direction: column; }
-        .category-badge { background: var(--primary-pink); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; align-self: flex-start; margin-bottom: 10px; text-transform: uppercase; }
-        .news-title { font-size: 1.1rem; margin-bottom: 8px; line-height: 1.4; }
-        .news-desc { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px; text-align: justify; flex: 1; }
-        .card-footer { display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 10px; }
-        .source-name { color: #4da6ff; font-weight: bold; }
-        .loader { border: 4px solid var(--border-color); border-top: 4px solid var(--primary-pink); border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 50px auto; display: none; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .nav-btn { padding: 8px 18px; border-radius: 20px; background: var(--card); border: 1px solid var(--border); color: var(--muted); cursor: pointer; white-space: nowrap; transition: 0.3s; font-weight: 500; }
+        .nav-btn.active { background: var(--pink); color: white; border-color: var(--pink); box-shadow: 0 4px 15px rgba(255,42,117,0.4); }
+
+        /* Trending */
+        .trending-wrap { padding: 0 20px 15px 20px; }
+        .trending-title { font-size: 0.9rem; color: var(--pink); margin-bottom: 10px; font-weight: bold; }
+        .trending-scroll { display: flex; gap: 12px; overflow-x: auto; scrollbar-width: none; }
+        .trending-scroll::-webkit-scrollbar { display: none; }
+        .trend-item { background: linear-gradient(45deg, rgba(30,30,40,1), rgba(20,20,30,1)); padding: 12px; border-radius: 10px; min-width: 260px; border-left: 3px solid var(--pink); cursor: pointer; transition: 0.2s; }
+        .trend-item:hover { transform: translateY(-2px); background: rgba(255,42,117,0.1); }
+        .trend-item p { font-size: 0.85rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+        /* News Grid */
+        .grid { padding: 20px; display: grid; grid-template-columns: 1fr; gap: 20px; }
+        @media(min-width: 600px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+        @media(min-width: 900px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+        
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; cursor: pointer; transition: 0.3s; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.5); border-color: var(--pink); }
+        .card-img { width: 100%; height: 200px; object-fit: cover; background: #222; }
+        .card-body { padding: 15px; flex: 1; display: flex; flex-direction: column; }
+        .badge { background: rgba(255,42,117,0.2); color: var(--pink); padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; align-self: flex-start; margin-bottom: 10px; text-transform: uppercase; }
+        .card-title { font-size: 1.05rem; line-height: 1.4; margin-bottom: 10px; font-weight: 600; }
+        .card-desc { font-size: 0.85rem; color: var(--muted); margin-bottom: 15px; flex: 1; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .card-footer { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 10px; }
+        .source { color: #3b82f6; font-weight: bold; }
+
+        /* Modal */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 1000; overflow-y: auto; padding: 20px; backdrop-filter: blur(5px); }
+        .modal-content { background: var(--bg); max-width: 800px; margin: 40px auto; border-radius: 16px; border: 1px solid var(--border); position: relative; overflow: hidden; }
+        .modal-close { position: absolute; top: 15px; right: 15px; background: var(--pink); color: white; border: none; width: 35px; height: 35px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; z-index: 10; }
+        .modal-img { width: 100%; height: 300px; object-fit: cover; }
+        .modal-body { padding: 25px; }
+        .modal-title { font-size: 1.5rem; margin-bottom: 15px; line-height: 1.4; }
+        .modal-text { font-size: 1rem; line-height: 1.7; color: #d1d5db; }
+        .modal-link { display: inline-block; margin-top: 20px; background: var(--pink); color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; }
+
+        /* Loader */
+        .loader { display: none; text-align: center; padding: 40px; }
+        .spinner { width: 40px; height: 40px; border: 4px solid var(--border); border-top-color: var(--pink); border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 10px; }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        .load-more { display: block; width: 200px; margin: 20px auto; padding: 12px; background: var(--card); border: 1px solid var(--pink); color: var(--pink); border-radius: 25px; cursor: pointer; font-weight: bold; text-align: center; }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo-area"><span class="logo-ai">AI</span> GO-NEWS</div>
-        <div class="search-bar"><input type="text" placeholder="Search news..."><span>🔍</span></div>
-        <button class="icon-btn">🌙</button>
+        <div class="logo"><span>AI</span> GO-NEWS</div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search news...">
+            <span>🔍</span>
+        </div>
     </header>
-    <nav id="category-nav">
-        <div class="nav-item active" data-category="general">🌐 World</div>
-        <div class="nav-item" data-category="politics">🏛️ Politics</div>
-        <div class="nav-item" data-category="sports">⚽ Sports</div>
-        <div class="nav-item" data-category="technology">💻 Tech</div>
+
+    <nav>
+        <button class="nav-btn active" data-cat="world">🌐 World</button>
+        <button class="nav-btn" data-cat="politics">🏛️ Politics</button>
+        <button class="nav-btn" data-cat="sports">⚽ Sports</button>
+        <button class="nav-btn" data-cat="technology">💻 Tech</button>
     </nav>
-    <div class="top-section">
-        <h3 style="font-size: 1rem;">Top Trending 🔥</h3>
-        <div id="clk">Loading Clock...</div>
+
+    <div class="trending-wrap">
+        <div class="trending-title">🔥 TOP 10 TRENDING</div>
+        <div class="trending-scroll" id="trendingBox"></div>
     </div>
-    <div class="trending" id="trending-container">
-        <div class="ti"><h4>TRENDING</h4><p>Loading top 100 viral news...</p></div>
+
+    <div class="grid" id="newsGrid"></div>
+    <button class="load-more" id="loadMoreBtn" style="display:none;">Load More</button>
+    
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+        <p>Fetching Premium News...</p>
     </div>
-    <div class="loader" id="loader"></div>
-    <div class="news-container" id="news-container"></div>
+
+    <!-- Modal -->
+    <div class="modal" id="newsModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <img src="" id="modalImg" class="modal-img">
+            <div class="modal-body">
+                <div class="badge" id="modalCat">CATEGORY</div>
+                <h2 class="modal-title" id="modalTitle">Title</h2>
+                <div class="modal-text" id="modalText">Content</div>
+                <a href="#" target="_blank" class="modal-link" id="modalLink">Read Full Article ↗</a>
+            </div>
+        </div>
+    </div>
+
     <script>
-        function updateClock() {
-            const now = new Date();
-            document.getElementById('clk').innerText = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
+        let allNews = [];
+        let filteredNews = [];
+        let displayCount = 15;
+        let currentCat = 'world';
+        let searchQuery = '';
 
-        const newsContainer = document.getElementById('news-container');
+        const grid = document.getElementById('newsGrid');
+        const trendingBox = document.getElementById('trendingBox');
         const loader = document.getElementById('loader');
-        let currentCategory = 'general';
-        
-        // CORS Proxy + Noozra API
-        const PROXY = 'https://api.allorigins.win/raw?url=';
-        const API_BASE = 'https://noozra.com/api/articles';
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
 
-        async function fetchNews(category) {
+        async function init() {
             loader.style.display = 'block';
-            newsContainer.innerHTML = '';
-            currentCategory = category;
-            
-            let apiCategory = category;
-            if(category === 'general') apiCategory = 'world';
-            if(category === 'politics') apiCategory = 'politics';
-            if(category === 'technology') apiCategory = 'tech';
-
-            const targetUrl = `${API_BASE}?category=${apiCategory}&limit=20`;
-            const finalUrl = PROXY + encodeURIComponent(targetUrl);
-
             try {
-                const response = await fetch(finalUrl);
-                if(!response.ok) throw new Error("API Failed");
-                const data = await response.json();
-                const articles = data.articles || data;
+                // Fetch news.json (Cache bust to get latest)
+                const res = await fetch('./news.json?t=' + new Date().getTime());
+                if(!res.ok) throw new Error("No data");
+                allNews = await res.json();
+                renderTrending(allNews.slice(0, 10));
+                filterAndRender();
+            } catch(e) {
+                grid.innerHTML = '<p style="text-align:center; width:100%; color:red;">Data not ready. Wait for GitHub Action to finish.</p>';
+            } finally {
                 loader.style.display = 'none';
-                renderNews(articles);
-            } catch (error) {
-                console.error("Fetch error:", error);
-                loader.style.display = 'none';
-                newsContainer.innerHTML = `<p style="text-align:center; width:100%; grid-column: 1/-1; color:red;">Network Error. Retrying in 30 seconds...</p>`;
-                setTimeout(() => { fetchNews(currentCategory); }, 30000);
             }
         }
 
-        function renderNews(articles) {
-            newsContainer.innerHTML = '';
-            if (!articles || articles.length === 0) {
-                newsContainer.innerHTML = `<p style="text-align:center; width:100%; grid-column: 1/-1; color:gray;">No news available right now.</p>`;
+        function renderTrending(items) {
+            trendingBox.innerHTML = items.map(n => `
+                <div class="trend-item" onclick="openModal(${JSON.stringify(n).replace(/"/g, '&quot;')})">
+                    <p>${n.title}</p>
+                </div>
+            `).join('');
+        }
+
+        function filterAndRender() {
+            filteredNews = allNews.filter(n => {
+                const matchCat = n.category === currentCat;
+                const matchSearch = n.title.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchCat && matchSearch;
+            });
+            displayCount = 15;
+            renderGrid();
+        }
+
+        function renderGrid() {
+            const toShow = filteredNews.slice(0, displayCount);
+            if (toShow.length === 0) {
+                grid.innerHTML = '<p style="text-align:center; width:100%; grid-column: 1/-1; color:gray;">No news found.</p>';
+                loadMoreBtn.style.display = 'none';
                 return;
             }
 
-            articles.forEach(article => {
-                if(!article.headline) return;
-                let cleanDesc = article.description || "No description available for this news.";
-                if (cleanDesc.includes('<')) {
-                    const tempDiv = document.createElement("div");
-                    tempDiv.innerHTML = cleanDesc;
-                    cleanDesc = tempDiv.textContent || tempDiv.innerText || "";
-                }
-                const imageUrl = article.image_url || 'https://via.placeholder.com/400x200?text=News+Image';
-                const source = article.source || 'Goo-News';
-                const pubDate = article.published_at ? new Date(article.published_at).toLocaleTimeString() : 'Just now';
-
-                const card = `
-                    <div class="news-card">
-                        <img src="${imageUrl}" class="card-img" alt="news" onerror="this.src='https://via.placeholder.com/400x200?text=News+Image'">
-                        <div class="card-content">
-                            <span class="category-badge">${currentCategory}</span>
-                            <h2 class="news-title">${article.headline}</h2>
-                            <p class="news-desc">${cleanDesc.substring(0, 120)}...</p>
-                            <div class="card-footer">
-                                <span class="source-name">${source}</span>
-                                <span>${pubDate}</span>
-                            </div>
+            grid.innerHTML = toShow.map(n => `
+                <div class="card" onclick="openModal(${JSON.stringify(n).replace(/"/g, '&quot;')})">
+                    <img src="${n.image}" class="card-img" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=800&q=80'">
+                    <div class="card-body">
+                        <span class="badge">${n.category}</span>
+                        <div class="card-title">${n.title}</div>
+                        <div class="card-desc">${n.content}</div>
+                        <div class="card-footer">
+                            <span class="source">${n.source}</span>
+                            <span>${new Date(n.pubDate).toLocaleDateString()}</span>
                         </div>
                     </div>
-                `;
-                newsContainer.innerHTML += card;
-            });
+                </div>
+            `).join('');
+
+            loadMoreBtn.style.display = displayCount < filteredNews.length ? 'block' : 'none';
         }
 
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', (e) => {
-                document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+        // Event Listeners
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
                 e.target.classList.add('active');
-                fetchNews(e.target.getAttribute('data-category'));
+                currentCat = e.target.dataset.cat;
+                filterAndRender();
             });
         });
-        fetchNews('general');
-        setInterval(() => { fetchNews(currentCategory); }, 600000);
+
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            filterAndRender();
+        });
+
+        loadMoreBtn.addEventListener('click', () => {
+            displayCount += 15;
+            renderGrid();
+        });
+
+        // Modal Logic
+        function openModal(news) {
+            document.getElementById('modalImg').src = news.image;
+            document.getElementById('modalCat').innerText = news.category;
+            document.getElementById('modalTitle').innerText = news.title;
+            // Clean HTML from full content
+            let cleanText = news.fullHtml.replace(/<[^>]*>?/gm, '').substring(0, 1500); 
+            document.getElementById('modalText').innerText = cleanText + '...';
+            document.getElementById('modalLink').href = news.link;
+            document.getElementById('newsModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('newsModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        init();
     </script>
 </body>
 </html>

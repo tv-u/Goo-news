@@ -1,0 +1,20 @@
+name: 6-Hour News Auto-Sync
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm install
+      - run: node scraper.js
+      - run: |
+          git config user.name "Goo-News Bot"
+          git config user.email "bot@goo-news.com"
+          git add news.json
+          git commit -m "🤖 Auto-Sync: Latest News Updated" || exit 0
+          git push
