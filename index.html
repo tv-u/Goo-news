@@ -68,7 +68,7 @@
             <button class="modal-close" onclick="closeModal()">✕</button>
         </div>
         <div class="modal-content">
-            <img src="" id="modalImg" class="modal-img">
+            <img src="" id="modalImg" class="modal-img" onerror="this.src='https://picsum.photos/800/400?random=999'">
             <h2 class="modal-title" id="modalTitle"></h2>
             <div class="modal-text" id="modalText"></div>
             <a href="#" target="_blank" class="btn-full" id="modalLink">Read Full Article ↗</a>
@@ -102,11 +102,11 @@
                 const card = document.createElement('div'); card.className = 'card';
                 card.onclick = () => { window.location.hash = `article/${n.id}`; };
                 
-                // Unique fallback using Picsum (seeded by news ID) so no two images are ever the same
-                const uniqueFallback = `https://picsum.photos/seed/${n.id}/800/400`;
+                // If image fails to load, use a unique random image based on the news ID
+                const fallbackImg = `https://picsum.photos/seed/${n.id}/800/400`;
 
                 card.innerHTML = `
-                    <img src="${n.image}" class="card-img" loading="lazy" onerror="this.src='${uniqueFallback}'">
+                    <img src="${n.image}" class="card-img" loading="lazy" onerror="this.src='${fallbackImg}'">
                     <div class="card-body">
                         <span class="badge">${n.category}</span>
                         <div class="card-title">${n.title}</div>
