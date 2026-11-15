@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="theme-color" content="#09090b">
-    <title id="pageTitle">AI GO-NEWS | Premium Portal</title>
-    <meta name="description" id="pageDesc" content="Live HD News Aggregator from top 100 RSS feeds worldwide.">
-    <script type="application/ld+json" id="seoData">
-    {"@context": "https://schema.org", "@type": "WebSite", "name": "AI GO-NEWS", "url": "https://tv-u.github.io/Goo-news/"}
-    </script>
+    <title>AI GO-NEWS | Premium Portal</title>
+    <meta name="description" id="pageDesc" content="Live HD News Aggregator from top 100 RSS feeds worldwide in 10 languages.">
     <style>
         :root { --bg: #09090b; --card: #18181b; --pink: #ff2a75; --text: #f4f4f5; --muted: #a1a1aa; --border: #27272a; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
@@ -43,8 +40,6 @@
         .bottom-nav div { color: var(--muted); font-size: 0.75rem; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; }
         .bottom-nav div.active { color: var(--pink); }
         .bottom-nav div span { font-size: 1.2rem; }
-        #toast { position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%); background: #27272a; color: #fff; padding: 10px 20px; border-radius: 20px; font-size: 0.9rem; opacity: 0; transition: opacity 0.3s; z-index: 2000; pointer-events: none; }
-        #toast.show { opacity: 1; }
     </style>
 </head>
 <body>
@@ -61,17 +56,15 @@
         <button class="nav-btn" data-cat="science" onclick="filterCategory('science')">🔬 Science</button>
         <button class="nav-btn" data-cat="health" onclick="filterCategory('health')">🏥 Health</button>
         <button class="nav-btn" data-cat="entertainment" onclick="filterCategory('entertainment')">🎬 Movies</button>
-        <button class="nav-btn" data-cat="gaming" onclick="filterCategory('gaming')">🎮 Gaming</button>
-        <button class="nav-btn" data-cat="crypto" onclick="filterCategory('crypto')">🪙 Crypto</button>
+        <button class="nav-btn" data-cat="hindi" onclick="filterCategory('hindi')">🇮🇳 Hindi</button>
+        <button class="nav-btn" data-cat="spanish" onclick="filterCategory('spanish')">🇪🇸 Spanish</button>
     </nav>
     <div class="grid" id="newsGrid"></div>
     
     <div class="bottom-nav">
         <div class="active" onclick="window.location.hash=''"><span>🏠</span>Home</div>
-        <div onclick="showToast('Coming soon!')"><span>🔖</span>Saved</div>
+        <div onclick="alert('Coming soon!')"><span>🔖</span>Saved</div>
     </div>
-
-    <div id="toast">Message</div>
 
     <div class="modal" id="newsModal">
         <div class="modal-header">
@@ -94,14 +87,14 @@
             try {
                 const res = await fetch('./news.json?t=' + new Date().getTime());
                 allNews = await res.json();
-                handleRouting(); // Check if URL has a specific article hash
+                handleRouting();
             } catch(e) {
-                grid.innerHTML = '<p style="text-align:center;color:red;grid-column:1/-1;">Error loading news data. Please run GitHub Action.</p>';
+                grid.innerHTML = '<p style="text-align:center;color:red;grid-column:1/-1;">Error loading news data. Please check GitHub Actions.</p>';
             }
         }
 
         function filterCategory(cat) {
-            window.location.hash = ''; // Clear hash
+            window.location.hash = '';
             document.querySelectorAll('.nav-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === cat));
             filteredNews = allNews.filter(n => cat === 'all' || (n.category && n.category.toLowerCase() === cat.toLowerCase()));
             page = 1; grid.innerHTML = ''; renderGrid();
@@ -132,38 +125,23 @@
             document.getElementById('modalLink').href = news.link;
             document.getElementById('newsModal').style.display = 'block';
             document.body.style.overflow = 'hidden';
-            
-            // Advanced SEO: Update Meta tags & JSON-LD
-            document.getElementById('pageTitle').innerText = news.title + ' | AI GO-NEWS';
-            document.getElementById('pageDesc').setAttribute('content', news.snippet);
-            document.getElementById('seoData').innerText = JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "NewsArticle",
-                "headline": news.title,
-                "image": [news.image],
-                "datePublished": news.pubDate,
-                "description": news.snippet,
-                "author": { "@type": "Organization", "name": news.source }
-            });
+            document.title = news.title + ' | AI GO-NEWS';
         }
 
         function closeModal() {
             document.getElementById('newsModal').style.display = 'none';
             document.body.style.overflow = 'auto';
-            window.location.hash = ''; // Reset routing
+            window.location.hash = ''; 
+            document.title = 'AI GO-NEWS | Premium Portal';
         }
 
-        // --- DYNAMIC ROUTING LOGIC ---
         function handleRouting() {
             const hash = window.location.hash;
             if (hash.startsWith('#article/')) {
                 const id = hash.replace('#article/', '');
                 const article = allNews.find(n => n.id === id);
-                if (article) {
-                    openModal(article);
-                } else {
-                    filterCategory('all');
-                }
+                if (article) openModal(article);
+                else filterCategory('all');
             } else {
                 document.getElementById('newsModal').style.display = 'none';
                 document.body.style.overflow = 'auto';
@@ -172,18 +150,11 @@
         }
 
         window.addEventListener('hashchange', handleRouting);
-
         window.addEventListener('scroll', () => {
             if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500 && filteredNews.length > (page - 1) * limit) {
                 renderGrid();
             }
         });
-
-        function showToast(msg) {
-            const t = document.getElementById('toast');
-            t.innerText = msg; t.classList.add('show');
-            setTimeout(() => t.classList.remove('show'), 3000);
-        }
 
         init();
     </script>
