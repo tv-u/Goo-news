@@ -72,17 +72,28 @@
         const newsContainer = document.getElementById('news-container');
         const loader = document.getElementById('loader');
         let currentCategory = 'general';
-        const API_BASE_URL = 'https://saurav.tech/NewsAPI/top-headlines/category/';
+        
+        // Noozra API (No Key required, CORS enabled, supports images)
+        const API_BASE_URL = 'https://noozra.com/api/articles';
 
         async function fetchNews(category) {
             loader.style.display = 'block';
             newsContainer.innerHTML = '';
             currentCategory = category;
+            
+            // Map our categories to Noozra's categories
+            let apiCategory = category;
+            if(category === 'general') apiCategory = 'world';
+            if(category === 'politics') apiCategory = 'politics';
+            if(category === 'technology') apiCategory = 'tech';
+
             try {
-                const response = await fetch(`${API_BASE_URL}${category}/in.json`);
+                const response = await fetch(`${API_BASE_URL}?category=${apiCategory}&limit=20`);
                 if(!response.ok) throw new Error("API Failed");
                 const data = await response.json();
-                const articles = data.articles.slice(0, 20);
+                
+                // Noozra returns articles in data.articles or directly as array
+                const articles = data.articles || data;
                 loader.style.display = 'none';
                 renderNews(articles);
             } catch (error) {
@@ -95,24 +106,35 @@
 
         function renderNews(articles) {
             newsContainer.innerHTML = '';
+            if (!articles || articles.length === 0) {
+                newsContainer.innerHTML = `<p style="text-align:center; width:100%; grid-column: 1/-1; color:gray;">No news available right now.</p>`;
+                return;
+            }
+
             articles.forEach(article => {
-                if(!article.title || article.title === "[Removed]") return;
+                if(!article.headline) return;
+                
                 let cleanDesc = article.description || "No description available for this news.";
                 if (cleanDesc.includes('<')) {
                     const tempDiv = document.createElement("div");
                     tempDiv.innerHTML = cleanDesc;
                     cleanDesc = tempDiv.textContent || tempDiv.innerText || "";
                 }
+
+                const imageUrl = article.image_url || 'https://via.placeholder.com/400x200?text=News+Image';
+                const source = article.source || 'Goo-News';
+                const pubDate = article.published_at ? new Date(article.published_at).toLocaleTimeString() : 'Just now';
+
                 const card = `
                     <div class="news-card">
-                        <img src="${article.urlToImage || 'https://via.placeholder.com/400x200?text=No+Image'}" class="card-img" alt="news">
+                        <img src="${imageUrl}" class="card-img" alt="news" onerror="this.src='https://via.placeholder.com/400x200?text=News+Image'">
                         <div class="card-content">
                             <span class="category-badge">${currentCategory}</span>
-                            <h2 class="news-title">${article.title}</h2>
+                            <h2 class="news-title">${article.headline}</h2>
                             <p class="news-desc">${cleanDesc.substring(0, 120)}...</p>
                             <div class="card-footer">
-                                <span class="source-name">${article.source.name}</span>
-                                <span>${new Date(article.publishedAt).toLocaleTimeString()}</span>
+                                <span class="source-name">${source}</span>
+                                <span>${pubDate}</span>
                             </div>
                         </div>
                     </div>
