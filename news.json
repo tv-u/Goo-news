@@ -23,7 +23,7 @@
   },
   {
     "id": "news-13",
-    "title": "Jensen Huang discusses Nvidia return with allies: report",
+    "title": "Jensen Huang discusses Nvidia return: report",
     "link": "https://www.smh.com.au/technology/jensen-huang-discusses-nvidia-comeback-with-allies-report-20261116-p61edc.html?ref=rss&utm_medium=rss&utm_source=rss_feed",
     "pubDate": "Mon, 16 Nov 2026 07:01:09 +1100",
     "snippet": "Ousted Nvidia chief executive officer Jensen Huang is discussing a possible comeback to the company just days after the board of directors pushed him out, the F...",
@@ -42,6 +42,17 @@
     "image": "https://i.imgur.com/2HpFicp.png",
     "source": "Billboard",
     "category": "music"
+  },
+  {
+    "id": "news-88",
+    "title": "Stephen King Named This Alfred Hitchcock Thriller As One Of His Favorite Scary Movies",
+    "link": "https://www.slashfilm.com/2311493/stephen-king-alfred-hitchcock-thriller-favorite-scary-movies-frenzy/",
+    "pubDate": "Sun, 15 Nov 2026 20:00:00 +0000",
+    "snippet": "Stephen King&#39;s favorite scary movies include this Alfred Hitchcock thriller, which is easily one of the reputed director&#39;s most disturbing movies....",
+    "fullText": "Stephen King&#39;s favorite scary movies include this Alfred Hitchcock thriller, which is easily one of the reputed director&#39;s most disturbing movies.",
+    "image": "https://www.slashfilm.com/img/gallery/stephen-king-named-this-alfred-hitchcock-thriller-as-one-of-his-favorite-scary-movies/l-intro-1794255860.jpg",
+    "source": "/Film - Movie & TV News, Trailers, Interviews, & Reviews",
+    "category": "movies"
   },
   {
     "id": "news-14",
@@ -220,7 +231,7 @@
     "category": "gadgets"
   },
   {
-    "id": "news-88",
+    "id": "news-89",
     "title": "Why Walter Koenig Held His Tongue To Keep His Star Trek II: The Wrath Of Khan Role",
     "link": "https://www.slashfilm.com/2311365/why-walter-koenig-held-tongue-keep-star-trek-ii-the-wrath-of-khan-role/",
     "pubDate": "Sun, 15 Nov 2026 19:00:00 +0000",
@@ -352,7 +363,7 @@
     "category": "cricket"
   },
   {
-    "id": "news-89",
+    "id": "news-90",
     "title": "Robert Downey Jr.'s 90s Supernatural Fantasy Flop Is Worth Revisiting",
     "link": "https://www.slashfilm.com/2307964/robert-downey-jr-90s-fantasy-flop-worth-revisiting-hearts-and-souls/",
     "pubDate": "Sun, 15 Nov 2026 18:00:00 +0000",
@@ -473,7 +484,7 @@
     "category": "space"
   },
   {
-    "id": "news-90",
+    "id": "news-91",
     "title": "The Office's Downfall Can Be Traced Back To One Moment",
     "link": "https://www.slashfilm.com/2311282/the-office-downfall-moment/",
     "pubDate": "Sun, 15 Nov 2026 17:00:00 +0000",
@@ -528,7 +539,7 @@
     "category": "asia"
   },
   {
-    "id": "news-91",
+    "id": "news-92",
     "title": "10 Best Western Movie Gunfights Of All Time, Ranked",
     "link": "https://www.slashfilm.com/2311599/best-western-movie-gunfights-ranked/",
     "pubDate": "Sun, 15 Nov 2026 16:10:00 +0000",
@@ -559,17 +570,6 @@
     "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/hampton-headshot-2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
     "source": "The Verge",
     "category": "technology"
-  },
-  {
-    "id": "news-92",
-    "title": "This Christian Bale Western Drama Flopped In Theaters But Is Worth Revisiting",
-    "link": "https://www.slashfilm.com/2311062/christian-bale-western-drama-hostiles-flop-worth-revisiting/",
-    "pubDate": "Sun, 15 Nov 2026 16:00:00 +0000",
-    "snippet": "This dark, unflinching 2017 Western starring Christian Bale was not a hit at the box office, but it&#39;s worth revisiting now....",
-    "fullText": "This dark, unflinching 2017 Western starring Christian Bale was not a hit at the box office, but it&#39;s worth revisiting now.",
-    "image": "https://www.slashfilm.com/img/gallery/this-christian-bale-western-drama-flopped-in-theaters-but-is-worth-revisiting/l-intro-1794242267.jpg",
-    "source": "/Film - Movie & TV News, Trailers, Interviews, & Reviews",
-    "category": "movies"
   },
   {
     "id": "news-19",
@@ -693,6 +693,17 @@
     "category": "technology"
   },
   {
+    "id": "news-113",
+    "title": "Tens Of Thousands Of Dollars Later, This Overengineered Jet Turbine Keeps Dust Out Of Truck Beds",
+    "link": "https://www.motor1.com/news/815386/jet-turbine-keeps-dust-out-truck-beds/",
+    "pubDate": "Sun, 15 Nov 2026 14:00:00 +0000",
+    "snippet": "Borrowing tech from aviation and rally cars, the system automatically keeps dust out of truck bed campers....",
+    "fullText": "Borrowing tech from aviation and rally cars, the system automatically keeps dust out of truck bed campers.",
+    "image": "https://cdn.motor1.com/images/mgl/Rqbm1e/s3/gfc-dust-pump.jpg",
+    "source": "Motor1.com - News",
+    "category": "cars"
+  },
+  {
     "id": "news-73",
     "title": "ICC finalises calendar till 2035: India to host 2029 CT, co-host 2031 World Cup",
     "link": "https://timesofindia.indiatimes.com/sports/cricket/news/icc-finalises-global-cricket-calendar-till-2035-india-to-host-2029-champions-trophy-co-host-2031-world-cup/articleshow/135857042.cms",
@@ -710,7 +721,7 @@
     "pubDate": "Sun, 15 Nov 2026 13:08:22 +0000",
     "snippet": "Liam Lawson never failed at Red Bull Racing in 2025. It was Red Bull that failed Liam Lawson.Retaining his services for another year isn't just a logical decisi...",
     "fullText": "Liam Lawson never failed at Red Bull Racing in 2025. It was Red Bull that failed Liam Lawson.Retaining his services for another year isn't just a logical decision, but perhaps the first sign that the organisation is changing the habits it developed under Helmut Marko. Yet there may be one more step it needs to take to avoid failing Lawson again.It needs to stop treating its young drivers ...Keep reading",
-    "image": "https://cdn-6.motorsport.com/images/amp/YP743Le2/s6/liam-lawson-red-bull-2.jpg",
+    "image": "https://cdn-1.motorsport.com/images/amp/YP743Le2/s6/liam-lawson-red-bull-2.jpg",
     "source": "Autosport.com - Formula 1 - Stories",
     "category": "f1"
   },
@@ -842,7 +853,7 @@
     "pubDate": "Sun, 15 Nov 2026 09:39:18 +0000",
     "snippet": "Finding the right balance is often a challenge in modern Formula 1. That applies to the technical regulations: striking a balance between satisfying drivers and...",
     "fullText": "Finding the right balance is often a challenge in modern Formula 1. That applies to the technical regulations: striking a balance between satisfying drivers and purists on the one hand, and delivering the spectacle F1 wants to offer younger fans on the other, with a constant stream of overtaking moves for, let’s say, the TikTok generation.But that balancing act also applies to the calendar ...Keep reading",
-    "image": "https://cdn-4.motorsport.com/images/amp/YE9EVzGY/s6/track-action-2.jpg",
+    "image": "https://cdn-8.motorsport.com/images/amp/YE9EVzGY/s6/track-action-2.jpg",
     "source": "Autosport.com - Formula 1 - Stories",
     "category": "f1"
   },
@@ -1023,6 +1034,17 @@
     "category": "basketball"
   },
   {
+    "id": "news-114",
+    "title": "This Corvette Owner Bought A Brand-New C8. Then He Lost $37,000 After Just 570 Miles",
+    "link": "https://www.motor1.com/news/815462/corvette-eray-massive-depreciation-auction/",
+    "pubDate": "Sat, 14 Nov 2026 18:00:00 +0000",
+    "snippet": "A nearly new Chevrolet Corvette E-Ray convertible sold for just $99,500, despite an original sticker price of nearly $137,000....",
+    "fullText": "A nearly new Chevrolet Corvette E-Ray convertible sold for just $99,500, despite an original sticker price of nearly $137,000.",
+    "image": "https://cdn.motor1.com/images/mgl/2N9G9x/s3/2025-chevrolet-corevette-e-ray.jpg",
+    "source": "Motor1.com - News",
+    "category": "cars"
+  },
+  {
     "id": "news-79",
     "title": "\n                        Yaxel Lendeborg, Warriors get a taste of life without Stephen Curry: 'It felt helpless out there'\n                    ",
     "link": "\n                                                https://www.cbssports.com/nba/news/yaxel-lendeborg-warriors-spurs-life-without-stephen-curry/\n                    ",
@@ -1032,6 +1054,17 @@
     "image": "https://sportshub.cbsistatic.com/i/2026/11/14/f398292f-29b3-4eec-8245-7f2c0ef78f56/yaxel-imagn-1.png",
     "source": "\n                    CBS Sports Headlines\n                ",
     "category": "basketball"
+  },
+  {
+    "id": "news-116",
+    "title": "Remember The Fire-Damaged Corvette Z06? Now It Actually Runs",
+    "link": "https://www.motor1.com/news/815389/chevrolet-corvette-z06-burned-restoration/",
+    "pubDate": "Sat, 14 Nov 2026 14:00:00 +0000",
+    "snippet": "Chicago mechanic revives a salvage-titled 2025 Corvette Z06, rebuilding its smoke-damaged interior and electronics while keeping repair costs below $10,000....",
+    "fullText": "Chicago mechanic revives a salvage-titled 2025 Corvette Z06, rebuilding its smoke-damaged interior and electronics while keeping repair costs below $10,000.",
+    "image": "https://cdn.motor1.com/images/mgl/G3b9n8/s3/fire-damaged-2025-corvette-z06-3lz.jpg",
+    "source": "Motor1.com - News",
+    "category": "cars"
   },
   {
     "id": "news-40",
@@ -1051,7 +1084,7 @@
     "pubDate": "Sat, 14 Nov 2026 09:13:34 +0000",
     "snippet": "McLaren will introduce upgrades to its MCL40 at Formula 1’s Las Vegas Grand Prix, with the new parts labelled as “the foundation for next year’s car”.The team l...",
     "fullText": "McLaren will introduce upgrades to its MCL40 at Formula 1’s Las Vegas Grand Prix, with the new parts labelled as “the foundation for next year’s car”.The team launched its 2027 front wing concept in Brazil, with team principal Andrea Stella describing it as an improvement for driveability and predictability; McLaren returned to form at Interlagos, with Lando Norris clinching pole ...Keep reading",
-    "image": "https://cdn-4.motorsport.com/images/amp/68VwEx92/s6/lando-norris-mclaren-2.jpg",
+    "image": "https://cdn-1.motorsport.com/images/amp/68VwEx92/s6/lando-norris-mclaren-2.jpg",
     "source": "Autosport.com - Formula 1 - Stories",
     "category": "f1"
   },
@@ -1098,6 +1131,17 @@
     "image": "https://foreignpolicy.com/wp-content/uploads/2026/11/1-hans-morgenthau-realist-GettyImages-838143458.jpg",
     "source": "Foreign Policy",
     "category": "geopolitics"
+  },
+  {
+    "id": "news-117",
+    "title": "Porsche’s New Supercar Already Spotted At The Nürburgring",
+    "link": "https://www.motor1.com/news/815463/porsche-mission-s-spied-engine-sounds-nurburgring/",
+    "pubDate": "Fri, 13 Nov 2026 20:00:00 +0000",
+    "snippet": "The Mission S is already at the Nürburgring, but Porsche isn't testing its new supercar just yet....",
+    "fullText": "The Mission S is already at the Nürburgring, but Porsche isn't testing its new supercar just yet.",
+    "image": "https://cdn.motor1.com/images/mgl/1ZPjyL/s3/porsche-mission-s-spy-video.jpg",
+    "source": "Motor1.com - News",
+    "category": "cars"
   },
   {
     "id": "news-30",
@@ -1166,6 +1210,17 @@
     "category": "space"
   },
   {
+    "id": "news-115",
+    "title": "Ford Showed Us Its Secret Car Vault Filled With Hundreds Of Hidden Gems",
+    "link": "https://www.motor1.com/news/815442/ford-vault-rare-car-collection/",
+    "pubDate": "Fri, 13 Nov 2026 16:30:00 +0000",
+    "snippet": "Broncos, Mustangs, one-offs, concepts, and never-before-seen studio models are now packed in the new Ford Vault....",
+    "fullText": "Broncos, Mustangs, one-offs, concepts, and never-before-seen studio models are now packed in the new Ford Vault.",
+    "image": "https://cdn.motor1.com/images/mgl/zx0XBW/s3/early-ford-focus-design-prototype.jpg",
+    "source": "Motor1.com - News",
+    "category": "cars"
+  },
+  {
     "id": "news-56",
     "title": "Gemini Astronaut Photos Inspired Early Earth Observation Program",
     "link": "https://www.nasa.gov/image-article/gemini-astronaut-photos-inspired-early-earth-observation-program/",
@@ -1194,7 +1249,7 @@
     "pubDate": "Fri, 13 Nov 2026 10:04:48 +0000",
     "snippet": "Mercedes mechanics have learned to watch their backs. Not because of the dangers of a pitstop, but because of Kimi Antonelli. Formula 1's newly crowned world ch...",
     "fullText": "Mercedes mechanics have learned to watch their backs. Not because of the dangers of a pitstop, but because of Kimi Antonelli. Formula 1's newly crowned world champion has a rather unusual habit. He approaches members of his crew, greets them and, when they least expect it, gives their nipples a pinch - so nobody appears to be safe!It is just one of the many practical jokes through which the ...Keep reading",
-    "image": "https://cdn-5.motorsport.com/images/amp/0o5AwKwY/s6/andrea-kimi-antonelli-mercedes-2.jpg",
+    "image": "https://cdn-2.motorsport.com/images/amp/0o5AwKwY/s6/andrea-kimi-antonelli-mercedes-2.jpg",
     "source": "Autosport.com - Formula 1 - Stories",
     "category": "f1"
   },
