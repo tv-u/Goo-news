@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@google/genai": "2.24.0",
+    "@mozilla/readability": "^0.6.0",
     "@vitejs/plugin-react": "^6.3.0",
     "axios": "^1.21.1",
     "dayjs": "^1.11.23",
     "framer-motion": "^14.14.0",
+    "jsdom": "^31.0.1",
     "node-fetch": "^3.3.2",
     "p-limit": "^7.3.3",
     "react": "^19.3.1",
