@@ -1,292 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goo-News | Live Viral & Trending News</title>
-    <!-- FontAwesome Icons & Google Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Goo News - Live Portal</title>
     <style>
-        :root {
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #0f172a;
-            --text-muted: #64748b;
-            --primary: #2563eb;
-            --border: #e2e8f0;
-            --header-bg: #ffffff;
-            --ticker-bg: #1e293b;
-        }
-        [data-theme="dark"] {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --primary: #3b82f6;
-            --border: #334155;
-            --header-bg: #1e293b;
-            --ticker-bg: #0f172a;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; transition: background 0.3s, color 0.3s; }
-        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; }
-        
-        /* Breaking Ticker */
-        .breaking-ticker { background: var(--ticker-bg); color: #fff; padding: 10px 15px; font-size: 14px; display: flex; align-items: center; overflow: hidden; white-space: nowrap; border-bottom: 1px solid var(--border); }
-        .ticker-badge { background: #dc2626; color: #fff; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; margin-right: 12px; text-transform: uppercase; animation: pulse 1.5px infinite; }
-        .ticker-content { display: inline-block; animation: marquee 25s linear infinite; }
-
-        /* Header */
-        header { background: var(--header-bg); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-        .nav-container { max-width: 1280px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
-        .logo { font-size: 26px; font-weight: 800; color: var(--primary); display: flex; align-items: center; gap: 8px; text-decoration: none; }
-        .search-bar { position: relative; flex: 1; max-width: 400px; }
-        .search-bar input { width: 100%; padding: 10px 15px 10px 40px; border-radius: 30px; border: 1px solid var(--border); background: var(--bg-color); color: var(--text-main); font-size: 14px; outline: none; }
-        .search-bar i { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--text-muted); }
-        .header-actions { display: flex; align-items: center; gap: 12px; }
-        .btn-theme, .btn-favs { background: var(--bg-color); border: 1px solid var(--border); color: var(--text-main); width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; }
-
-        /* Categories Filter */
-        .categories-nav { max-width: 1280px; margin: 15px auto; padding: 0 20px; display: flex; gap: 10px; overflow-x: auto; scrollbar-width: none; }
-        .categories-nav::-webkit-scrollbar { display: none; }
-        .cat-btn { background: var(--card-bg); border: 1px solid var(--border); color: var(--text-main); padding: 8px 18px; border-radius: 20px; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; }
-        .cat-btn.active, .cat-btn:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
-
-        /* Main Container */
-        .container { max-width: 1280px; margin: 20px auto; padding: 0 20px; }
-        .news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
-
-        /* News Card */
-        .news-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; display: flex; flexDirection: column; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); position: relative; }
-        .card-img-wrap { position: relative; width: 100%; height: 200px; overflow: hidden; background: #cbd5e1; }
-        .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
-        .news-card:hover .card-img-wrap img { transform: scale(1.05); }
-        .card-cat { position: absolute; top: 12px; left: 12px; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); color: #fff; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
-        .bookmark-btn { position: absolute; top: 12px; right: 12px; background: rgba(255,255,255,0.8); border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #0f172a; }
-        .bookmark-btn.active { background: var(--primary); color: #fff; }
-
-        .card-body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
-        .card-meta { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-muted); margin-bottom: 10px; }
-        .card-title { font-size: 18px; font-weight: 700; line-height: 1.4; margin-bottom: 12px; color: var(--text-main); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-        .card-snippet { font-size: 14px; color: var(--text-muted); line-height: 1.5; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; flex-grow: 1; }
-        
-        .card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border); padding-top: 15px; margin-top: auto; }
-        .read-more-btn { background: var(--primary); color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; text-decoration: none; border: none; cursor: pointer; }
-        .share-icons { display: flex; gap: 10px; font-size: 16px; color: var(--text-muted); }
-        .share-icons i { cursor: pointer; transition: color 0.2s; }
-        .share-icons i:hover { color: var(--primary); }
-
-        /* Modal Overlay */
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 20px; }
-        .modal-box { background: var(--card-bg); width: 100%; max-width: 700px; max-height: 90vh; border-radius: 20px; overflow-y: auto; padding: 30px; position: relative; border: 1px solid var(--border); }
-        .modal-close { position: absolute; top: 20px; right: 20px; background: var(--bg-color); border: 1px solid var(--border); color: var(--text-main); width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; }
-        .modal-img { width: 100%; height: 300px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
-        .modal-title { font-size: 24px; font-weight: 800; margin-bottom: 15px; }
-        .modal-content { font-size: 15px; line-height: 1.8; color: var(--text-main); white-space: pre-line; margin-bottom: 25px; }
-        .modal-source { display: inline-block; background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 14px; }
-
-        .no-results { grid-column: 1 / -1; text-align: center; padding: 50px; color: var(--text-muted); font-size: 18px; }
-
-        @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+        body { font-family: Arial, sans-serif; background: #0f172a; color: #fff; text-align: center; padding: 50px; }
+        .card { background: #1e293b; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); display: inline-block; max-width: 400px; width: 100%; }
+        .btn { display: block; width: 100%; padding: 15px; margin: 15px 0; background: #22c55e; color: white; text-decoration: none; font-weight: bold; border-radius: 8px; font-size: 16px; transition: 0.3s; }
+        .btn:hover { background: #16a34a; }
+        .btn-alt { background: #3b82f6; }
+        .btn-alt:hover { background: #2563eb; }
     </style>
 </head>
-<body data-theme="light">
+<body>
+    <div class="card">
+        <h2>🔥 Trending Updates & Media</h2>
+        <p>नवीनतम कंटेंट देखने के लिए नीचे दिए गए बटन पर क्लिक करें:</p>
+        
+        <!-- Adsterra Smartlink 1 -->
+        <a href="https://asiafilm.org/4/c2b46070b44982014166acafd6074c3d" class="btn" target="_blank">Watch Now / Click Here</a>
+        
+        <!-- Adsterra Smartlink 2 -->
+        <a href="https://asiafilm.org/4/3711015d24018cf89ccb362976c4a2e0" class="btn btn-alt" target="_blank">Download Links</a>
 
-    <!-- Breaking News Ticker -->
-    <div class="breaking-ticker">
-        <span class="ticker-badge">Live Updates</span>
-        <div class="ticker-content" id="ticker-text">Loading top viral trends & global headlines across categories...</div>
+        <!-- Adsterra Smartlink 3 -->
+        <a href="https://asiafilm.org/4/dc01c1237bd130c5ef9bcfef4f0928ed" class="btn" style="background: #eab308; color: #000;" target="_blank">Exclusive Offers</a>
     </div>
-
-    <!-- Header -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo"><i class="fa-solid fa-globe"></i> Goo-News</a>
-            <div class="search-bar">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="searchInput" placeholder="Search 500+ trending stories..." oninput="filterNews()">
-            </div>
-            <div class="header-actions">
-                <button class="btn-favs" onclick="toggleBookmarksView()" title="Saved Stories"><i class="fa-solid fa-bookmark"></i></button>
-                <button class="btn-theme" onclick="toggleTheme()" title="Toggle Dark/Light Mode"><i class="fa-solid fa-moon" id="themeIcon"></i></button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Categories Filter Nav -->
-    <div class="categories-nav" id="categoryNav">
-        <button class="cat-btn active" onclick="filterCategory('All')">All News</button>
-        <button class="cat-btn" onclick="filterCategory('World')">World</button>
-        <button class="cat-btn" onclick="filterCategory('India')">India</button>
-        <button class="cat-btn" onclick="filterCategory('Tech')">Tech</button>
-        <button class="cat-btn" onclick="filterCategory('Business')">Business</button>
-        <button class="cat-btn" onclick="filterCategory('Sports')">Sports</button>
-    </div>
-
-    <!-- Main News Feed Grid -->
-    <div class="container">
-        <div class="news-grid" id="newsGrid">
-            <!-- Dynamic Cards Loaded Here -->
-        </div>
-    </div>
-
-    <!-- Full Article Modal -->
-    <div class="modal-overlay" id="articleModal" onclick="closeModalOnOutside(event)">
-        <div class="modal-box">
-            <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
-            <img src="" id="modalImg" class="modal-img">
-            <h2 class="modal-title" id="modalTitle"></h2>
-            <div class="modal-content" id="modalContent"></div>
-            <a href="" id="modalSourceLink" target="_blank" class="modal-source">Read Original Source <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-        </div>
-    </div>
-
-    <script>
-        let allArticles = [];
-        let currentCategory = 'All';
-        let showBookmarksOnly = false;
-        let bookmarks = JSON.parse(localStorage.getItem('goo_bookmarks')) || [];
-
-        // Fetch news.json data
-        fetch('news.json?v=' + new Date().getTime())
-            .then(res => res.json())
-            .then(data => {
-                allArticles = data;
-                renderNews(allArticles);
-                setupTicker(allArticles);
-            })
-            .catch(err => {
-                document.getElementById('newsGrid').innerHTML = '<div class="no-results">Failed to load news feed. Please try again later.</div>';
-            });
-
-        function renderNews(articles) {
-            const grid = document.getElementById('newsGrid');
-            grid.innerHTML = '';
-
-            let filtered = articles;
-            if (currentCategory !== 'All') {
-                filtered = filtered.filter(item => item.category === currentCategory);
-            }
-            if (showBookmarksOnly) {
-                filtered = filtered.filter(item => bookmarks.includes(item.title));
-            }
-
-            if (filtered.length === 0) {
-                grid.innerHTML = '<div class="no-results"><i class="fa-regular fa-face-frown" style="font-size: 40px; margin-bottom: 10px;"></i><br>No news articles found.</div>';
-                return;
-            }
-
-            filtered.forEach((item, index) => {
-                const isSaved = bookmarks.includes(item.title);
-                const readTime = Math.ceil((item.content ? item.content.length : 100) / 300) + ' min read';
-                
-                const card = document.createElement('div');
-                card.className = 'news-card';
-                card.innerHTML = `
-                    <div class="card-img-wrap">
-                        <img src="${item.image}" alt="Poster" loading="lazy">
-                        <span class="card-cat">${item.category || 'General'}</span>
-                        <button class="bookmark-btn ${isSaved ? 'active' : ''}" onclick="toggleBookmark('${item.title.replace(/'/g, "\\'")}')"><i class="fa-solid fa-bookmark"></i></button>
-                    </div>
-                    <div class="card-body">
-                        <div class="card-meta">
-                            <span><i class="fa-regular fa-clock"></i> ${readTime}</span>
-                            <span>${item.published ? item.published.slice(0, 16) : ''}</span>
-                        </div>
-                        <h3 class="card-title">${item.title}</h3>
-                        <p class="card-snippet">${item.content}</p>
-                        <div class="card-footer">
-                            <button class="read-more-btn" onclick="openModal(${JSON.stringify(item).replace(/"/g, '&quot;')})">Read Full Story</button>
-                            <div class="share-icons">
-                                <i class="fa-brands fa-whatsapp" onclick="shareNews('whatsapp', '${item.title}', '${item.source_link}')" title="Share WhatsApp"></i>
-                                <i class="fa-brands fa-telegram" onclick="shareNews('telegram', '${item.title}', '${item.source_link}')" title="Share Telegram"></i>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        function filterCategory(cat) {
-            currentCategory = cat;
-            showBookmarksOnly = false;
-            document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            renderNews(allArticles);
-        }
-
-        function filterNews() {
-            const query = document.getElementById('searchInput').value.toLowerCase();
-            const filtered = allArticles.filter(item => 
-                item.title.toLowerCase().includes(query) || item.content.toLowerCase().includes(query)
-            );
-            renderNews(filtered);
-        }
-
-        function toggleBookmark(title) {
-            if (bookmarks.includes(title)) {
-                bookmarks = bookmarks.filter(b => b !== title);
-            } else {
-                bookmarks.push(title);
-            }
-            localStorage.setItem('goo_bookmarks', JSON.stringify(bookmarks));
-            renderNews(allArticles);
-        }
-
-        function toggleBookmarksView() {
-            showBookmarksOnly = !showBookmarksOnly;
-            currentCategory = 'All';
-            document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelector('.cat-btn').classList.add('active');
-            renderNews(allArticles);
-        }
-
-        function openModal(item) {
-            document.getElementById('modalImg').src = item.image;
-            document.getElementById('modalTitle').textContent = item.title;
-            document.getElementById('modalContent').textContent = item.content;
-            document.getElementById('modalSourceLink').href = item.source_link;
-            document.getElementById('articleModal').style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            document.getElementById('articleModal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        function closeModalOnOutside(event) {
-            if (event.target.id === 'articleModal') closeModal();
-        }
-
-        function shareNews(platform, title, url) {
-            const text = encodeURIComponent(title + "\n\nRead more on Goo-News: " + url);
-            if (platform === 'whatsapp') {
-                window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
-            } else if (platform === 'telegram') {
-                window.open(`https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`, '_blank');
-            }
-        }
-
-        function setupTicker(articles) {
-            if (articles.length > 0) {
-                const titles = articles.slice(0, 10).map(a => `⚡ ${a.title}`).join(' &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; ');
-                document.getElementById('ticker-text').innerHTML = titles;
-            }
-        }
-
-        function toggleTheme() {
-            const body = document.body;
-            const icon = document.getElementById('themeIcon');
-            if (body.getAttribute('data-theme') === 'light') {
-                body.setAttribute('data-theme', 'dark');
-                icon.className = 'fa-solid fa-sun';
-            } else {
-                body.setAttribute('data-theme', 'light');
-                icon.className = 'fa-solid fa-moon';
-            }
-        }
-    </script>
 </body>
 </html>
