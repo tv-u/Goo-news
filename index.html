@@ -1,20 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,follow">
-<meta http-equiv="refresh" content="0;url=https://clone-website.pages.dev/">
-<link rel="canonical" href="https://clone-website.pages.dev/">
-<title>Goo-news</title>
-<script>
-(function(){
-  window.location.replace("https://clone-website.pages.dev/");
-})();
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI GO-NEWS | Premium News Aggregator</title>
+    <style>
+        /* CSS Variables for Theme */
+        :root {
+            --bg-color: #0f0f13;
+            --card-bg: #1e1e24;
+            --primary-pink: #ff2a75;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a5;
+            --border-color: #2d2d35;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* Header & Navbar */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background: var(--bg-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .logo-ai {
+            background: var(--primary-pink);
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: var(--card-bg);
+            padding: 8px 15px;
+            border-radius: 20px;
+            flex: 1;
+            max-width: 400px;
+            margin: 0 15px;
+        }
+
+        .search-bar input {
+            background: transparent;
+            border: none;
+            color: white;
+            outline: none;
+            width: 100%;
+        }
+
+        .icon-btn {
+            background: var(--card-bg);
+            border: none;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        /* Category Tabs */
+        nav {
+            display: flex;
+            overflow-x: auto;
+            padding: 15px 20px;
+            gap: 10px;
+            scrollbar-width: none;
+        }
+        nav::-webkit-scrollbar { display: none; }
+
+        .nav-item {
+            padding: 8px 18px;
+            border-radius: 20px;
+            background: var(--card-bg);
+            color: var(--text-muted);
+            cursor: pointer;
+            white-space: nowrap;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .nav-item.active {
+            background: var(--primary-pink);
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Live Clock & Trending Section */
+        .top-section {
+            padding: 0 20px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #clk {
+            font-size: 0.9rem;
+            color: var(--primary-pink);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Trending CSS Fixed (Bug fixed here) */
+        .trending {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding: 0 20px 15px 20px;
+            scrollbar-width: none;
+        }
+        .trending::-webkit-scrollbar { display: none; }
+
+        .ti {
+            background: linear-gradient(45deg, #1e1e24, #2a2a35);
+            padding: 12px 20px;
+            border-radius: 12px;
+            min-width: 250px;
+            border-left: 4px solid var(--primary-pink);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .ti h4 { font-size: 0.85rem; color: var(--primary-pink); margin-bottom: 5px; }
+        .ti p { font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+        /* Main News Grid */
+        .news-container {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media(min-width: 768px) {
+            .news-container { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        /* News Card */
+        .news-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-card:hover { transform: translateY(-5px); }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: #333;
+        }
+
+        .card-content { padding: 15px; flex: 1; display: flex; flex-direction: column; }
+
+        .category-badge {
+            background: var(--primary-pink);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            align-self: flex-start;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .news-title {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        /* HTML Bug Fixed: Description text will be clean */
+        .news-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            text-align: justify;
+            flex: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 10px;
+        }
+
+        .source-name { color: #4da6ff; font-weight: bold; }
+
+        /* Loading Spinner */
+        .loader {
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--primary-pink);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 50px auto;
+            display: none;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
 </head>
 <body>
-<p>Redirecting to Goo-news homepage...</p>
-<a href="https://clone-website.pages.dev/">Open Goo-news</a>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-area">
+            <span class="logo-ai">AI</span> GO-NEWS
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search news...">
+            <span>🔍</span>
+        </div>
+        <button class="icon-btn">🌙</button>
+    </header>
+
+    <!-- Categories -->
+    <nav id="category-nav">
+        <div class="nav-item active" data-category="general">🌐 World</div>
+        <div class="nav-item" data-category="politics">🏛️ Politics</div>
+        <div class="nav-item" data-category="sports">⚽ Sports</div>
+        <div class="nav-item" data-category="technology">💻 Tech</div>
+    </nav>
+
+    <!-- Top Section (Clock & Trending) -->
+    <div class="top-section">
+        <h3 style="font-size: 1rem;">Top Trending 🔥</h3>
+        <div id="clk">Loading Clock...</div> <!-- ID 'clk' Fixed -->
+    </div>
+
+    <div class="trending" id="trending-container">
+        <!-- Trending items will load here -->
+        <div class="ti"><h4>TRENDING</h4><p>Loading top 100 viral news...</p></div>
+    </div>
+
+    <div class="loader" id="loader"></div>
+
+    <!-- Main News Grid -->
+    <div class="news-container" id="news-container">
+        <!-- News Cards will be injected here by JS -->
+    </div>
+
+    <script>
+        // --- 1. FIXED CLOCK LOGIC ---
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clk').innerText = now.toLocaleTimeString('en-US', { 
+                hour: '2-digit', minute: '2-digit', second: '2-digit' 
+            });
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // --- 2. NEWS FETCHING LOGIC & AUTO-RETRY ---
+        const newsContainer = document.getElementById('news-container');
+        const loader = document.getElementById('loader');
+        let currentCategory = 'general';
+
+        // NOTE: Replace this URL with your actual API endpoint (e.g., GNews, NewsAPI, or your backend)
+        // For demonstration, I am using a public mock API.
+        const API_BASE_URL = 'https://saurav.tech/NewsAPI/top-headlines/category/'; 
+
+        async function fetchNews(category) {
+            loader.style.display = 'block';
+            newsContainer.innerHTML = ''; // Clear old news
+            currentCategory = category;
+
+            try {
+                // API Call
+                const response = await fetch(`${API_BASE_URL}${category}/in.json`);
+                if(!response.ok) throw new Error("API Failed");
+                
+                const data = await response.json();
+                const articles = data.articles.slice(0, 20); // Show top 20 per category
+
+                loader.style.display = 'none';
+                renderNews(articles);
+                
+            } catch (error) {
+                console.error("Fetch error:", error);
+                loader.style.display = 'none';
+                newsContainer.innerHTML = `<p style="text-align:center; width:100%; grid-column: 1/-1; color:red;">Network Error. Retrying in 30 seconds...</p>`;
+                
+                // AUTO-RETRY LOGIC (30 seconds)
+                setTimeout(() => {
+                    fetchNews(currentCategory);
+                }, 30000);
+            }
+        }
+
+        function renderNews(articles) {
+            newsContainer.innerHTML = '';
+            articles.forEach(article => {
+                if(!article.title || article.title === "[Removed]") return;
+
+                // HTML BUG FIX: Clean description text (Removes raw HTML tags like <p style="...">)
+                let cleanDesc = article.description || "No description available for this news.";
+                if (cleanDesc.includes('<')) {
+                    const tempDiv = document.createElement("div");
+                    tempDiv.innerHTML = cleanDesc;
+                    cleanDesc = tempDiv.textContent || tempDiv.innerText || "";
+                }
+
+                const card = `
+                    <div class="news-card">
+                        <img src="${article.urlToImage || 'https://via.placeholder.com/400x200?text=No+Image'}" class="card-img" alt="news">
+                        <div class="card-content">
+                            <span class="category-badge">${currentCategory}</span>
+                            <h2 class="news-title">${article.title}</h2>
+                            <p class="news-desc">${cleanDesc.substring(0, 120)}...</p>
+                            <div class="card-footer">
+                                <span class="source-name">${article.source.name}</span>
+                                <span>${new Date(article.publishedAt).toLocaleTimeString()}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                newsContainer.innerHTML += card;
+            });
+        }
+
+        // --- 3. EVENT LISTENERS ---
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', (e) => {
+                document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+                e.target.classList.add('active');
+                fetchNews(e.target.getAttribute('data-category'));
+            });
+        });
+
+        // Initial Load
+        fetchNews('general');
+
+        // --- 4. AUTO REFRESH (Every 10 Minutes) ---
+        setInterval(() => {
+            console.log("Auto-refreshing news...");
+            fetchNews(currentCategory);
+        }, 600000); // 600,000 ms = 10 minutes
+    </script>
 </body>
 </html>
