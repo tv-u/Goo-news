@@ -3,13 +3,7 @@
   "short_name": "GooNews",
   "start_url": "/Goo-news/",
   "display": "standalone",
-  "background_color": "#0a0a0f",
+  "background_color": "#09090b",
   "theme_color": "#ff2a75",
-  "icons": [
-    {
-      "src": "https://cdn-icons-png.flaticon.com/512/2965/2965879.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
+  "icons": [{"src": "https://cdn-icons-png.flaticon.com/512/2965/2965879.png", "sizes": "512x512", "type": "image/png"}]
 }

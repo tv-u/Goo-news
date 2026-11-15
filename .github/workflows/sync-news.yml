@@ -16,5 +16,5 @@ jobs:
           git config user.name "Goo-News AI"
           git config user.email "ai@goo-news.com"
           git add news.json
-          git commit -m "🤖 Auto-Sync: Latest 1000 News Updated" || exit 0
+          git commit -m "🤖 Auto-Sync: Latest News Updated" || exit 0
           git push
