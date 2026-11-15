@@ -1,9 +1,5 @@
 {
-  "name": "AI GO-NEWS",
-  "short_name": "GooNews",
-  "start_url": "/Goo-news/",
-  "display": "standalone",
-  "background_color": "#09090b",
-  "theme_color": "#ff2a75",
+  "name": "AI GO-NEWS", "short_name": "GooNews", "start_url": "/Goo-news/",
+  "display": "standalone", "background_color": "#09090b", "theme_color": "#ff2a75",
   "icons": [{"src": "https://cdn-icons-png.flaticon.com/512/2965/2965879.png", "sizes": "512x512", "type": "image/png"}]
 }

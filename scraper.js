@@ -89,6 +89,7 @@ function autoCategorize(title, url) {
                     fullText: cleanDesc.substring(0, 3000),
                     image: posterUrl,
                     source: feed.title || 'Goo-News',
+                    domain: new URL(url).hostname.replace('www.', ''),
                     category: autoCategorize(feed.title || '', url)
                 });
             });

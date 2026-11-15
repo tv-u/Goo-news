@@ -1,4 +1,4 @@
-const CACHE_NAME = 'goo-news-v2';
+const CACHE_NAME = 'goo-news-v1';
 const ASSETS = ['/Goo-news/', '/Goo-news/index.html', '/Goo-news/news.json'];
 self.addEventListener('install', (e) => { e.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS))); });
 self.addEventListener('fetch', (e) => {

@@ -3,29 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#09090b">
+    <link rel="manifest" href="manifest.json">
     <title id="pageTitle">AI GO-NEWS | Premium Portal</title>
     <meta name="description" id="pageDesc" content="Live HD News Aggregator from top 1000+ RSS feeds worldwide.">
+    <script type="application/ld+json" id="seoData">
+    {"@context": "https://schema.org", "@type": "WebSite", "name": "AI GO-NEWS", "url": "https://tv-u.github.io/Goo-news/"}
+    </script>
     <style>
-        :root { --bg: #09090b; --card: #18181b; --pink: #ff2a75; --text: #f4f4f5; --muted: #a1a1aa; --border: #27272a; }
+        :root { --bg: #09090b; --card: #18181b; --pink: #ff2a75; --text: #f4f4f5; --muted: #a1a1aa; --border: #27272a; --toast-bg: #27272a; }
+        [data-theme="light"] { --bg: #f4f4f5; --card: #ffffff; --text: #09090b; --muted: #52525b; --border: #e4e4e7; --toast-bg: #18181b; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
-        body { background: var(--bg); color: var(--text); overflow-x: hidden; display: flex; flex-direction: column; min-height: 100vh; }
+        body { background: var(--bg); color: var(--text); overflow-x: hidden; padding-bottom: 80px; transition: background 0.3s; }
         
-        /* Header */
-        header { display: flex; flex-direction: column; padding: 12px 16px; background: rgba(9,9,11,0.95); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); gap: 10px; }
+        #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--pink); width: 0%; z-index: 9999; transition: width 0.1s; }
+        #scrollTopBtn { position: fixed; bottom: 80px; right: 20px; background: var(--pink); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: none; z-index: 90; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(255,42,117,0.4); }
+
+        header { display: flex; flex-direction: column; padding: 12px 16px; background: rgba(9,9,11,0.9); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border); gap: 10px; }
+        [data-theme="light"] header { background: rgba(255,255,255,0.9); }
         .top-bar { display: flex; align-items: center; justify-content: space-between; }
         .logo { font-size: 1.2rem; font-weight: 900; display: flex; align-items: center; gap: 6px; cursor: pointer; }
         .logo span { background: var(--pink); padding: 3px 6px; border-radius: 4px; font-size: 0.8rem; color: white; }
+        .actions { display: flex; gap: 10px; }
+        .icon-btn { background: var(--card); border: 1px solid var(--border); color: var(--text); width: 35px; height: 35px; border-radius: 50%; cursor: pointer; font-size: 1.2rem; display: flex; align-items: center; justify-content: center; }
         .search-box { display: flex; align-items: center; background: var(--card); border: 1px solid var(--border); padding: 8px 12px; border-radius: 20px; width: 100%; }
-        .search-box input { background: transparent; border: none; color: white; outline: none; width: 100%; font-size: 0.9rem; }
-        
-        /* Nav */
-        nav { display: flex; overflow-x: auto; padding: 12px 16px; gap: 8px; scrollbar-width: none; position: sticky; top: 93px; background: rgba(9,9,11,0.95); backdrop-filter: blur(12px); z-index: 99; border-bottom: 1px solid var(--border); }
+        .search-box input { background: transparent; border: none; color: var(--text); outline: none; width: 100%; font-size: 0.9rem; }
+
+        nav { display: flex; overflow-x: auto; padding: 12px 16px; gap: 8px; scrollbar-width: none; position: sticky; top: 103px; background: rgba(9,9,11,0.9); backdrop-filter: blur(12px); z-index: 99; border-bottom: 1px solid var(--border); }
+        [data-theme="light"] nav { background: rgba(255,255,255,0.9); }
         nav::-webkit-scrollbar { display: none; }
         .nav-btn { padding: 6px 14px; border-radius: 20px; background: var(--card); border: 1px solid var(--border); color: var(--muted); cursor: pointer; white-space: nowrap; font-size: 0.85rem; font-weight: 600; text-transform: capitalize; }
         .nav-btn.active { background: var(--pink); color: white; border-color: var(--pink); }
-        
-        /* Main Layout */
-        main { flex: 1; }
+
+        .trending-wrap { padding: 16px; }
+        .trending-title { font-size: 0.8rem; color: var(--pink); margin-bottom: 8px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; display: flex; align-items: center; gap: 5px; }
+        .trending-scroll { display: flex; gap: 10px; overflow-x: auto; scrollbar-width: none; padding-bottom: 5px; }
+        .trending-scroll::-webkit-scrollbar { display: none; }
+        .trend-item { background: var(--card); padding: 12px; border-radius: 12px; min-width: 240px; border: 1px solid var(--border); border-left: 3px solid var(--pink); cursor: pointer; }
+        .trend-item p { font-size: 0.85rem; font-weight: 600; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text); }
+
         .grid { padding: 16px; display: grid; grid-template-columns: 1fr; gap: 16px; }
         @media(min-width: 600px) { .grid { grid-template-columns: repeat(2, 1fr); } }
         @media(min-width: 900px) { .grid { grid-template-columns: repeat(3, 1fr); } }
@@ -39,38 +55,58 @@
         .card-footer { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 8px; }
         .source { color: #3b82f6; font-weight: 700; }
 
-        /* Static Pages (About, Terms, Disclaimer) */
-        .page-container { padding: 20px; max-width: 800px; margin: 0 auto; display: none; line-height: 1.6; color: var(--muted); }
-        .page-container h1 { color: var(--text); font-size: 1.8rem; margin-bottom: 15px; }
-        .page-container h2 { color: var(--text); font-size: 1.3rem; margin-top: 20px; margin-bottom: 10px; }
-        .page-container p { margin-bottom: 15px; }
+        .skeleton { background: linear-gradient(90deg, var(--card) 25%, var(--border) 50%, var(--card) 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 8px; }
+        @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
 
-        /* Modal */
+        .bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(9,9,11,0.95); backdrop-filter: blur(15px); border-top: 1px solid var(--border); display: flex; justify-content: space-around; padding: 10px 0; z-index: 100; }
+        [data-theme="light"] .bottom-nav { background: rgba(255,255,255,0.95); }
+        .bottom-nav div { color: var(--muted); font-size: 0.75rem; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; }
+        .bottom-nav div.active { color: var(--pink); }
+        .bottom-nav div span { font-size: 1.2rem; }
+
         .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg); z-index: 1000; overflow-y: auto; }
-        .modal-header { position: sticky; top: 0; background: var(--card); padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); z-index: 10; }
-        .modal-close { background: transparent; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 5px; }
+        .modal-header { position: sticky; top: 0; background: rgba(9,9,11,0.9); backdrop-filter: blur(10px); padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); z-index: 10; }
+        [data-theme="light"] .modal-header { background: rgba(255,255,255,0.9); }
+        .modal-close { background: var(--card); border: 1px solid var(--border); color: var(--text); width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-weight: bold; }
         .modal-content { padding: 20px; max-width: 800px; margin: 0 auto; }
         .modal-img { width: 100%; border-radius: 12px; margin-bottom: 16px; }
-        .modal-title { font-size: 1.4rem; margin-bottom: 12px; font-weight: 800; }
-        .modal-text { font-size: 1rem; line-height: 1.6; color: var(--muted); margin-bottom: 20px; white-space: pre-wrap; }
-        .btn-full { display: block; text-align: center; background: var(--pink); color: white; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1rem; }
+        .modal-meta { display: flex; gap: 10px; font-size: 0.8rem; color: var(--muted); margin-bottom: 10px; }
+        .modal-title { font-size: 1.4rem; margin-bottom: 12px; line-height: 1.3; font-weight: 800; }
+        .modal-text { font-size: 1rem; line-height: 1.6; color: var(--muted); margin-bottom: 20px; white-space: pre-wrap; transition: font-size 0.2s; }
+        .modal-actions { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .modal-btn { flex: 1; min-width: 100px; padding: 10px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 5px; font-size: 0.9rem; }
+        .btn-tts { background: #3b82f6; color: white; }
+        .btn-save { background: var(--card); border: 1px solid var(--border); color: var(--text); }
+        .btn-share { background: var(--pink); color: white; }
+        .btn-full { display: block; text-align: center; background: var(--card); border: 1px solid var(--border); color: var(--text); padding: 14px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1rem; }
+        
+        .font-controls { display: flex; gap: 5px; margin-bottom: 15px; align-items: center; }
+        .font-controls button { background: var(--card); border: 1px solid var(--border); color: var(--text); padding: 5px 10px; border-radius: 5px; cursor: pointer; font-weight: bold; }
 
-        /* Footer */
-        footer { background: var(--card); border-top: 1px solid var(--border); padding: 20px; text-align: center; margin-top: auto; }
-        .footer-links { display: flex; justify-content: center; gap: 15px; margin-bottom: 10px; flex-wrap: wrap; }
-        .footer-links a { color: var(--text); text-decoration: none; font-size: 0.9rem; font-weight: bold; }
-        .footer-links a:hover { color: var(--pink); }
-        .footer-copy { font-size: 0.8rem; color: var(--muted); }
+        .related-section { margin-top: 30px; border-top: 1px solid var(--border); padding-top: 20px; }
+        .related-title { font-size: 1.1rem; font-weight: bold; margin-bottom: 15px; color: var(--pink); }
+        .related-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+        .related-card { display: flex; gap: 10px; background: var(--card); padding: 10px; border-radius: 10px; cursor: pointer; border: 1px solid var(--border); }
+        .related-card img { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; }
+        .related-card div { flex: 1; }
+        .related-card h4 { font-size: 0.9rem; line-height: 1.3; margin-bottom: 5px; color: var(--text); }
 
-        /* Infinite Scroll */
-        #sentinel { height: 50px; width: 100%; }
+        #toast { position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%); background: var(--toast-bg); color: #fff; padding: 10px 20px; border-radius: 20px; font-size: 0.9rem; opacity: 0; transition: opacity 0.3s; z-index: 2000; pointer-events: none; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+        #toast.show { opacity: 1; }
         .loader { text-align: center; padding: 20px; display: none; font-weight: bold; color: var(--pink); }
     </style>
 </head>
 <body>
+    <div id="progress-bar"></div>
+    <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+    <div id="toast">Message</div>
+
     <header>
         <div class="top-bar">
             <div class="logo" onclick="window.location.hash=''"><span>AI</span> GO-NEWS</div>
+            <div class="actions">
+                <button class="icon-btn" id="themeToggle">🌙</button>
+            </div>
         </div>
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="Search news...">
@@ -80,51 +116,22 @@
     
     <nav id="navContainer"></nav>
     
-    <main>
-        <!-- Home Grid -->
-        <div id="homeGrid" class="grid"></div>
-        <div id="sentinel"></div>
-        <div class="loader" id="loader">Loading more news...</div>
+    <div class="trending-wrap" id="trendingWrap">
+        <div class="trending-title">🔥 TRENDING NOW</div>
+        <div class="trending-scroll" id="trendingBox"></div>
+    </div>
 
-        <!-- About Page -->
-        <div id="aboutPage" class="page-container">
-            <h1>About AI GO-NEWS</h1>
-            <p>AI GO-NEWS is a next-generation, AI-powered news aggregator designed to bring you the latest headlines from over 1000+ verified global RSS feeds. Our mission is to provide a seamless, ad-free, and lightning-fast reading experience.</p>
-            <h2>Our Technology</h2>
-            <p>We use advanced scraping algorithms and strict poster-extraction logic to ensure that every news article is accompanied by its authentic, high-definition image. We do not generate fake images or duplicate content.</p>
-        </div>
+    <div class="grid" id="newsGrid"></div>
+    
+    <div id="sentinel" style="height:50px; width:100%;"></div>
+    <div class="loader" id="loader">Loading more news...</div>
 
-        <!-- Terms Page -->
-        <div id="termsPage" class="page-container">
-            <h1>Terms & Conditions</h1>
-            <p>By accessing and using AI GO-NEWS, you agree to the following terms:</p>
-            <h2>1. Use of Content</h2>
-            <p>All news articles, images, and media displayed on this website are the property of their respective sources. AI GO-NEWS acts solely as an aggregator and claims no ownership over the third-party content.</p>
-            <h2>2. External Links</h2>
-            <p>Our website contains links to external sites. We are not responsible for the content, privacy policies, or practices of any third-party websites.</p>
-        </div>
+    <div class="bottom-nav">
+        <div class="active" onclick="window.location.hash=''"><span>🏠</span>Home</div>
+        <div onclick="showSaved()"><span>🔖</span>Saved</div>
+        <div onclick="showToast('Settings coming soon!')"><span>⚙️</span>Settings</div>
+    </div>
 
-        <!-- Disclaimer Page -->
-        <div id="disclaimerPage" class="page-container">
-            <h1>Disclaimer</h1>
-            <p>The information provided by AI GO-NEWS is for general informational purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, or completeness of any information on the site.</p>
-            <p>Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of the site or reliance on any information provided on the site.</p>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-links">
-            <a href="#home" onclick="window.location.hash=''">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#terms">Terms & Conditions</a>
-            <a href="#disclaimer">Disclaimer</a>
-        </div>
-        <div class="footer-copy">
-            &copy; 2026 AI GO-NEWS. All rights reserved. <br> Powered by 1000+ Global RSS Feeds.
-        </div>
-    </footer>
-
-    <!-- Article Modal -->
     <div class="modal" id="newsModal">
         <div class="modal-header">
             <div style="font-weight: bold; font-size: 0.9rem;">Article Reader</div>
@@ -132,29 +139,78 @@
         </div>
         <div class="modal-content">
             <img src="" id="modalImg" class="modal-img" onerror="this.style.display='none'">
+            <div class="modal-meta">
+                <span id="modalSource" style="color:var(--pink); font-weight:bold;"></span>
+                <span id="modalTime"></span>
+                <span id="modalReadTime"></span>
+            </div>
             <h2 class="modal-title" id="modalTitle"></h2>
-            <div class="modal-text" id="modalText"></div>
-            <a href="#" target="_blank" class="btn-full" id="modalLink">Read Full Article ↗</a>
+            
+            <div class="font-controls">
+                <span style="font-size:0.8rem; color:var(--muted);">Text Size:</span>
+                <button onclick="changeFontSize(1)">A+</button>
+                <button onclick="changeFontSize(-1)">A-</button>
+            </div>
+
+            <div class="modal-actions">
+                <button class="modal-btn btn-tts" onclick="speakText()">🔊 Listen</button>
+                <button class="modal-btn btn-save" onclick="saveArticle()">🔖 Save</button>
+                <button class="modal-btn btn-share" onclick="shareArticle()">📤 Share</button>
+            </div>
+            <div class="modal-text" id="modalText">Content</div>
+            <a href="#" target="_blank" class="btn-full" id="modalLink">Read Full on Source ↗</a>
+
+            <div class="related-section">
+                <div class="related-title">Related News</div>
+                <div class="related-grid" id="relatedGrid"></div>
+            </div>
         </div>
     </div>
 
     <script>
+        if ('serviceWorker' in navigator) { navigator.serviceWorker.register('sw.js'); }
+        
         let allNews = [], filteredNews = [], page = 1, limit = 12, currentCat = 'all', isLoading = false;
-        const homeGrid = document.getElementById('homeGrid');
+        let currentArticle = null, isPlaying = false, currentFontSize = 16;
+
+        const grid = document.getElementById('newsGrid');
         const navContainer = document.getElementById('navContainer');
         const searchInput = document.getElementById('searchInput');
         const loader = document.getElementById('loader');
         const sentinel = document.getElementById('sentinel');
+        const trendingBox = document.getElementById('trendingBox');
+        const themeBtn = document.getElementById('themeToggle');
 
+        // Theme Logic
+        if(localStorage.getItem('theme') === 'light') document.documentElement.setAttribute('data-theme', 'light');
+        themeBtn.onclick = () => {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            document.documentElement.setAttribute('data-theme', isLight ? 'dark' : 'light');
+            localStorage.setItem('theme', isLight ? 'dark' : 'light');
+            themeBtn.innerText = isLight ? '🌙' : '☀️';
+        };
+        themeBtn.innerText = localStorage.getItem('theme') === 'light' ? '☀️' : '🌙';
+
+        // Scroll Progress & Top Button
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            document.getElementById('progress-bar').style.width = ((winScroll / height) * 100) + "%";
+            document.getElementById('scrollTopBtn').style.display = winScroll > 500 ? 'block' : 'none';
+        });
+
+        // Init
         async function init() {
+            grid.innerHTML = Array(6).fill('<div class="card"><div class="card-img skeleton"></div><div class="card-body"><div class="skeleton" style="height:20px; margin-bottom:10px; width:80%;"></div><div class="skeleton" style="height:15px; margin-bottom:10px;"></div></div></div>').join('');
             try {
                 const res = await fetch('./news.json?t=' + new Date().getTime());
                 allNews = await res.json();
                 if(!Array.isArray(allNews) || allNews.length === 0) throw new Error("No Data");
                 buildNav();
+                renderTrending(allNews.slice(0, 5));
                 handleRouting();
             } catch(e) {
-                homeGrid.innerHTML = '<p style="text-align:center;color:red;grid-column:1/-1;padding:20px;">डेटा लोड नहीं हो पाया। कृपया रिफ्रेश करें।</p>';
+                grid.innerHTML = '<p style="text-align:center;color:red;grid-column:1/-1;padding:20px;">डेटा लोड नहीं हो पाया।</p>';
             }
         }
 
@@ -165,6 +221,10 @@
                     ${cat === 'all' ? '📰 All' : cat.replace('_', ' ')}
                 </button>
             `).join('');
+        }
+
+        function renderTrending(items) {
+            trendingBox.innerHTML = items.map(n => `<div class="trend-item" onclick="window.location.hash='article/${n.id}'"><p>${n.title}</p></div>`).join('');
         }
 
         function filterCategory(cat) {
@@ -178,7 +238,7 @@
             
             filteredNews = temp;
             page = 1; 
-            homeGrid.innerHTML = ''; 
+            grid.innerHTML = ''; 
             loadMore(); 
         }
 
@@ -188,7 +248,7 @@
             
             const toShow = filteredNews.slice((page - 1) * limit, page * limit);
             if(toShow.length === 0 && page === 1) {
-                homeGrid.innerHTML = '<p style="text-align:center;color:gray;grid-column:1/-1;">No news found.</p>';
+                grid.innerHTML = '<p style="text-align:center;color:gray;grid-column:1/-1;">No news found.</p>';
                 isLoading = false;
                 return;
             }
@@ -203,11 +263,10 @@
                         <span class="badge">${n.category || 'world'}</span>
                         <div class="card-title">${n.title}</div>
                         <div class="card-desc">${n.snippet}</div>
-                        <div class="card-footer"><span class="source">${n.source}</span><span>${new Date(n.pubDate).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span></div>
+                        <div class="card-footer"><span class="source">${n.domain || n.source}</span><span>${new Date(n.pubDate).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span></div>
                     </div>`;
-                homeGrid.appendChild(card);
+                grid.appendChild(card);
             });
-            
             page++;
             isLoading = false;
         }
@@ -220,57 +279,121 @@
         }, { rootMargin: '200px' });
         observer.observe(sentinel);
 
+        // Modal & Features
         function openModal(news) {
+            currentArticle = news;
+            currentFontSize = 16;
+            document.getElementById('modalText').style.fontSize = currentFontSize + 'px';
+            
             document.getElementById('modalImg').src = news.image || '';
             document.getElementById('modalImg').style.display = news.image ? 'block' : 'none';
             document.getElementById('modalTitle').innerText = news.title;
+            document.getElementById('modalSource').innerText = news.source;
+            document.getElementById('modalTime').innerText = new Date(news.pubDate).toLocaleDateString();
+            
+            // Read Time
+            const words = (news.fullText || news.snippet).split(' ').length;
+            document.getElementById('modalReadTime').innerText = `⏱️ ${Math.ceil(words / 200)} min read`;
+            
             document.getElementById('modalText').innerText = news.fullText || news.snippet;
             document.getElementById('modalLink').href = news.link;
+            
+            // Related News
+            const related = allNews.filter(n => n.category === news.category && n.id !== news.id).slice(0, 3);
+            const relGrid = document.getElementById('relatedGrid');
+            if(related.length > 0) {
+                relGrid.innerHTML = related.map(r => `
+                    <div class="related-card" onclick="openModal(${JSON.stringify(r).replace(/"/g, '&quot;')})">
+                        <img src="${r.image}" onerror="this.src='https://picsum.photos/seed/${r.id}/100/100'">
+                        <div><h4>${r.title}</h4></div>
+                    </div>
+                `).join('');
+                document.querySelector('.related-section').style.display = 'block';
+            } else {
+                document.querySelector('.related-section').style.display = 'none';
+            }
+
             document.getElementById('newsModal').style.display = 'block';
             document.body.style.overflow = 'hidden';
+            
+            // Dynamic SEO
             document.getElementById('pageTitle').innerText = news.title;
+            document.getElementById('pageDesc').setAttribute('content', news.snippet);
+            document.getElementById('seoData').innerText = JSON.stringify({
+                "@context": "https://schema.org", "@type": "NewsArticle", "headline": news.title,
+                "image": [news.image], "datePublished": news.pubDate, "description": news.snippet,
+                "author": { "@type": "Organization", "name": news.source }
+            });
         }
 
         function closeModal() {
             document.getElementById('newsModal').style.display = 'none';
             document.body.style.overflow = 'auto';
+            window.speechSynthesis.cancel(); 
+            isPlaying = false;
             window.location.hash = ''; 
+            document.getElementById('pageTitle').innerText = 'AI GO-NEWS | Premium Portal';
         }
 
-        // --- DYNAMIC ROUTING & SEO LOGIC ---
+        function speakText() {
+            if (isPlaying) { window.speechSynthesis.cancel(); isPlaying = false; return; }
+            const text = document.getElementById('modalText').innerText;
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.onend = () => isPlaying = false;
+            window.speechSynthesis.speak(utterance); 
+            isPlaying = true;
+            showToast('Playing audio...');
+        }
+
+        function changeFontSize(step) {
+            currentFontSize += (step * 2);
+            if(currentFontSize < 12) currentFontSize = 12;
+            if(currentFontSize > 24) currentFontSize = 24;
+            document.getElementById('modalText').style.fontSize = currentFontSize + 'px';
+        }
+
+        function saveArticle() {
+            let saved = JSON.parse(localStorage.getItem('savedNews') || '[]');
+            if (!saved.find(n => n.id === currentArticle.id)) {
+                saved.push(currentArticle); localStorage.setItem('savedNews', JSON.stringify(saved));
+                showToast('Article Saved!');
+            } else { showToast('Already Saved!'); }
+        }
+
+        function shareArticle() {
+            if (navigator.share) {
+                navigator.share({ title: currentArticle.title, url: currentArticle.link });
+            } else {
+                navigator.clipboard.writeText(currentArticle.link);
+                showToast('Link Copied!');
+            }
+        }
+
+        function showSaved() {
+            const saved = JSON.parse(localStorage.getItem('savedNews') || '[]');
+            if(saved.length === 0) return showToast('No saved articles.');
+            filteredNews = saved; page = 1; grid.innerHTML = ''; 
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            loadMore(); 
+            showToast('Showing Saved Articles');
+        }
+
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            t.innerText = msg; t.classList.add('show');
+            setTimeout(() => t.classList.remove('show'), 3000);
+        }
+
         function handleRouting() {
             const hash = window.location.hash;
-            
-            // Hide all sections first
-            homeGrid.style.display = 'none';
-            document.getElementById('aboutPage').style.display = 'none';
-            document.getElementById('termsPage').style.display = 'none';
-            document.getElementById('disclaimerPage').style.display = 'none';
-            document.getElementById('newsModal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-
-            if (hash === '#about') {
-                document.getElementById('aboutPage').style.display = 'block';
-                document.getElementById('pageTitle').innerText = 'About Us | AI GO-NEWS';
-                document.getElementById('pageDesc').setAttribute('content', 'Learn about AI GO-NEWS, the ultimate news aggregator.');
-            } else if (hash === '#terms') {
-                document.getElementById('termsPage').style.display = 'block';
-                document.getElementById('pageTitle').innerText = 'Terms & Conditions | AI GO-NEWS';
-                document.getElementById('pageDesc').setAttribute('content', 'Terms and conditions for using AI GO-NEWS.');
-            } else if (hash === '#disclaimer') {
-                document.getElementById('disclaimerPage').style.display = 'block';
-                document.getElementById('pageTitle').innerText = 'Disclaimer | AI GO-NEWS';
-                document.getElementById('pageDesc').setAttribute('content', 'Disclaimer for AI GO-NEWS.');
-            } else if (hash.startsWith('#article/')) {
-                homeGrid.style.display = 'grid'; // Keep grid visible behind modal
+            if (hash.startsWith('#article/')) {
                 const id = hash.replace('#article/', '');
                 const article = allNews.find(n => n.id === id);
                 if (article) openModal(article);
                 else filterCategory('all');
             } else {
-                homeGrid.style.display = 'grid';
-                document.getElementById('pageTitle').innerText = 'AI GO-NEWS | Premium Portal';
-                document.getElementById('pageDesc').setAttribute('content', 'Live HD News Aggregator from top 1000+ RSS feeds.');
+                document.getElementById('newsModal').style.display = 'none';
+                document.body.style.overflow = 'auto';
                 if(filteredNews.length === 0) filterCategory('all');
             }
         }
