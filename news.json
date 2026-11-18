@@ -1,11 +1,75 @@
 [
     {
         "category": "World",
-        "title": "Government backs welfare shake-up to prevent 'lost generation'",
-        "content": "Ex-minister Alan Milburn has set out plans to divert spending from benefits towards job support.",
-        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/cf5e/live/7e3d3ce0-e2b0-11f1-8226-87dfa5049e9a.jpg",
-        "published": "Tue, 17 Nov 2026 18:43:05 GMT",
-        "source_link": "https://www.bbc.co.uk/news/articles/ck79210y125xo?at_medium=RSS&at_campaign=rss"
+        "title": "Burnham promises to 'move quickly' on Neets report",
+        "content": "The prime minister tells the BBC he wants to get \"stuck in\" after the Milburn report proposes wide-ranging changes to help unemployed young people.",
+        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/c6d5/live/68b519f0-e31a-11f1-a094-5fdc692f3e33.jpg",
+        "published": "Wed, 18 Nov 2026 06:00:24 GMT",
+        "source_link": "https://www.bbc.co.uk/news/articles/c8n50457edd4o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+        "category": "World",
+        "title": "Chris Mason: Milburn may have gifted Labour MPs a moral argument for welfare reform",
+        "content": "There is hope his Neets report has created a case on benefits which MPs can back, writes political editor Chris Mason.",
+        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/edf3/live/4d7f4930-e2ed-11f1-99a1-253766e7ad8b.jpg",
+        "published": "Wed, 18 Nov 2026 06:00:38 GMT",
+        "source_link": "https://www.bbc.co.uk/news/articles/cj62p66zl6kyo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+        "category": "World",
+        "title": "As Trump and Xi meet, China's AI dreams face an unexpected hurdle: the Nvidia spy scandal",
+        "content": "China worries the scandal could ramp up pressure on the US  to further restrict the sale of advanced chips.",
+        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/ec0d/live/1061d030-dea2-11f1-b441-2b33b063138f.jpg",
+        "published": "Tue, 17 Nov 2026 23:02:12 GMT",
+        "source_link": "https://www.bbc.co.uk/news/articles/c5vg23g92rj4o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+        "category": "World",
+        "title": "Home secretary plans to tackle 'perception of two-tier policing'",
+        "content": "Shabana Mahmood will announce stronger guidance on police impartiality.",
+        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/4035/live/d90bfb90-e2c2-11f1-a9da-01a195e70ea0.jpg",
+        "published": "Tue, 17 Nov 2026 22:31:32 GMT",
+        "source_link": "https://www.bbc.co.uk/news/articles/c3vg24wpg040o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+        "category": "World",
+        "title": "William and Kate on Earthshot Prize green carpet in Mumbai",
+        "content": "The pair arrived at the ceremony where five £1m prizes were awarded to projects aimed at solving climate challenges.",
+        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/ac99/live/a44fd170-e2ad-11f1-a094-5fdc692f3e33.jpg",
+        "published": "Tue, 17 Nov 2026 21:15:00 GMT",
+        "source_link": "https://www.bbc.co.uk/news/videos/c6x2ev29v87no?at_medium=RSS&at_campaign=rss"
+    },
+    {
+        "category": "World",
+        "title": "The EU that Burnham is eyeing up is very different to the one Britain left",
+        "content": "Andy Burnham wants \"steps\" towards a closer EU alignment. But the bloc has changed considerably since the UK left it",
+        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/0152/live/8197ef80-e282-11f1-99a1-253766e7ad8b.jpg",
+        "published": "Wed, 18 Nov 2026 00:39:06 GMT",
+        "source_link": "https://www.bbc.co.uk/news/articles/cq4gn3109pzgo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+        "category": "World",
+        "title": "Democrat Mary Peltola unseats Republican in Alaska Senate race",
+        "content": "For two weeks, the race remained too close to call but the win allows Democrats an even greater majority in the US Senate.",
+        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/8202/live/39cdb760-dc7a-11f1-b23d-9526db010e6c.jpg",
+        "published": "Wed, 18 Nov 2026 04:58:50 GMT",
+        "source_link": "https://www.bbc.co.uk/news/articles/cqev3v2ygzlvo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+        "category": "World",
+        "title": "Waymo pulls driverless taxis from all US freeways",
+        "content": "The decision comes after California banned Waymo's driverless vehicles from operating on the state's highways following a series of traffic incidents.",
+        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/80ea/live/d55939e0-e31c-11f1-99a1-253766e7ad8b.jpg",
+        "published": "Wed, 18 Nov 2026 03:07:22 GMT",
+        "source_link": "https://www.bbc.co.uk/news/articles/cmy86pp336qlo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+        "category": "World",
+        "title": "Government risks missing climate targets if EV rules weakened, adviser warns",
+        "content": "The UK could miss legally binding climate targets if EV targets are cut, an adviser warns",
+        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/36bf/live/43e4a6f0-e29c-11f1-8dda-8925a81c3da5.jpg",
+        "published": "Wed, 18 Nov 2026 00:44:48 GMT",
+        "source_link": "https://www.bbc.co.uk/news/articles/c63rgqg5l9l2o?at_medium=RSS&at_campaign=rss"
     },
     {
         "category": "World",
@@ -17,70 +81,6 @@
     },
     {
         "category": "World",
-        "title": "Nvidia reports bumper results as firm says it's not reinstating Huang",
-        "content": "Nvidia reported strong quarterly earnings on Tuesday amid the dramatic exit of ex-CEO Jensen Huang.",
-        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/2e48/live/58880030-e2d7-11f1-99a1-253766e7ad8b.jpg",
-        "published": "Tue, 17 Nov 2026 23:03:39 GMT",
-        "source_link": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-        "category": "World",
-        "title": "American soldier arrested by UK police on suspicion of spying taken into US military custody",
-        "content": "The Metropolitan Police say he has been taken into custody by the US Military over suspected national security and espionage allegations.",
-        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/42be/live/81981920-e2db-11f1-950d-ffe0c8f51f90.png",
-        "published": "Tue, 17 Nov 2026 22:46:30 GMT",
-        "source_link": "https://www.bbc.co.uk/news/articles/c6x284ez38vdo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-        "category": "World",
-        "title": "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
-        "content": "Ukraine says the missile and drone attack on the strategic bridge in the Russian-annexed Crimea took weeks to plan.",
-        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/222d/live/db8315b0-e278-11f1-99a1-253766e7ad8b.png",
-        "published": "Tue, 17 Nov 2026 21:24:35 GMT",
-        "source_link": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-        "category": "World",
-        "title": "BBC reports from Kyiv bridge hit by Russian attack",
-        "content": "The BBC's Sarah Rainsford spoke to residents near the site of the overnight strike.",
-        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/5a20/live/d8ac30b0-e2b4-11f1-a094-5fdc692f3e33.jpg",
-        "published": "Tue, 17 Nov 2026 15:54:15 GMT",
-        "source_link": "https://www.bbc.co.uk/news/videos/cmlywvww3pzlo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-        "category": "World",
-        "title": "Rooney says he considered taking his own life at Man Utd",
-        "content": "Wayne Rooney says he considered taking his own life during his playing days at Manchester United and was \"speaking to a therapist to try and figure out what was up\".",
-        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/8374/live/62be97f0-e2b2-11f1-99b6-a35a62fa4264.jpg",
-        "published": "Tue, 17 Nov 2026 14:09:19 GMT",
-        "source_link": "https://www.bbc.co.uk/sport/football/articles/cx1l0n3v003eo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-        "category": "World",
-        "title": "Thomas Markle charged over child sex abuse material in Philippines",
-        "content": "Markle is being held in prison in the US on a separate charge and has previously denied all of the allegations.",
-        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/5b0e/live/040fc640-dd79-11f1-93e1-3b657b665bcf.jpg",
-        "published": "Tue, 17 Nov 2026 22:44:15 GMT",
-        "source_link": "https://www.bbc.co.uk/news/articles/ckg5ry8m49ggo?at_medium=RSS&at_campaign=rss"
-    },
-    {
-        "category": "World",
-        "title": "William and Kate celebrate Earthshot Prize winners in Mumbai",
-        "content": "The Prince and Princess of Wales were joined by sporting and acting stars for the annual environmental awards ceremony.",
-        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/7619/live/c9b38b90-e2ae-11f1-99b6-a35a62fa4264.jpg",
-        "published": "Tue, 17 Nov 2026 18:20:36 GMT",
-        "source_link": "https://www.bbc.co.uk/news/articles/cqlykve012d1o?at_medium=RSS&at_campaign=rss"
-    },
-    {
-        "category": "World",
-        "title": "How Met failed to stop rape-unit detective who abused women",
-        "content": "Warren Arter used his position - running a team investigating sexual assaults - to target women.",
-        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/f492/live/73e8fc20-e1f2-11f1-99a1-253766e7ad8b.png",
-        "published": "Tue, 17 Nov 2026 06:02:28 GMT",
-        "source_link": "https://www.bbc.co.uk/news/articles/c6kgq8d779lro?at_medium=RSS&at_campaign=rss"
-    },
-    {
-        "category": "World",
         "title": "We can't afford to hire under-25s, say firms. Will Milburn plans help?",
         "content": "The proposal to cut employers' National Insurance costs is \"essential\" to tackling the Neet problem, one business group says.",
         "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/1236/live/f4363760-e29e-11f1-a094-5fdc692f3e33.png",
@@ -89,371 +89,363 @@
     },
     {
         "category": "World",
-        "title": "Why Milburn's Neets reforms will only save £200m a year by 2036",
-        "content": "Milburn's plan to help young people promises to save money from the UK's welfare bill. BBC Verify has taken a look at the numbers.",
-        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/d54c/live/80759b20-e278-11f1-a094-5fdc692f3e33.jpg",
-        "published": "Tue, 17 Nov 2026 13:15:59 GMT",
-        "source_link": "https://www.bbc.co.uk/news/articles/c6205wlz8vn0o?at_medium=RSS&at_campaign=rss"
+        "title": "Out of work and not in college: How quickly could Milburn's plans help you?",
+        "content": "The government-backed report says its recommendations could help 440,000 young people into work by 2036.",
+        "image": "https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/4190/live/a11a6ca0-e284-11f1-b166-176de21e2352.jpg",
+        "published": "Tue, 17 Nov 2026 14:43:05 GMT",
+        "source_link": "https://www.bbc.co.uk/news/articles/c6x2wnz3k7lno?at_medium=RSS&at_campaign=rss"
     },
     {
         "category": "India",
-        "title": "Pakistani Man Jailed For 27 Years In US For Trump Murder Plot",
-        "content": "But the United States' top law officer Todd Blanche insisted Tuesday that the plot was against Trump.",
-        "image": "https://c.ndtvimg.com/2026-03/5fantc6c_asif-merchant_625x300_05_March_26.jpg?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
-        "published": "Wed, 18 Nov 2026 04:35:17 +0530",
-        "source_link": "https://www.ndtv.com/world-news/pakistani-man-jailed-for-27-years-in-us-for-trump-murder-plot-12341452#publisher=newsstand"
+        "title": "Nvidia Sold Out For 2 Years, Can Survive Without Jensen Huang: IBM CEO",
+        "content": "Arvind Krishna said Nvidia has a strong engineering team, a solid product pipeline",
+        "image": "https://c.ndtvimg.com/2026-11/3v4rjo3g_arvind-krishna-jensen-huang_625x300_18_November_26.jpeg",
+        "published": "Wed, 18 Nov 2026 11:46:43 +0530",
+        "source_link": "https://www.ndtv.com/world-news/exclusive-ibm-ceo-arvind-krishna-on-why-jensen-huangs-exit-may-not-be-a-big-blow-to-nvidia-12342342#publisher=newsstand"
     },
     {
         "category": "India",
-        "title": "Jensen Huang 'Ready To Return', Nvidia Chairman Says Will Not Reinstate Him",
-        "content": "Earlier, Jensen Huang said that he would come back to lead the chipmaker if the board invited him.",
-        "image": "https://c.ndtvimg.com/2026-11/m78c4fa8_jensen-huang_625x300_17_November_26.jpeg?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
-        "published": "Wed, 18 Nov 2026 04:11:28 +0530",
-        "source_link": "https://www.ndtv.com/world-news/nvidia-chairman-says-board-does-not-intend-to-reinstate-jensen-huang-as-ceo-12341411#publisher=newsstand"
+        "title": "Wine Parties, Office Put-Downs And \"Royal Family\" Culture: Inside Jensen Huang's Nvidia",
+        "content": "Some Nvidia employees said Huang and his children were treated like a \"royal family\"",
+        "image": "https://c.ndtvimg.com/2026-11/ngi4maus_jensen-huang_625x300_18_November_26.jpeg",
+        "published": "Wed, 18 Nov 2026 11:33:33 +0530",
+        "source_link": "https://www.ndtv.com/world-news/inside-jensen-huangs-nvidia-wine-parties-office-put-downs-and-royal-family-culture-12342178#publisher=newsstand"
     },
     {
         "category": "India",
-        "title": "Israel Parliament Elects Gadi Eisenkot Ally As Speaker In Blow For Netanyahu",
-        "content": "Sixty six lawmakers out of 120 voted in favour of Matan Kahana.",
-        "image": "https://c.ndtvimg.com/2026-11/3s8hkr5_matan-kahana_625x300_18_November_26.jpeg",
-        "published": "Wed, 18 Nov 2026 03:44:12 +0530",
-        "source_link": "https://www.ndtv.com/world-news/israel-parliament-elects-gadi-eisenkot-ally-matan-kahana-as-speaker-in-blow-for-netanyahu-12341395#publisher=newsstand"
+        "title": "US, South Korea Ask Java Users To Install Security Updates Amid Flaws",
+        "content": "Java is used in critical information systems including government agencies, and military.",
+        "image": "https://c.ndtvimg.com/2026-11/4g4ucpo_ai-for-cyberfraud-reuters_625x300_06_November_26.jpeg?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
+        "published": "Wed, 18 Nov 2026 11:30:20 +0530",
+        "source_link": "https://www.ndtv.com/world-news/us-south-korea-ask-java-users-to-install-security-updates-amid-flaws-12342238#publisher=newsstand"
     },
     {
         "category": "India",
-        "title": "Nvidia Beats Estimates In First Earnings Report Without Jensen Huang",
-        "content": "American chips giant Nvidia exceeded analysts' expectations on Tuesday when it reported $115.8 billion in total revenue in its third quarter, double over last year, including sales from its data center business which grew even faster at 110% to reach $107.6 billion.",
-        "image": "https://c.ndtvimg.com/2026-11/qqap05b4_nvidia_625x300_16_November_26.jpg?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
-        "published": "Wed, 18 Nov 2026 03:26:32 +0530",
-        "source_link": "https://www.ndtv.com/world-news/nvidia-beats-third-quarter-expectations-in-first-earnings-report-since-jensen-huangs-resignation-12341344#publisher=newsstand"
+        "title": "Thar For Horse Race Winner At Bihar MLA Anant Singh's Daughter's Wedding",
+        "content": "MLA Anant Singh witnessing preparations for the grand horse race next week",
+        "image": "https://c.ndtvimg.com/2026-11/smv02u8_anant-singh-horse-race-_625x300_18_November_26.jpeg",
+        "published": "Wed, 18 Nov 2026 11:27:38 +0530",
+        "source_link": "https://www.ndtv.com/india-news/thar-for-horse-race-winner-at-bihar-mla-anant-singhs-daughters-wedding-12342511#publisher=newsstand"
     },
     {
         "category": "India",
-        "title": "Azam Khan Gets Relief As Supreme Court Stays Conviction, High Court Grants Interim Bail",
-        "content": "The Enforcement Directorate had arrested Azam Khan (78) from the Rampur district jail on October 31.",
-        "image": "https://c.ndtvimg.com/2026-11/22qogov4_azam-khan_625x300_16_November_26.png?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
-        "published": "Wed, 18 Nov 2026 02:53:58 +0530",
-        "source_link": "https://www.ndtv.com/india-news/azam-khan-gets-relief-as-supreme-court-stays-conviction-high-court-grants-interim-bail-12341315#publisher=newsstand"
+        "title": "'False Narrative': Former Tata Trusts Trustee Darius Khambata Backs Noel Tata, Rebuts Venu Srinivasan",
+        "content": "Former Tata Trusts trustee Darius Khambata has backed Noel Tata, slammed Venu Srinivasan and Vijay Singh.",
+        "image": "https://c.ndtvimg.com/2026-11/m8opaj0s_tata-saga_625x300_18_November_26.png?im=FaceCrop,algorithm=dnn,width=1280,height=720",
+        "published": "Wed, 18 Nov 2026 11:17:25 +0530",
+        "source_link": "https://www.ndtv.com/business-news/tata-sons-ipo-dispute-former-tata-trusts-trustee-darius-khambata-backs-noel-tata-rebuts-venu-srinivasan-12342358#publisher=newsstand"
     },
     {
         "category": "India",
-        "title": "Elderly Couple, Student Killed In Road Accidents In UP: Cops",
-        "content": "Both sustained serious injuries and were taken to the joint hospital, where doctors declared them dead.",
-        "image": "https://c.ndtvimg.com/2023-01/7hfj4un8_accident-generic-road-sign-generic-getty_625x300_20_January_23.jpg?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
-        "published": "Wed, 18 Nov 2026 02:05:17 +0530",
-        "source_link": "https://www.ndtv.com/india-news/elderly-couple-student-killed-in-road-accidents-in-up-cops-12341262#publisher=newsstand"
+        "title": "Tenant Who Robbed, Murdered Assam Family Lost Rs 4 Lakh In Online Game: Cops",
+        "content": "The accused were identified as Raju Das and Amir Das",
+        "image": "https://c.ndtvimg.com/2026-11/gihu3ucc_assam-deaths-ndtv_625x300_17_November_26.jpeg?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
+        "published": "Wed, 18 Nov 2026 11:00:24 +0530",
+        "source_link": "https://www.ndtv.com/india-news/dibrugarh-triple-murders-tenant-who-robbed-murdered-assam-family-lost-rs-4-lakh-in-online-game-cops-12342394#publisher=newsstand"
     },
     {
         "category": "India",
-        "title": "Man Wanted In Delhi Bar Firing Shot In Leg During Encounter",
-        "content": "The firing incident at the bar took place on Monday night. (Representational)",
-        "image": "https://c.ndtvimg.com/2024-02/80ef0ba_delhi-police-generic_625x300_04_February_24.jpeg?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
-        "published": "Wed, 18 Nov 2026 01:37:37 +0530",
-        "source_link": "https://www.ndtv.com/delhi-news/man-wanted-in-delhi-bar-firing-shot-in-leg-during-encounter-12341220#publisher=newsstand"
+        "title": "Cyclone Akvan Expected To Strengthen Before Landfall In Andhra On Friday",
+        "content": "Coastal Andhra Pradesh is likely to receive heavy to very heavy rainfall on November 19 and 20",
+        "image": "https://c.ndtvimg.com/2026-11/vqtn7sqo_cyclone-akvan_625x300_17_November_26.jpg?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
+        "published": "Wed, 18 Nov 2026 11:00:19 +0530",
+        "source_link": "https://www.ndtv.com/andhra-pradesh-news/cyclone-akvan-expected-to-strengthen-before-landfall-in-andhra-on-friday-12342406#publisher=newsstand"
     },
     {
         "category": "India",
-        "title": "19 Killed As Russian Military Transport Plane Crashes In Siberia",
-        "content": "According to local reports, no one aboard the plane survived.",
-        "image": "https://c.ndtvimg.com/2026-11/upf8bo0c_russia-plane-crash_650x400_18_November_26.jpg",
-        "published": "Wed, 18 Nov 2026 01:18:04 +0530",
-        "source_link": "https://www.ndtv.com/world-news/13-killed-as-russian-military-transport-plane-crashes-in-siberia-report-12341047#publisher=newsstand"
+        "title": "Nvidia Under Securities And Exchange Commission's Lens: Report",
+        "content": "The investigation will look into whether Nvidia's disclosures misled investors.",
+        "image": "https://c.ndtvimg.com/2026-11/72j6ddbo_jensen-nvidia-board_625x300_18_November_26.png?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
+        "published": "Wed, 18 Nov 2026 11:00:14 +0530",
+        "source_link": "https://www.ndtv.com/world-news/nvidia-under-securities-and-exchange-commissions-lens-report-jensen-huang-affair-with-suspected-chinese-spy-alice-huang-12342404#publisher=newsstand"
     },
     {
         "category": "India",
-        "title": "US Takes Custody Of Army Officer Accused Of Spying For Russia In UK",
-        "content": "The police say their counterterror force has worked closely with the FBI and US military.",
-        "image": "https://c.ndtvimg.com/2022-09/miofv1o8_us-military-generic-us-army-uniform-generic-istock_625x300_24_September_22.jpg?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
-        "published": "Wed, 18 Nov 2026 01:12:46 +0530",
-        "source_link": "https://www.ndtv.com/world-news/us-takes-custody-of-army-officer-accused-of-spying-for-russia-in-uk-12341180#publisher=newsstand"
+        "title": "Alice Huang's Husband Built $9 Billion AI Network With China's Help: Report",
+        "content": "Kang Wei, Jensen Huang and Alice Huang",
+        "image": "https://c.ndtvimg.com/2026-11/l218kuto_jensen_625x300_18_November_26.jpg?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
+        "published": "Wed, 18 Nov 2026 11:00:11 +0530",
+        "source_link": "https://www.ndtv.com/world-news/nvdia-jensen-huang-affair-alice-huang-husband-kang-wei-built-9-billion-ai-network-with-china-help-says-wsj-report-12342401#publisher=newsstand"
     },
     {
         "category": "India",
-        "title": "No SpiceJet Departures Since 7 pm, Hundreds Of Passengers Stranded In Mumbai",
-        "content": "SpiceJet is yet to comment on the flight delays.",
-        "image": "https://c.ndtvimg.com/2026-11/6fssdgck_spicejet-cancellations_625x300_18_November_26.jpg?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
-        "published": "Wed, 18 Nov 2026 01:12:15 +0530",
-        "source_link": "https://www.ndtv.com/world-news/no-spicejet-departures-from-mumbai-airport-since-7-pm-hundreds-of-passengers-stranded-12341118#publisher=newsstand"
+        "title": "Lashkar Terrorist Lateef Bhat Killed In J&K Encounter. He Was Hiding Inside Mosque",
+        "content": "Lateef Bhat was killed in an encounter in Kulgam",
+        "image": "https://c.ndtvimg.com/2026-11/qg5qph74_lateef-bhat_625x300_18_November_26.jpeg",
+        "published": "Wed, 18 Nov 2026 10:39:12 +0530",
+        "source_link": "https://www.ndtv.com/india-news/lashkar-terrorist-lateef-bhat-killed-in-j-k-encounter-he-was-hiding-inside-mosque-12342224#publisher=newsstand"
     },
     {
         "category": "India",
-        "title": "\"Created Problems, Deeply Regret\": Jensen Huang's Full Statement",
-        "content": "Former Jensen Huang on Tuesday issued a statement after he quit last week.",
-        "image": "https://c.ndtvimg.com/2026-11/s0l519uk_jensen-huang-reuters_625x300_16_November_26.jpeg?im=FitAndFill,algorithm=dnn,width=1280,height=720",
-        "published": "Wed, 18 Nov 2026 01:01:47 +0530",
-        "source_link": "https://www.ndtv.com/world-news/created-problems-own-my-mistakes-jensen-huangs-full-statement-12340527#publisher=newsstand"
+        "title": "Stock Market Today: This Platform Lets Firms Track AI Agents. Should Investors Buy?",
+        "content": "Sensex, Nifty News: Kellton says KeOS allows organisations to set limits on what an AI agent can do.",
+        "image": "https://c.ndtvimg.com/2026-11/4vpengjk_kelton-bse_625x300_18_November_26.png?im=FitAndFill,algorithm=dnn,width=1280,height=720",
+        "published": "Wed, 18 Nov 2026 10:36:02 +0530",
+        "source_link": "https://www.ndtv.com/business-news/stock-market-today-this-platform-lets-firms-track-ai-agents-should-investors-buy-12342218#publisher=newsstand"
     },
     {
         "category": "India",
-        "title": "AI Agents Could Displace About 10% Of Workers In 5 Years: IBM Chief To NDTV",
-        "content": "Artificial Intelligence will not take away many jobs, and it will generate different kinds of jobs. And as of now, there are three areas where they can contribute substantially, Arvind Krishna, chairman and CEO of IBM told NDTV today.",
-        "image": "https://c.ndtvimg.com/2026-11/or18gq7k_rk-ibm-_625x300_18_November_26.jpg?im=FaceCrop,algorithm=dnn,width=1280,height=720",
-        "published": "Wed, 18 Nov 2026 00:49:58 +0530",
-        "source_link": "https://www.ndtv.com/india-news/ai-agents-could-displace-about-10-of-workers-in-5-years-ibm-chief-to-ndtv-12341127#publisher=newsstand"
+        "title": "2 Arrested, 40 Bottles Seized: Fake Premium Liquor Racket Busted In Hyderabad",
+        "content": "The racket came to light after Excise officials received information about the illegal activity.",
+        "image": "https://i.ndtvimg.com/i/2016-06/hyderabad-police-generic_650x400_61467173241.jpg?im=FeatureCrop,algorithm=dnn,width=1280,height=720",
+        "published": "Wed, 18 Nov 2026 10:03:01 +0530",
+        "source_link": "https://www.ndtv.com/hyderabad-news/2-arrested-40-bottles-seized-fake-premium-liquor-racket-busted-in-hyderabad-12341902#publisher=newsstand"
     },
     {
         "category": "India",
-        "title": "Nvidia chairman Harvey Jones rules out former CEO Jensen Huang's return",
-        "content": "Nvidia chairman Harvey Jones' statement came hours after Huang said he would return if invited.",
-        "image": "https://static.toiimg.com/photo/msid-135943528,imgsize-484531.cms",
-        "published": "Wed, 18 Nov 2026 04:37:26 +0530",
-        "source_link": "https://timesofindia.indiatimes.com/business/international-business/board-has-no-plans-to-reinstate-him-as-ceo-nvidia-chairman-rules-out-jensen-huangs-return/articleshow/135943448.cms"
-    },
-    {
-        "category": "India",
-        "title": "From Manila, Quad signal to China: 'Peace by strength'",
-        "content": "US President Donald Trump announced Quad will conduct its first military exercise featuring maritime patrol aircraft in March 2027.",
-        "image": "https://static.toiimg.com/photo/msid-135943306,imgsize-235578.cms",
-        "published": "Wed, 18 Nov 2026 04:12:56 +0530",
-        "source_link": "https://timesofindia.indiatimes.com/india/from-manila-quad-signal-to-china-peace-by-strength/articleshow/135943307.cms"
-    },
-    {
-        "category": "India",
-        "title": "'Many systems back up and running': Apple rules out cyberattack after outage",
-        "content": "iCloud and Apple Pay were the most disrupted services. People reported widespread problems in logging in, messaging, emails, payments and fund transfers.",
-        "image": "https://static.toiimg.com/photo/msid-135940304,imgsize-40830.cms",
-        "published": "Tue, 17 Nov 2026 23:48:30 +0530",
-        "source_link": "https://timesofindia.indiatimes.com/technology/tech-news/apple-google-outage-app-store-gmail-search-and-other-services-down/articleshow/135937196.cms"
-    },
-    {
-        "category": "India",
-        "title": "UP assembly polls: SP likely to make initial offer of 24 seats to Congress",
-        "content": "In the 2022 Uttar Pradesh assembly elections, Congress candidates polled more than 20,000 votes in these seats.",
-        "image": "https://static.toiimg.com/photo/msid-135939117,imgsize-40033.cms",
-        "published": "Wed, 18 Nov 2026 00:56:14 +0530",
-        "source_link": "https://timesofindia.indiatimes.com/city/lucknow/sps-initial-offer-24-seats-cong-will-have-to-bargain-hard-for-rest/articleshow/135939119.cms"
-    },
-    {
-        "category": "India",
-        "title": "After govt push, curbs on sexual post recommendations on Instagram",
-        "content": "The changes apply to suggested posts from accounts users do not follow, including in Reels, and the main feed.",
-        "image": "https://static.toiimg.com/photo/msid-135940189,imgsize-58584.cms",
-        "published": "Wed, 18 Nov 2026 02:18:08 +0530",
-        "source_link": "https://timesofindia.indiatimes.com/india/after-govt-push-curbs-on-sexual-post-recommendations-on-instagram/articleshow/135940179.cms"
-    },
-    {
-        "category": "India",
-        "title": "Why Louisiana residents are fighting Amazon’s delivery drones",
-        "content": "Residents in Baton Rouge, Louisiana, are pushing back against Amazon's Prime Air delivery drones. They say the 80-pound machines are noisy, fly too low, threaten privacy and may be driving away birds. One resident recorded drones at 87 decibels. Amazon has changed flight heights and routes and says customers in suburban and semirural areas deserve fast delivery. Similar opposition to drone delivery is growing in Texas and Massachusetts.",
-        "image": "https://static.toiimg.com/photo/msid-135932807,imgsize-20012.cms",
-        "published": "Tue, 17 Nov 2026 21:45:33 +0530",
-        "source_link": "https://timesofindia.indiatimes.com/technology/tech-news/louisiana-residents-want-amazons-80-pound-delivery-drones-out-of-their-sky-amazon-says-we-believe-customers-in-suburban-and-semirural-areas-should-/articleshow/135932764.cms"
-    },
-    {
-        "category": "India",
-        "title": "Chandrayaan-3 finds 3 distinct layers in Moon’s soil",
-        "content": "‘Findings could guide water-ice exploration, lunar habitat construction’",
-        "image": "https://static.toiimg.com/photo/msid-135941026,imgsize-167380.cms",
-        "published": "Wed, 18 Nov 2026 03:48:27 +0530",
-        "source_link": "https://timesofindia.indiatimes.com/science/chandrayaan-3-finds-3-distinct-layers-in-moons-soil/articleshow/135940788.cms"
-    },
-    {
-        "category": "India",
-        "title": "Alabama man wins $126k over stormwater damage, loses latest bid to collect award",
-        "content": "William D. Carpenter triumphed in court, securing a judgment of $126,504.64 for stormwater damage in Alabama. However, challenges arose when he tried to enforce this judgment, prompting him to initiate a new lawsuit against both the homeowners' association and the homeowners. The Alabama Supreme Court dismissed his appeal over procedural technicalities, leaving the original claims of negligence and trespass unresolved as the case continues to unfold in the lower court.",
-        "image": "https://static.toiimg.com/photo/msid-135914096,imgsize-2287695.cms",
-        "published": "Wed, 18 Nov 2026 03:00:00 +0530",
-        "source_link": "https://timesofindia.indiatimes.com/world/us/an-alabama-man-won-a-126504-64-judgment-after-stormwater-from-a-neighbouring-subdivision-damaged-his-land-but-struggled-to-collect-it-in-november-2026-the-states-highest-court-dismissed-his-latest-appeal/articleshow/135913787.cms"
-    },
-    {
-        "category": "India",
-        "title": "'Goldy Dhillon a petty thief': Lawrence gang on gangster who threatened Amitabh Bachchan",
-        "content": "The gang claimed Dhillon used to wash utensils at a restaurant in Germany for a living and said he lacked the wherewithal to target Bachchan or even his domestic staff.",
-        "image": "https://static.toiimg.com/photo/msid-135940373,imgsize-745083.cms",
-        "published": "Wed, 18 Nov 2026 02:58:49 +0530",
-        "source_link": "https://timesofindia.indiatimes.com/india/goldy-dhillon-a-petty-thief-lawrence-gang/articleshow/135940324.cms"
-    },
-    {
-        "category": "India",
-        "title": "SC upholds stay on Azam Khan's conviction; offers son, wife relief",
-        "content": "The Supreme Court said all three were on the \"same footing\" and questioned the Allahabad high court for \"discriminating\" among them.",
-        "image": "https://static.toiimg.com/photo/msid-135940429,imgsize-888462.cms",
-        "published": "Wed, 18 Nov 2026 03:09:34 +0530",
-        "source_link": "https://timesofindia.indiatimes.com/india/sc-upholds-stay-on-azam-khans-conviction-offers-son-wife-relief/articleshow/135940416.cms"
-    },
-    {
-        "category": "India",
-        "title": "In fresh Iran strikes, US targets missile site on Qeshm Island",
-        "content": "According to a US military official, a fighter jet struck the facility in retaliation for Iran's targeting of US personnel and assets.",
-        "image": "https://static.toiimg.com/photo/msid-135939773,imgsize-391937.cms",
-        "published": "Wed, 18 Nov 2026 01:40:35 +0530",
-        "source_link": "https://timesofindia.indiatimes.com/world/middle-east/us-launches-fresh-strikes-on-iran-targets-missile-launch-site-on-qeshm-island/articleshow/135939742.cms"
-    },
-    {
-        "category": "India",
-        "title": "UConn donor's daughters sue after bank's name added to arena built with his $1m",
-        "content": "The daughters of Harry A. Gampel have filed a lawsuit against the University of Connecticut regarding naming rights for a building that they contend should bear their father's name, as per a 1989 agreement. This legal action comes after M&amp;T Bank's recent renaming of the arena, prompting concerns about the erosion of their father's legacy.",
-        "image": "https://static.toiimg.com/photo/msid-135890193,imgsize-95665.cms",
-        "published": "Wed, 18 Nov 2026 02:00:00 +0530",
-        "source_link": "https://timesofindia.indiatimes.com/world/us/his-1-million-gift-helped-build-a-connecticut-basketball-arena-in-1990-36-years-later-three-daughters-are-suing-after-uconn-added-a-banks-name-under-a-32-5-million-20-year-naming-agreement/articleshow/135889971.cms"
-    },
-    {
-        "category": "India",
-        "title": "Jharkhand SIR: Final BLO meetings at poll stations on November 18",
-        "content": "Jharkhand CEO K Ravi Kumar appeals to all eligible Indian citizens in the state to ensure their names are included in the electoral roll by taking part in Ek Aur Avsar (One More Opportunity) camps",
-        "image": "https://th-i.thgim.com/public/incoming/e5e05a/article71713614.ece/alternates/LANDSCAPE_1200/20260930290L.jpg",
-        "published": "Wed, 18 Nov 2026 03:52:22 +0530",
-        "source_link": "https://www.thehindu.com/news/national/jharkhand/jharkhand-sir-final-blo-meeting-at-poll-stations-on-november-18/article71713613.ece"
-    },
-    {
-        "category": "India",
-        "title": "Construction activities on Kaziranga wildlife corridors flagged",
-        "content": "An Eastern Assam-based environment activist writes to the Supreme Court-constituted Central Empowered Committee, highlighting the concerns",
-        "image": "https://th-i.thgim.com/public/incoming/vyxyko/article71713610.ece/alternates/LANDSCAPE_1200/WhatsApp%20Image%202026-11-16%20at%207.00.14%20PM.jpeg",
-        "published": "Wed, 18 Nov 2026 03:14:11 +0530",
-        "source_link": "https://www.thehindu.com/news/national/assam/construction-activities-on-kaziranga-wildlife-corridors-flagged/article71713607.ece"
-    },
-    {
-        "category": "India",
-        "title": "Kedarnath generates 73 tonnes of waste during 2026 Char Dham Yatra",
-        "content": "Around 65.65 lakh pilgrims visit four Char Dham shrines and Hemkund Sahib in 2026 as Badrinath portals close for winter",
-        "image": "https://th-i.thgim.com/public/incoming/y3a6oy/article71713487.ece/alternates/LANDSCAPE_1200/PTI09_18_2026_000333B.jpg",
-        "published": "Wed, 18 Nov 2026 03:00:56 +0530",
-        "source_link": "https://www.thehindu.com/news/national/uttarakhand/kedarnath-generates-73-tonnes-of-waste-during-2026-char-dham-yatra/article71712125.ece"
-    },
-    {
-        "category": "India",
-        "title": "Won’t allow hiring of outsiders, hire locals: J&K CM Omar Abdullah to outside companies",
-        "content": "He made the statement during the inauguration of development projects worth ₹30 crores in Jammu, Samba and Kathua districts",
-        "image": "https://th-i.thgim.com/public/incoming/4rglir/article71713480.ece/alternates/LANDSCAPE_1200/HXVKDr8akAAh_Z5.jpeg",
-        "published": "Wed, 18 Nov 2026 02:17:09 +0530",
-        "source_link": "https://www.thehindu.com/news/national/jammu-and-kashmir/wont-allow-hiring-of-outsiders-hire-locals-jk-cm-omar-abdullah-to-outside-companies/article71713475.ece"
-    },
-    {
-        "category": "India",
-        "title": "Ruckus erupts between SFI activists and police over setting up bookstalls near Calcutta University",
-        "content": "The SFI leaders said they sought permission from the Kolkata Police to set up a bookstall on the College Street footpath, but police refused on November 16 evening, saying it could disrupt traffic",
-        "image": "https://th-i.thgim.com/public/incoming/ozrvne/article71713473.ece/alternates/LANDSCAPE_1200/20261117207L.jpg",
-        "published": "Wed, 18 Nov 2026 01:52:19 +0530",
-        "source_link": "https://www.thehindu.com/news/national/west-bengal/ruckus-erupts-between-sfi-activists-and-police-over-setting-up-bookstalls-near-calcutta-university/article71713007.ece"
-    },
-    {
-        "category": "India",
-        "title": "Elanthoor human sacrifice case: witness examination nearing final stage",
+        "title": "Cornered in a mosque, said 'no' to surrender: How forces killed LeT commander Lateef Bhat",
         "content": "",
+        "image": "https://static.toiimg.com/photo/msid-135950516,imgsize-206490.cms",
+        "published": "Wed, 18 Nov 2026 10:57:46 +0530",
+        "source_link": "https://timesofindia.indiatimes.com/india/biggest-success-of-2026-how-security-forces-killed-let-commander-behind-crpf-terror-attack/articleshow/135950231.cms"
+    },
+    {
+        "category": "India",
+        "title": "SC issues contempt notice to lawyer over remarks against CJI Surya Kant",
+        "content": "",
+        "image": "https://static.toiimg.com/photo/msid-135951203,imgsize-1092017.cms",
+        "published": "Wed, 18 Nov 2026 11:27:50 +0530",
+        "source_link": "https://timesofindia.indiatimes.com/india/supreme-court-issues-contempt-notice-to-lawyer-over-remarks-against-cji-surya-kant/articleshow/135951002.cms"
+    },
+    {
+        "category": "India",
+        "title": "Bengaluru man tied up, set on fire by coworkers",
+        "content": "Bengaluru has witnessed two horrific incidents recently involving burn injuries. Firstly, Mohammed, a scrap merchant, was restrained and ignited by coworkers, resulting in him being hospitalized for severe burns at Victoria Hospital. Meanwhile, 28-year-old Pavan tragically ended his life by self-immolation, his actions stemming from heartache over a relationship with a married woman that took a turn for the worse when she stopped responding to him.",
+        "image": "https://static.toiimg.com/photo/msid-135950558,imgsize-49264.cms",
+        "published": "Wed, 18 Nov 2026 10:59:52 +0530",
+        "source_link": "https://timesofindia.indiatimes.com/city/bengaluru/bengaluru-man-tied-up-set-on-fire-by-coworkers/articleshow/135950517.cms"
+    },
+    {
+        "category": "India",
+        "title": "AI models identify civilians as military targets in tests",
+        "content": "",
+        "image": "https://static.toiimg.com/photo/msid-135951201,imgsize-306622.cms",
+        "published": "Wed, 18 Nov 2026 11:36:48 +0530",
+        "source_link": "https://timesofindia.indiatimes.com/defence/international/ai-models-turn-civilians-ambulances-and-school-into-military-targets-in-simulated-war-tests/articleshow/135951000.cms"
+    },
+    {
+        "category": "India",
+        "title": "Cues from Wellington nets: Shubman Gill, Morne Morkel and '20 good balls'",
+        "content": "Shubman Gill is leaving no stone unturned ahead of India's Test series against New Zealand. A demanding 30-minute net session against bowling coach Morne Morkel, complete with a challenge to face 20 good-length deliveries, offered a glimpse into the Indian captain's preparations.",
+        "image": "https://static.toiimg.com/photo/msid-135951025,imgsize-211086.cms",
+        "published": "Wed, 18 Nov 2026 11:17:53 +0530",
+        "source_link": "https://timesofindia.indiatimes.com/sports/cricket/india-vs-new-zealand/cues-from-wellington-nets-shubman-gill-morne-morkel-and-20-good-balls/articleshow/135950833.cms"
+    },
+    {
+        "category": "India",
+        "title": "US National Security Agency confirms classified internal network suffered outage",
+        "content": "The US National Security Agency experienced a network outage during scheduled maintenance on November 17. Although the outage did not affect mission-critical capabilities, it impacted numerous employees. The agency clarified that the issue was not a cybersecurity incident and operations continued at its headquarters. This incident follows several recent technology outages in the US affecting various sectors including banks and airlines.",
+        "image": "https://static.toiimg.com/photo/msid-135951743,imgsize-221890.cms",
+        "published": "Wed, 18 Nov 2026 11:41:04 +0530",
+        "source_link": "https://timesofindia.indiatimes.com/technology/tech-news/us-national-security-agency-confirms-classified-internal-network-suffered-outage-says-some-internal-systems-were-affected-but-/articleshow/135951682.cms"
+    },
+    {
+        "category": "India",
+        "title": "Gold price prediction: Will gold’s brutal week continue? Check outlook for today",
+        "content": "Gold price prediction today: The sell-off is increasingly driven by rising interest-rate expectations, with markets pricing in Fed hikes in December and January and another move by April. Gold has declined more than 25% since the war began in late February, with equities and Bitcoin also falling amid the broader rates-driven sell-off.",
+        "image": "https://static.toiimg.com/photo/msid-135951583,imgsize-598649.cms",
+        "published": "Wed, 18 Nov 2026 11:35:15 +0530",
+        "source_link": "https://timesofindia.indiatimes.com/business/india-business/gold-price-prediction-today-india-where-is-gold-silver-rate-headed-on-november-18-2026-mcx-gold-futures-outlook-us-iran-war-middle-east-tensions-federal-reserve/articleshow/135951392.cms"
+    },
+    {
+        "category": "India",
+        "title": "Taylor Swift, Dolly Parton recorded at 10-acre estate now listed for $19.5m",
+        "content": "Dark Horse Estate in Franklin, Tennessee is now on the market for $19.5 million. This unique property features recording facilities and accommodations for artists and guests alike. It has a rich history with over 65 gold and platinum albums recorded by various notable musicians. The estate spans over 10 acres, providing privacy and ample outdoor space for inspiration and relaxation.",
+        "image": "https://static.toiimg.com/photo/msid-135933925,imgsize-153446.cms",
+        "published": "Wed, 18 Nov 2026 12:10:00 +0530",
+        "source_link": "https://timesofindia.indiatimes.com/real-estate/news/taylor-swift-and-dolly-parton-recorded-music-at-a-tennessee-retreat-built-in-1998-after-more-than-65-gold-and-platinum-albums-were-made-there-the-10-acre-studio-estate-is-now-listed-for-19-5-million/articleshow/135933523.cms"
+    },
+    {
+        "category": "India",
+        "title": "'Some dishes best served cold': LeT commander Lateef Bhat killed in Kulgam encounter",
+        "content": "",
+        "image": "https://static.toiimg.com/photo/msid-135949311,imgsize-1008379.cms",
+        "published": "Wed, 18 Nov 2026 10:13:38 +0530",
+        "source_link": "https://timesofindia.indiatimes.com/india/some-dishes-are-best-served-cold-top-let-commander-lateef-bhat-killed-in-encounter-in-jks-kulgam/articleshow/135949196.cms"
+    },
+    {
+        "category": "India",
+        "title": "This is your captain speaking: 'Reluctant leader' Gill is reshaping India's Test culture",
+        "content": "Shubman Gill has stepped into the role of captain for the Indian cricket team, showcasing his determination after a tough tour of Australia. He has made a significant mark in Test matches, amassing 754 runs during the tour in England. Gill insists that preparation is key for Test cricket and has publicly supported Rishabh Pant.",
+        "image": "https://static.toiimg.com/photo/msid-135948399,imgsize-57585.cms",
+        "published": "Wed, 18 Nov 2026 09:41:45 +0530",
+        "source_link": "https://timesofindia.indiatimes.com/sports/cricket/india-vs-new-zealand/this-is-your-captain-speaking-from-reluctant-leader-to-commanding-voice-shubman-gill-is-reshaping-indias-test-culture/articleshow/135948278.cms"
+    },
+    {
+        "category": "India",
+        "title": "'Responsibility to banish hatred': Mamdani condemns anti-Indian racism at Diwali event",
+        "content": "Mayor Zohran Mamdani addressed rising incidents of racism targeting the Indian-American community during a Diwali celebration. He emphasized the need for collective responsibility in combating hate and ensuring safety for Hindus and Sikhs. Thirteen US lawmakers have requested a federal investigation into a disruption of a Diwali event in Seattle. They referred to troubling patterns of anti-South Asian hate across the country.",
+        "image": "https://static.toiimg.com/photo/msid-135951713,imgsize-1006330.cms",
+        "published": "Wed, 18 Nov 2026 11:41:28 +0530",
+        "source_link": "https://timesofindia.indiatimes.com/nri/us-canada-news/responsibility-to-banish-hatred-zohran-mamdani-condemns-anti-indian-racism-at-new-york-diwali-event/articleshow/135950880.cms"
+    },
+    {
+        "category": "India",
+        "title": "After fire razed $12.25m Malibu mansion, empty land gets $12.99m auction reserve",
+        "content": "A coastal property in Malibu, once valued at $29.8 million, is heading to auction. This 5.35-acre site experienced significant fire damage, leaving it vacant and needing reconstruction. With a reserve price of $12.99 million, slightly higher than its previous purchase price, potential buyers might be drawn to the approved plans for a new mansion.",
+        "image": "https://static.toiimg.com/photo/msid-135931260,imgsize-130450.cms",
+        "published": "Wed, 18 Nov 2026 11:00:15 +0530",
+        "source_link": "https://timesofindia.indiatimes.com/real-estate/news/in-2007-a-businessman-paid-12-25-million-for-a-malibu-mansion-the-2018-woolsey-fire-destroyed-it-and-the-vacant-5-35-acre-coastal-plot-is-now-headed-to-auction-with-a-12-99-million-reserve/articleshow/135931108.cms"
+    },
+    {
+        "category": "India",
+        "title": "Cyclone 'Akvan' LIVE updates: Strengthens into severe cyclonic storm, but further intensification not likely",
+        "content": "The system has changed its track slightly, and the probable landfall points may remain between Visakhapatnam and Nellore on November 20",
         "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
-        "published": "Wed, 18 Nov 2026 01:42:44 +0530",
-        "source_link": "https://www.thehindu.com/news/national/kerala/elanthoor-human-sacrifice-case-witness-examination-nearing-final-stage/article71712944.ece"
+        "published": "Wed, 18 Nov 2026 12:23:26 +0530",
+        "source_link": "https://www.thehindu.com/news/national/cyclone-akvan-intensify-into-a-severe-cyclonic-storm-imd-weather-forecast-andhra-landfall-november-18-2026-live-updates/article71714340.ece"
     },
     {
         "category": "India",
-        "title": "Convocation ceremony row: Maharaja’s College council asks suspended students to accept their mistake",
-        "content": "The incident caused disrepute to the image of the institution in the public domain, finds inquiry report",
-        "image": "https://th-i.thgim.com/public/incoming/1tpq2l/article71713472.ece/alternates/LANDSCAPE_1200/College01.jpg",
-        "published": "Wed, 18 Nov 2026 01:42:21 +0530",
-        "source_link": "https://www.thehindu.com/news/national/kerala/convocation-ceremony-row-maharajas-college-council-asks-suspended-students-to-accept-their-mistake/article71713079.ece"
+        "title": "ED moves Supreme Court challenging interim bail granted to Azam Khan in money laundering case",
+        "content": "Supreme Court said the plea would be listed for hearing on November 19; ED sources said the agency has filed a Special Leave Petition (SLP) before the Supreme Court against the Allahabad High Court’s order",
+        "image": "https://th-i.thgim.com/public/incoming/402ti7/article71714755.ece/alternates/LANDSCAPE_1200/PTI11_16_2026_000205A.jpg",
+        "published": "Wed, 18 Nov 2026 12:23:14 +0530",
+        "source_link": "https://www.thehindu.com/news/national/azam-khan-supreme-court-ed-interim-bail/article71714741.ece"
     },
     {
         "category": "India",
-        "title": "Kochi woman loses ₹90,000 in credit card activation scam",
-        "content": "The complainant, a resident of Mulavukad, was allegedly cheated by an unidentified person who contacted her over the phone, promising to activate a credit card issued by a private sector bank",
-        "image": "https://th-i.thgim.com/public/incoming/d49vvd/article71713470.ece/alternates/LANDSCAPE_1200/iStock-1557556005.jpg",
-        "published": "Wed, 18 Nov 2026 01:34:19 +0530",
-        "source_link": "https://www.thehindu.com/news/national/kerala/kochi-woman-loses-90000-in-credit-card-activation-scam/article71711687.ece"
+        "title": "Disclose Kolathur MLA V.S. Babu’s health status: litigant before Madras High Court",
+        "content": "A resident of the constituency files a writ petition (criminal) seeking a direction to the government officials to consider representations made by him in this regard",
+        "image": "https://th-i.thgim.com/public/incoming/lexya6/article71714841.ece/alternates/LANDSCAPE_1200/DSC_7500.JPG",
+        "published": "Wed, 18 Nov 2026 12:19:55 +0530",
+        "source_link": "https://www.thehindu.com/news/national/tamil-nadu/disclose-kolathur-mla-vs-babus-health-status-litigant-before-madras-high-court/article71714662.ece"
     },
     {
         "category": "India",
-        "title": "Kerala High Court allows Cusat employees to seek review of suspension",
-        "content": "The court directed the Syndicate to examine whether the continued suspension was justified",
-        "image": "https://th-i.thgim.com/public/incoming/l40gxu/article71713468.ece/alternates/LANDSCAPE_1200/iStock-1778903639.jpg",
-        "published": "Wed, 18 Nov 2026 01:31:05 +0530",
-        "source_link": "https://www.thehindu.com/news/cities/Kochi/kerala-high-court-allows-cusat-employees-to-seek-review-of-suspension/article71712795.ece"
+        "title": "Two Janakiraman novels that explored women’s desires and defiance in a conservative Brahminical milieu",
+        "content": "T. Janakiraman’s novels Amma Vanthal and Nalabhagam explored sexual transgression in a conservative Brahminical milieu. Decades later, both remain audacious literary explorations of subjects considered taboo in Tamil society",
+        "image": "https://th-i.thgim.com/public/news/national/tamil-nadu/gsgtis/article71711220.ece/alternates/LANDSCAPE_1200/WhatsApp%20Image%202026-11-16%20at%2012.39.07.jpeg",
+        "published": "Wed, 18 Nov 2026 12:18:06 +0530",
+        "source_link": "https://www.thehindu.com/news/national/tamil-nadu/two-tamil-novels-that-explored-womens-desires-and-defiance-in-a-conservative-brahminical-milieu/article71707141.ece"
     },
     {
         "category": "India",
-        "title": "Opposition, ruling councillors in Keralam’s Kochi Corporation spar over Thuruthy Towers, ro-ro service at stormy council meet",
-        "content": "LDF seeks dates for apartment handover and launch of third ro-ro vessel; UDF cites procedural delays in commissioning vessel; Opposition alleges UDF is using losses incurred by KSINC to justify privatisation of ro-ro ferry operations",
-        "image": "https://th-i.thgim.com/public/incoming/xsclcb/article71713464.ece/alternates/LANDSCAPE_1200/Corporation%20council%20protest.jpg",
-        "published": "Wed, 18 Nov 2026 01:28:06 +0530",
-        "source_link": "https://www.thehindu.com/news/national/kerala/opposition-ruling-councillors-in-keralams-kochi-corporation-spar-over-thuruthy-towers-ro-ro-service-at-stormy-council-meet/article71713463.ece"
+        "title": "Andhra keeps 13 NDRF and 11 SDRF teams ready for Cyclone Akvan",
+        "content": "People can call 112, 1070 or 18004250101 in an emergency, and report power cuts, fallen trees and waterlogging on WhatsApp at 95523 00009",
+        "image": "https://th-i.thgim.com/public/incoming/93yxrm/article71661384.ece/alternates/LANDSCAPE_1200/9604_3_11_2026_14_7_7_2_IMG_20261103_WA0071.JPG",
+        "published": "Wed, 18 Nov 2026 12:08:47 +0530",
+        "source_link": "https://www.thehindu.com/news/national/andhra-pradesh/andhra-keeps-13-ndrf-and-11-sdrf-teams-ready-for-cyclone-akvan/article71714707.ece"
     },
     {
         "category": "India",
-        "title": "Kerala HC allows amended plea by suspended Sanskrit varsity students against inquiry report",
-        "content": "The students had challenged the suspension order and sought permission to appear for the semester examinations in their original petition",
-        "image": "https://th-i.thgim.com/public/incoming/7iib6m/article71713462.ece/alternates/LANDSCAPE_1200/iStock-1778903639.jpg",
-        "published": "Wed, 18 Nov 2026 01:27:22 +0530",
-        "source_link": "https://www.thehindu.com/news/national/kerala/kerala-hc-allows-amended-plea-by-suspended-sanskrit-varsity-students-against-inquiry-report/article71712319.ece"
+        "title": "Kerala HC expresses dismay over pending audits at Guruvayur Devaswom Board",
+        "content": "Division Bench of Justices Devan Ramachandran and Basant Balaji noted that, along with audits pending for the past few years, there was no information on how audits were conducted previously",
+        "image": "https://th-i.thgim.com/public/news/national/kerala/r6g4en/article71714760.ece/alternates/LANDSCAPE_1200/Kerala%20HC%20%20%20-%20R%20K%20Nithin.jpg",
+        "published": "Wed, 18 Nov 2026 12:06:29 +0530",
+        "source_link": "https://www.thehindu.com/news/national/kerala/kerala-hc-expresses-dismay-over-pending-audits-at-guruvayur-devaswom-board/article71713394.ece"
     },
     {
         "category": "India",
-        "title": "Ahead of polls, BJP plans extensive public outreach campaign and stronger booth level management in U.P.",
-        "content": "BJP national president Nitin Nabin said the BJP would register a historic victory in Uttar Pradesh for the third consecutive time in 2027",
-        "image": "https://th-i.thgim.com/public/incoming/3okozs/article71712860.ece/alternates/LANDSCAPE_1200/PTI11_17_2026_000277B.jpg",
-        "published": "Wed, 18 Nov 2026 01:25:18 +0530",
-        "source_link": "https://www.thehindu.com/news/national/ahead-of-polls-bjp-to-focus-on-extensive-public-outreach-campaign-and-stronger-booth-level-management-in-up/article71712599.ece"
+        "title": "Kerala HC directs KSRTC to play multilingual messages against waste dumping in Sabarimala pilgrim buses",
+        "content": "Division Bench tells Travancore Devaswom Board that messages should highlight the importance of maintaining cleanliness and sanctity of Pampa river and its surrounding areas",
+        "image": "https://th-i.thgim.com/public/news/national/kerala/f4j4tf/article71714466.ece/alternates/LANDSCAPE_1200/Kerala%20HC%20%20%20-%20R%20K%20Nithin.jpg",
+        "published": "Wed, 18 Nov 2026 12:05:29 +0530",
+        "source_link": "https://www.thehindu.com/news/national/kerala/kerala-hc-directs-ksrtc-to-play-multilingual-messages-against-waste-dumping-in-sabarimala-pilgrim-buses/article71713440.ece"
     },
     {
         "category": "India",
-        "title": "No comeback for Jensen Huang? Nvidia chairman rules out return as CEO",
-        "content": "No comeback for Jensen Huang Nvidia chairman rules out return as CEO",
-        "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202611/jensen-huang-171210127-16x9_0.jpg?VersionId=LhUYIOsQFi0XAEAB1ndi3Cxc788zneTp",
-        "published": "Wed, 18 Nov 2026 04:36:42 +0530",
-        "source_link": "https://www.indiatoday.in/world/story/no-comeback-for-jensen-huang-nvidia-chairman-rules-out-return-as-ceo-3041166-2026-11-18?utm_source=rss"
+        "title": "Good, safe roads are people’s right, says Minister Komatireddy Venkat Reddy",
+        "content": "Road development should not be measured only by the number of kilometres constructed or the size of a flyover. We must also ask whether an ordinary person can use that road safely.",
+        "image": "https://th-i.thgim.com/public/incoming/2la8j1/article71712857.ece/alternates/LANDSCAPE_1200/Komatireddy%20Venkat%20Reddy%20%2001.jpg",
+        "published": "Wed, 18 Nov 2026 12:05:00 +0530",
+        "source_link": "https://www.thehindu.com/news/national/telangana/good-safe-roads-are-peoples-right-says-minister-komatireddy-venkat-reddy/article71712436.ece"
     },
     {
         "category": "India",
-        "title": "Apple outage, NSA network failure add to growing list of US tech disruptions",
-        "content": "Apple outage NSA network failure add to growing list of US tech disruptions",
-        "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202611/apple-171302835-16x9_0.jpg?VersionId=uXs8wwyBUPJij2oobpcO3rvC158elZ9n",
-        "published": "Tue, 17 Nov 2026 23:46:39 +0530",
-        "source_link": "https://www.indiatoday.in/technology/story/users-report-problems-accessing-apple-pay-icloud-app-store-and-apple-support-3041144-2026-11-17?utm_source=rss"
+        "title": "Pallikaranai marsh construction ban: Madras HC asks litigants to approach Supreme Court for interim relief",
+        "content": "Chief Justice Sushrut Arvind Dharmadhikari and Justice G. Arul Murugan dispose of a batch of cases, including the one filed by CREDAI-Chennai, with liberty to the petitioners to move the top court",
+        "image": "https://th-i.thgim.com/public/incoming/yx44b6/article71714761.ece/alternates/LANDSCAPE_1200/DJI_20260718100734_0076_D.JPG",
+        "published": "Wed, 18 Nov 2026 12:02:23 +0530",
+        "source_link": "https://www.thehindu.com/news/national/tamil-nadu/pallikaranai-marsh-construction-ban-madras-hc-asks-litigants-to-approach-supreme-court-for-interim-relief/article71714706.ece"
     },
     {
         "category": "India",
-        "title": "Swim to Guam? Democrats grill US Navy chief over Iran war, sailors' mental health",
-        "content": "Swim to Guam Democrats grill US Navy chief over Iran war sailors mental health",
-        "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202611/us-secretary-of-the-navy-hung-cao-173306984-16x9_0.jpg?VersionId=ooxBRp6Gg_2WPE87H1GxAlZ7giVz8z1w",
-        "published": "Wed, 18 Nov 2026 04:07:48 +0530",
-        "source_link": "https://www.indiatoday.in/world/story/hung-cao-senate-hearing-navy-suicides-iran-war-3041164-2026-11-18?utm_source=rss"
+        "title": "Over 400 citizens urge CM to postpone Invest Telangana Global Summit citing drought",
+        "content": "Environmentalists, scientists, academics, civil society representatives and people’s organisations expressed concern over the reported deployment of one government officer for each delegate, arguing that administrative personnel should instead be engaged in drought mitigation",
+        "image": "https://th-i.thgim.com/public/news/cities/Hyderabad/6ocjo6/article71714764.ece/alternates/LANDSCAPE_1200/Invest%20Telangana%20global%20summit.png",
+        "published": "Wed, 18 Nov 2026 12:02:12 +0530",
+        "source_link": "https://www.thehindu.com/news/national/telangana/over-400-citizens-urge-cm-to-postpone-invest-telangana-global-summit-citing-drought/article71712667.ece"
     },
     {
         "category": "India",
-        "title": "United by China dread, Quad returns with a bang, joins hands on critical tech",
-        "content": "United by China dread Quad returns with a bang joins hands on critical tech",
-        "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202611/us-president-donald-trump-with-quad-leaders-pm-narendra-modi--sanae-takaichi-and-anthony-albanese-in-175928199-16x9_0.jpg?VersionId=UayH7rq1EIDe_BvXwv9eydVkvFWfeTar",
-        "published": "Tue, 17 Nov 2026 20:19:46 +0530",
-        "source_link": "https://www.indiatoday.in/world/story/quad-summit-manila-trump-modi-china-ai-critical-minerals-semiconductors-indo-pacific-itspc-3040860-2026-11-17?utm_source=rss"
+        "title": "Retain corporate HQ in Mumbai, manufacture in Telangana: Sridhar Babu",
+        "content": "Industries Minister says a dedicated officer would be assigned to every company coming from Mumbai  to provide end-to-end assistance",
+        "image": "https://th-i.thgim.com/public/news/cities/Hyderabad/xx4e2f/article71714739.ece/alternates/LANDSCAPE_1200/Image%2045.jpeg",
+        "published": "Wed, 18 Nov 2026 12:02:10 +0530",
+        "source_link": "https://www.thehindu.com/news/cities/mumbai/retain-corporate-hq-in-mumbai-manufacture-in-telangana-sridhar-babu/article71714743.ece"
     },
     {
         "category": "India",
-        "title": "Congress' wishlist for UP polls puts Akhilesh in a spot, seeks 181 seats",
-        "content": "Congress wishlist for UP polls puts Akhilesh in a spot seeks  seats",
-        "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202611/sp-leader-akhilesh-yadav-and-congress-mp-rahul-gandhi-081024672-16x9.jpg?VersionId=_KBHKxDYvroDJcefirIe9_o7T8fRl1I4",
-        "published": "Tue, 17 Nov 2026 02:24:55 +0530",
-        "source_link": "https://www.indiatoday.in/elections/assembly/story/congress-sp-seat-sharing-leaked-list-181-uttar-pradesh-assembly-seats-3040356-2026-11-17?utm_source=rss"
+        "title": "Maharashtra declares four more talukas drought-hit; total rises to 308",
+        "content": "The four newly added talukas are Chiplun, Wada and Vikramgad in Konkan, and Dindori in Nashik district; ₹4,701.6 crore has been distributed to 94.3 lakh farmers across the State so far",
+        "image": "https://th-i.thgim.com/public/incoming/i48ktu/article71714679.ece/alternates/LANDSCAPE_1200/20261108206L.jpg",
+        "published": "Wed, 18 Nov 2026 11:55:55 +0530",
+        "source_link": "https://www.thehindu.com/news/national/maharashtra/maharashtra-government-added-4-more-talukas-total-308-talukas-are-drought-hit/article71714682.ece"
     },
     {
         "category": "India",
-        "title": "Video: PM Modi picks up Indian flag marker during Quad photo-op, puts it in pocket",
-        "content": "Video PM Modi picks up Indian flag marker during Quad photoop puts it in pocket",
-        "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202611/modi-is-seen-bending-down--picking-up-the-small-white-rectangular-card-bearing-the-indian-flag-and-s-175708357-16x9_0.jpeg?VersionId=dDS4gD.lyrB6On0ATAUXbAdhuhR._OYH",
-        "published": "Tue, 17 Nov 2026 17:06:14 +0530",
-        "source_link": "https://www.indiatoday.in/india/story/video-pm-modi-picks-up-indian-flag-marker-from-floor-puts-it-in-pocket-during-quad-photo-op-3040779-2026-11-17?utm_source=rss"
+        "title": "Mosque standoff, video call, tear gas, gunfire: How Lateef Bhat was neutralised",
+        "content": "Mosque standoff video call tear gas gunfire How Lateef Bhat was neutralised",
+        "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202611/security-forces-launched-an-operation-to-flush-bhat-out-and-fire-tear-gas-shells-inside-the-mosque-a-184748182-16x9_0.jpg?VersionId=t.2vwibyMNktPYycPDY0dKIIFReR6CBz",
+        "published": "Wed, 18 Nov 2026 11:20:36 +0530",
+        "source_link": "https://www.indiatoday.in/india/story/lateef-bhat-lashkar-e-taiba-commander-killed-kulgam-encounter-jammu-kashmir-tear-gas-video-call-gunfire-3041261-2026-11-18?utm_source=rss"
     },
     {
         "category": "India",
-        "title": "Major outage hits US spy agency's classified communication system: Report",
-        "content": "Major outage hits US spy agencys classified communication system Report",
-        "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202611/us-spy-agency-172251824-16x9_0.jpg?VersionId=v5kuFUeT3VLIOzfba.RU4S1hUmxz70pi",
-        "published": "Wed, 18 Nov 2026 00:51:13 +0530",
-        "source_link": "https://www.indiatoday.in/world/us-news/story/major-outage-hits-us-spy-agencys-classified-communication-system-white-house-rules-out-cyberattack-3041157-2026-11-18?utm_source=rss"
+        "title": "Some dishes best served cold: CRPF chief on killing of LeT terrorist Lateef Bhat",
+        "content": "Some dishes best served cold CRPF chief on killing of LeT terrorist Lateef Bhat",
+        "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202611/lashkar-terrorist-lateef-bhat-1800586-16x9_0.jpg?VersionId=KBtbtWfB0s1rN0eooXVvya.aZ4LQhF8D",
+        "published": "Wed, 18 Nov 2026 10:27:23 +0530",
+        "source_link": "https://www.indiatoday.in/india/story/some-dishes-are-best-served-cold-crpf-chief-after-lashkar-commander-lateef-bhat-is-killed-3041249-2026-11-18?utm_source=rss"
     },
     {
         "category": "India",
-        "title": "How Alice Huang's husband built $9 billion data-centre empire with China's support",
-        "content": "How Alice Huangs husband built  billion datacentre empire with Chinas support",
+        "title": "Rahul Gandhi talks of India's 'economic disaster' in US, BJP fires anti-India jibe",
+        "content": "Rahul Gandhi talks of Indias economic disaster in US BJP fires antiIndia jibe",
+        "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202611/rahul-gandhi-181048491-16x9_0.jpg?VersionId=XiqPzXVshPgNkhZVVyNXIX2AVktziumg",
+        "published": "Wed, 18 Nov 2026 09:52:04 +0530",
+        "source_link": "https://www.indiatoday.in/india/story/rahul-gandhi-india-economic-disaster-colombia-university-modi-bjp-3041242-2026-11-18?utm_source=rss"
+    },
+    {
+        "category": "India",
+        "title": "How Alice Huang's husband built $9-billion data centre empire with China's support",
+        "content": "How Alice Huangs husband built billion data centre empire with Chinas support",
         "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202611/jensen-hunag--kang-wei-171356481-16x9_0.png?VersionId=fDkC8OE8OktiFzvl1_TPlcGSMdtMhKCi",
         "published": "Tue, 17 Nov 2026 23:24:55 +0530",
         "source_link": "https://www.indiatoday.in/world/story/alice-huang-husband-kang-wei-built-usd-9-billion-data-centre-empire-with-chinas-support-3041125-2026-11-17?utm_source=rss"
     },
     {
         "category": "India",
-        "title": "Allahabad High Court flags ED's arrest procedure, grants interim bail to Azam Khan",
-        "content": "Allahabad High Court flags EDs arrest procedure grants interim bail to Azam Khan",
-        "image": "https://akm-img-a-in.tosshub.com/sites/indiatoday/resources/img/default-690x413.png",
-        "published": "Wed, 18 Nov 2026 03:35:43 +0530",
-        "source_link": "https://www.indiatoday.in/india/law-news/story/azam-khan-interim-bail-allahabad-high-court-questions-ed-arrest-3041163-2026-11-18?utm_source=rss"
+        "title": "Ayodhya done, Mathura next? What BJP's kar seva invite means for Akhilesh Yadav",
+        "content": "Ayodhya done Mathura next What BJPs kar seva invite means for Akhilesh Yadav",
+        "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202611/up-cm-yogi-adityanath--without-naming-akhilesh-yadav--demanded-that-those-responsible-for-the-1990-p-170018714-16x9_0.png?VersionId=jutYf3RuHUK5BcjU5ri3OMyssWxjUBRm",
+        "published": "Wed, 18 Nov 2026 06:30:00 +0530",
+        "source_link": "https://www.indiatoday.in/elections/assembly/story/up-ayodhya-turned-towards-mathura-krishna-janmabhoomi-bjp-akhilesh-yadav-itspc-3040696-2026-11-18?utm_source=rss"
+    },
+    {
+        "category": "India",
+        "title": "Udaipur family of four gives up Rs 15-crore business, embraces Jain monkhood",
+        "content": "Udaipur family of four gives up Rs crore business embraces Jain monkhood",
+        "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202611/four-members-of-a-jain-family-have-decided-to-become-sanyasis-175032241-16x9_0.jpg?VersionId=oSgxU6sxF6OzeRKLr6mDY.9qKKO.j8qw",
+        "published": "Tue, 17 Nov 2026 23:04:32 +0530",
+        "source_link": "https://www.indiatoday.in/cities/other-cities/story/jain-diksha-udaipur-family-leaves-rs-15-crore-surat-textile-business-3041052-2026-11-17?utm_source=rss"
+    },
+    {
+        "category": "India",
+        "title": "Rs 94-lakh watch seized at IGI. How flyer from Dubai was busted in Green Channel",
+        "content": "Rs lakh watch seized at IGI How flyer from Dubai was busted in Green Channel",
+        "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202611/delhi-customs-held-the-passenger-arriving-from-dubai-following-suspicion-and-profiling-relating-to-t-182452387-16x9_0.png?VersionId=ZUhv6ZN4I7JxAuyOTphuG5vF.GxEQHqk",
+        "published": "Wed, 18 Nov 2026 11:54:13 +0530",
+        "source_link": "https://www.indiatoday.in/india/story/delhi-igi-airport-94-lakh-watch-patek-philippe-seize-spicejet-passenger-dubai-arrest-itspc-3041257-2026-11-18?utm_source=rss"
+    },
+    {
+        "category": "India",
+        "title": "Former Tata trustee Darius Khambata says all agreed to find Chandra's successor: Report",
+        "content": "Former Tata trustee Darius Khambata says all agreed to find Chandras successor Report",
+        "image": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202611/darius-khambata-033613897-original-sixteen-to-nine.png?VersionId=nIj1XHCuh1WfYps_HTxQk8zQXvsPqKTL",
+        "published": "Wed, 18 Nov 2026 11:42:44 +0530",
+        "source_link": "https://www.indiatoday.in/business/story/tata-sons-succession-khambata-questions-chandrasekaran-reappointment-3041279-2026-11-18?utm_source=rss"
     },
     {
         "category": "India",
@@ -481,104 +473,136 @@
     },
     {
         "category": "India",
-        "title": "Quad leaders unveil initiatives to boost Indo-Pacific trade, connectivity; oppose coercion",
-        "content": "PM Modi joined US President Donald Trump, Australian PM Anthony Albanese and Japanese Prime Minister Sanae Takaichi for the Quad Leaders Summit in Manila.",
-        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/17/1600x900/logo/QUAD_MANILA_1794944593625_k9wB_1794944593897_u8qd_f15509dc-2266-4d0c-bf97-998852911aac_M5EI.jpg",
-        "published": "Wed, 18 Nov 2026 01:14:11 +0530",
-        "source_link": "https://www.hindustantimes.com/india-news/manila-quad-leaders-unveil-initiatives-to-boost-indo-pacific-trade-connectivity-oppose-coercion-101794943628413.html"
+        "title": "VB-G RAM G would have raised states’ burden over six-fold in 2025-6: PRS report",
+        "content": "Under the VB-G RAM G, which replaced MGNREGA from July 1, states will bear 40% of the wage and material expenditure, while the Centre will contribute 60%",
+        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/18/1600x900/logo/The-higher-burden-comes-from-the-change-in-how-the_1794983513898_4F06.jpg",
+        "published": "Wed, 18 Nov 2026 12:02:05 +0530",
+        "source_link": "https://www.hindustantimes.com/india-news/vbg-ram-g-would-have-raised-states-burden-over-six-fold-in-2025-6-prs-report-101794983526366.html"
     },
     {
         "category": "India",
-        "title": "‘E20 critics are idiots who don’t know science’: Suresh Gopi hits back amid ethanol content row",
-        "content": "Gopi alleged that those making claims and testing ethanol content in fuel may be buying petrol in canisters and mixing something in it before taking samples.",
-        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/17/1600x900/logo/sureshgopi_1794935842412_mj4J_1794935842538_EwKQ_7c55aefd-696b-4631-9028-86cb0f84c8be_PvuP.jpeg",
-        "published": "Tue, 17 Nov 2026 23:15:13 +0530",
-        "source_link": "https://www.hindustantimes.com/india-news/suresh-gopi-hits-back-amid-ethanol-content-row-e20-critics-are-idiots-who-dont-know-science-101794934344366.html"
+        "title": "Amit Shah hails ‘high synergy level’, CRPF DG says ‘some dishes best served cold’ after key Kulgam encounter",
+        "content": "Union home minister Amit Shah also took to X and confirmed that Bhat was “neutralised”.",
+        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/18/1600x900/LATEEF_BHAT_ENCOUNTER__1794983207738_rUYp_1794983207852_tTBz_eb972bf2-263e-4aec-905d-e62f74f5df9c_bp5A.jpg",
+        "published": "Wed, 18 Nov 2026 11:57:31 +0530",
+        "source_link": "https://www.hindustantimes.com/india-news/terrorist-lateef-bhat-killed-kulgam-encounter-crpf-dg-gp-singh-amit-shah-political-reactions-jammu-and-kashmir-news-101794982009411.html"
     },
     {
         "category": "India",
-        "title": "Italian tourist found dead in Manali hotel",
-        "content": "An Italian tourist was found dead in his hotel room at Chanala-Jagatsukh near Manali in Himachal Pradesh, police said on Tuesday.",
-        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/17/1600x900/logo/police_1794928331961_28QM_1794928332108_nvyJ_b2387615-6e54-4d9c-82d5-4528589f4c05_7uZw.jpg",
-        "published": "Tue, 17 Nov 2026 21:09:05 +0530",
-        "source_link": "https://www.hindustantimes.com/india-news/italian-tourist-found-dead-in-manali-hotel-101794927257215.html"
+        "title": "'Heavens won't fall': Supreme Court refuses to stall Azam Khan's release from prison in money laundering case",
+        "content": "“No. Not today. You argue all these points before the court concerned tomorrow,” CJI Kant told the law officer.",
+        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/18/1600x900/logo/azam_khan_1794982937058_nCK6_1794982937188_I3BI_bc211821-49c9-4b46-b2f7-350560178926_LBuD.jpg",
+        "published": "Wed, 18 Nov 2026 11:54:50 +0530",
+        "source_link": "https://www.hindustantimes.com/india-news/heavens-wont-fall-supreme-court-refuses-to-stall-azam-khans-release-from-prison-in-money-laundering-case-101794982913647.html"
     },
     {
         "category": "India",
-        "title": "Rajasthan railway blast probe leads police to two accused, three Pak handlers",
-        "content": "Investigators said the first significant breakthrough came when police examined hotels and dharamshalas in the region",
-        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/17/1600x900/logo/HT-has-exclusively-obtained-photographs-of-all-thr_1794929671343_88Rw.jpg",
-        "published": "Tue, 17 Nov 2026 21:04:39 +0530",
-        "source_link": "https://www.hindustantimes.com/india-news/rajasthan-railway-blast-probe-leads-police-to-two-accused-three-pak-handlers-101794929680313.html"
+        "title": "Supreme Court issues notice on contempt plea against lawyer over remarks on CJI",
+        "content": "The top court on Wednesday considered the AG’s letter along with the other material to entertain the petition.",
+        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/18/1600x900/logo/supreme_court_1794981985833_QjiX_1794981985961_QtkF_79b00d65-5f3c-40c0-b029-3cb155cbc878_vzr1.jpg",
+        "published": "Wed, 18 Nov 2026 11:39:36 +0530",
+        "source_link": "https://www.hindustantimes.com/india-news/supreme-court-cji-surya-kant-notice-contempt-petition-101794981935302.html"
     },
     {
         "category": "India",
-        "title": "Preparations underway for PM Balendra Shah's India visit: Nepal foreign ministry sources",
-        "content": "Nepal’s foreign ministry is preparing for PM Balendra Shah’s proposed India visit, to cover connectivity, infrastructure, trade and tourism.",
-        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/17/1600x900/logo/Balendra_Shah_1794927132933_cNYB_1794927133186_Kr6Z_c3cc17ab-a7d0-4b38-81e9-aa98287aeb15_cl8J.jpg",
-        "published": "Tue, 17 Nov 2026 21:03:56 +0530",
-        "source_link": "https://www.hindustantimes.com/india-news/preparations-underway-for-pm-balendra-shahs-india-visit-nepal-foreign-ministry-sources-101794926564617.html"
+        "title": "Mosque shelter, video call with cops: Inside last Kulgam terrorist commander Lateef Bhat's final moments before encounter",
+        "content": "Security forces killed Lateef Bhat, described by police as South Kashmir’s last active local terrorist commander, in a Kulgam encounter on Wednesday.",
+        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/18/1600x900/logo/LATEEF_BHAT_ENCOUNTER_1794981627937_CrjU_1794981644643_h5I1_4c548d66-927a-4c0c-85e6-2b71a75620b8_P000.jpg",
+        "published": "Wed, 18 Nov 2026 11:35:23 +0530",
+        "source_link": "https://www.hindustantimes.com/india-news/mosque-shelter-video-call-with-cops-inside-last-kulgam-terrorist-local-commander-lateef-bhat-final-moments-before-encounter-101794978859436.html"
     },
     {
         "category": "India",
-        "title": "CJP's Saurav Das submits address proof to SEM court: 'Condition is Delhi Police won't leak it'",
-        "content": "CJP co-convenor Saurav Das said that his appearance at the Special Executive Magistrate (SEM) &nbsp;pertained to his Delhi address verification.",
-        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/17/1600x900/logo/PTI10-11-2026-000432A-0_1794927738640_0KEn_1794927750752_P7C5_a51e5f4b-b93b-4326-a3c9-796157afe199_d0M1.jpg",
-        "published": "Tue, 17 Nov 2026 20:57:05 +0530",
-        "source_link": "https://www.hindustantimes.com/india-news/my-delhi-address-verified-cjps-saurav-das-on-appearance-before-sem-weeks-after-release-101794925074809.html"
+        "title": "Lateef Bhat: Carpenter who became one of Kashmir’s most wanted terrorists",
+        "content": "Security forces had been hot on Bhat’s trail for the past seven days since the attack on the CRPF personnel",
+        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/18/1600x900/logo/The-scene-of-Lateef-Bhat-s-killing-in-the-Kulgam-d_1794981953549_7qpC.jpg",
+        "published": "Wed, 18 Nov 2026 11:24:02 +0530",
+        "source_link": "https://www.hindustantimes.com/india-news/carpetertunedterrorist-lateef-bhat-s-killing-ends-year-long-hunt-after-escaping-thrice-101794981242384.html"
     },
     {
         "category": "India",
-        "title": "Madurai showroom heist: Tattoo clue led police to YouTuber who stole 11.3 kg jewellery",
-        "content": "Police eventually identified Nishanth with the help of a tip-off about a tattoo on his left arm. The tattoo matched the one seen in the CCTV footage",
-        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/17/1600x900/logo/Wearing-a-cap-and-a-mask-to-conceal-his-identity--_1794928050815_9P0k.jpg",
-        "published": "Tue, 17 Nov 2026 20:36:37 +0530",
-        "source_link": "https://www.hindustantimes.com/india-news/tattoo-clue-led-police-to-youtuber-who-stole-11-3-kg-jewellery-in-madurai-showroom-heist-101794927998330.html"
+        "title": "YSRCP, BRS upset over omissions in Sonia Gandhi’s ‘Belonging: A Journey of Love’",
+        "content": "The BRS alleged the Congress leadership never demonstrated genuine affection or respect for Telangana.",
+        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/18/1600x900/logo/sonia_gandhi_1794980574966_zleN_1794980575155_KW4e_8f7dff75-ee81-4779-a60a-33993c9df6a3_BUBp.jpg",
+        "published": "Wed, 18 Nov 2026 11:15:07 +0530",
+        "source_link": "https://www.hindustantimes.com/india-news/ysrcp-brs-upset-over-omissions-in-sonia-gandhi-s-belonging-a-journey-of-love-101794980485897.html"
     },
     {
         "category": "India",
-        "title": "'1 Indian seafarer missing, 2 injured': MEA condemns attack on LPG tanker in Strait of Hormuz",
-        "content": "The MEA said the Indian embassy in Oman was closely monitoring the ongoing search and rescue operations in coordination with Omani authorities.",
-        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/17/1600x900/ANI-20261112320-0_1794927687099_H7oB_1794927700529_lqhv_17b0aac8-b6e2-45cd-965e-eab849ea13a1_rQST.jpg",
-        "published": "Tue, 17 Nov 2026 20:21:53 +0530",
-        "source_link": "https://www.hindustantimes.com/india-news/india-condemns-attack-on-lpg-tanker-carrying-24-indians-in-strait-of-hormuz-1-seafarer-missing-mea-the-targeting-must-end-101794926651905.html"
+        "title": "Unsavoury remarks against CJI: SC issues contempt notice to lawyer",
+        "content": "Unsavoury remarks against CJI: SC issues contempt notice to lawyer",
+        "image": "https://www.hindustantimes.com/ht-img/img/2025/06/30/1600x900/logo/ht-generic_india3_1751287297962_1751287304722.jpg",
+        "published": "Wed, 18 Nov 2026 11:09:45 +0530",
+        "source_link": "https://www.hindustantimes.com/india-news/unsavoury-remarks-against-cji-sc-issues-contempt-notice-to-lawyer-101794980386255.html"
     },
     {
         "category": "India",
-        "title": "‘Have they read SC order': Shivakumar hits out at Tamil Nadu Oppn parties opposing Mekedatu project",
-        "content": "Responding to a question on his recent interaction with Tamil Nadu chief minister Vijay at Sonia Gandhi's book launch, Shivakumar said the two were friends.",
-        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/17/1600x900/logo/shivakumar_1794918740298_OqtM_1794918740432_Cb6I_1d0baf1b-d4c8-459a-8655-83fa5ea42bd3_3Sxt.jpg",
-        "published": "Tue, 17 Nov 2026 19:51:51 +0530",
-        "source_link": "https://www.hindustantimes.com/india-news/dk-shivakumar-hits-out-at-tamil-nadu-opposition-parties-opposing-mekedatu-project-cites-supreme-court-order-101794918205954.html"
+        "title": "NCW seeks stronger inter-state coordination among NCR police forces for women's safety",
+        "content": "NCW seeks stronger inter-state coordination among NCR police forces for women's safety",
+        "image": "https://www.hindustantimes.com/ht-img/img/2025/06/30/1600x900/logo/ht-generic_india1_1751287243850_1751287256749.jpg",
+        "published": "Wed, 18 Nov 2026 10:55:10 +0530",
+        "source_link": "https://www.hindustantimes.com/india-news/ncw-seeks-stronger-inter-state-coordination-among-ncr-police-forces-for-women-s-safety-101794979511212.html"
     },
     {
         "category": "India",
-        "title": "Rahul Gandhi posts ‘Satyam Shivam Sundaram’ after BJP dig; Himanta Sarma hits back",
-        "content": "The row erupted after Rahul Gandhi recalled his mother Sonia Gandhi sitting on his father Rajiv Gandhi's lap during meals, prompting criticism from BJP leaders.",
-        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/17/1600x900/logo/MixCollage-17-Nov-2026-07-05-PM-2921_1794922563115_5IOZ_1794922571624_ecmM_6ed99b5f-bbd1-4d95-a50c-6870c99e25ba_2xH9.jpg",
-        "published": "Tue, 17 Nov 2026 19:26:34 +0530",
-        "source_link": "https://www.hindustantimes.com/india-news/rahul-gandhi-posts-satyam-shivam-sundaram-after-bjp-dig-at-sonia-gandhi-rajiv-gandhi-lap-himanta-sarma-hits-back-101794920094880.html"
+        "title": "9 years on, Niwari admin forms panel to audit Orchha’s Ram Raja temple treasury",
+        "content": "Niwari collector Jamuna Bhide dismissed rumours about a break-in, saying some people were spreading misinformation regarding the inspection",
+        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/18/1600x900/logo/The-panel-has-been-constituted-to-inventory-donati_1794978592551_4eBg.jpg",
+        "published": "Wed, 18 Nov 2026 10:40:00 +0530",
+        "source_link": "https://www.hindustantimes.com/india-news/9-years-on-niwari-admin-forms-panel-to-audit-orchha-s-ram-raja-temple-treasury-101794978601272.html"
     },
     {
         "category": "India",
-        "title": "BSF jawan detained by Bangladesh’s BGB after crossing unfenced border released: Officials",
-        "content": "The incident took place around noon when locals caught the jawan and handed him over to the Bangladesh’s BGB",
-        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/17/1600x900/logo/BSF-personnel-patrol-near-the-International-Border_1691632414827_1794924770424_w8aE_07846711-6dd7-4bf8-b5d1-b3b1c5c52ae8_n4nY.jpg",
-        "published": "Tue, 17 Nov 2026 19:13:35 +0530",
-        "source_link": "https://www.hindustantimes.com/india-news/bsf-jawan-detained-by-bangladesh-s-bgb-after-crossing-unfenced-border-released-officials-101794923016356.html"
+        "title": "Woman, two minor sons killed in fire from suspected LPG gas leakage in Manipur",
+        "content": "Police said the house, built of wood and bamboo with a galvanised tin roof, caught fire quickly. The mother and the two sons were trapped and failed to escape.",
+        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/18/1600x900/logo/photo-1576707995936-a6cffe26ef7b_1794973843129_lNd_1794977780082_SWRV_1794977780250_1Faj_1b5d66ec-1e53-4709-b031-d6749becb328_Atvp.jpg",
+        "published": "Wed, 18 Nov 2026 10:30:11 +0530",
+        "source_link": "https://www.hindustantimes.com/india-news/woman-two-minor-sons-killed-in-fire-from-suspected-lpg-gas-leakage-in-manipur-101794977174338.html"
     },
     {
         "category": "India",
-        "title": "PM Modi picks up Indian flag marker during Quad photo op, Trump says ‘save it’",
-        "content": "The Quad leaders, PM Modi, US President Trump, Australian and Japanese PMs Anthony Albanese and Sanae Takaichi, met in Manila, Philippines on Tuesday.",
-        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/17/1600x900/modi_quad_1794924360979_fW9t_1794924363943_PnOX_9a85494f-a936-4361-a8d9-3ab741ba5fab_wLpU.gif",
-        "published": "Tue, 17 Nov 2026 19:09:17 +0530",
-        "source_link": "https://www.hindustantimes.com/india-news/pm-modi-picks-up-indian-flag-placed-as-spot-marker-on-floor-during-meeting-of-quad-leaders-101794922582225.html"
+        "title": "Pashmina shawls, Rogan art, blue pottery: A look at PM Modi's gifts to world leaders in Philippines",
+        "content": "The gifts presented by the Prime Minister included Kashmiri silk carpets, Pashmina shawls, Rajasthani Pichwai paintings, Gujarat's Rogan art and more.&nbsp;",
+        "image": "https://www.hindustantimes.com/ht-img/img/2026/11/18/1600x900/logo/hhhhh_1794977106041_5W6l_1794977117588_lJfB_1ad3ed05-58bc-4c02-bf63-632d15f686de_e6fc.jpg",
+        "published": "Wed, 18 Nov 2026 10:25:52 +0530",
+        "source_link": "https://www.hindustantimes.com/india-news/pashmina-shawls-rogan-art-blue-pottery-a-look-at-pm-modis-gifts-to-world-leaders-in-philippines-manila-asean-101794976524903.html"
     },
     {
         "category": "Tech",
-        "title": "Nvidia says its open-source AI strategy remains intact after Jensen Huang’s exit",
-        "content": "Nvidia's interim CEO reaffirmed its open-source AI strategy and plans to acquire Hugging Face, despite Jensen Huang's sudden departure.",
+        "title": "Nvidia’s startup stakes ballooned to $65B, but Huang’s exit puts future  deals in doubt",
+        "content": "The value of Nvidia’s private investments has nearly tripled over the past nine months, fueled by Jensen Huang’s aggressive dealmaking and rising valuations of its existing portfolio companies.",
+        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
+        "published": "Wed, 18 Nov 2026 01:44:21 +0000",
+        "source_link": "https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt/"
+    },
+    {
+        "category": "Tech",
+        "title": "Nvidia promises that revenue will keep soaring — for now",
+        "content": "Despite the turmoil Nvidia is in after the departure of its disgraced founder and CEO Jensen Huang, the company projected that its streak of record-breaking revenue isn't about to stop.",
+        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
+        "published": "Wed, 18 Nov 2026 00:16:50 +0000",
+        "source_link": "https://techcrunch.com/2026/11/17/nvidia-promises-that-revenue-will-keep-soaring-for-now/"
+    },
+    {
+        "category": "Tech",
+        "title": "Stripe backer Atomico calls for Europe to own its success stories",
+        "content": "Europe is home to many of the world's fastest growing companies of all time, veteran VC firm Atomico highlighted in its latest annual State of European Tech report.",
+        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
+        "published": "Wed, 18 Nov 2026 00:01:00 +0000",
+        "source_link": "https://techcrunch.com/2026/11/17/stripe-backer-atomico-calls-for-europe-to-own-its-success-stories/"
+    },
+    {
+        "category": "Tech",
+        "title": "Nvidia is abandoning China after Jensen Huang’s ouster",
+        "content": "Nvidia's interim CEO says the company is done selling chips to China. How much will that cost?",
+        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
+        "published": "Tue, 17 Nov 2026 23:37:48 +0000",
+        "source_link": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/"
+    },
+    {
+        "category": "Tech",
+        "title": "Nvidia says its open source AI strategy remains intact after Jensen Huang’s exit",
+        "content": "Nvidia's interim CEO reaffirmed its open source AI strategy and plans to acquire Hugging Face, despite Jensen Huang's sudden departure.",
         "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
         "published": "Tue, 17 Nov 2026 23:04:35 +0000",
         "source_link": "https://techcrunch.com/2026/11/17/nvidia-says-its-open-source-ai-strategy-remains-intact-after-jensen-huangs-exit/"
@@ -641,35 +665,11 @@
     },
     {
         "category": "Tech",
-        "title": "Apple services, including iCloud, App Store, Apple Music, and more, hit by outage",
-        "content": "Apple's status page confirms its services are facing outages, but has not confirmed the cause.",
-        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
-        "published": "Tue, 17 Nov 2026 18:55:40 +0000",
-        "source_link": "https://techcrunch.com/2026/11/17/apple-services-including-icloud-app-store-and-apple-music-hit-by-outage/"
-    },
-    {
-        "category": "Tech",
-        "title": "Google to keep Gemini chats for 2 months, up from 72 hours, even with history off",
-        "content": "Google's Gemini update extending chat retention will roll out globally over the coming weeks.",
-        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
-        "published": "Tue, 17 Nov 2026 18:48:23 +0000",
-        "source_link": "https://techcrunch.com/2026/11/17/google-to-keep-gemini-chats-for-two-months-up-from-72-hours-even-with-history-off/"
-    },
-    {
-        "category": "Tech",
-        "title": "As decision model use skyrockets, is customization the next frontier?",
-        "content": "Sqwish Labs has a new wrinkle on the decision model: Train it with your own data to max its capabilities.",
-        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
-        "published": "Tue, 17 Nov 2026 18:10:00 +0000",
-        "source_link": "https://techcrunch.com/2026/11/17/as-decision-model-use-skyrockets-is-customization-is-the-next-frontier/"
-    },
-    {
-        "category": "Tech",
-        "title": "Pedestal AI raises $4.7 million to agentify the supply chain",
-        "content": "The company uses agentic AI to make supply chains faster and more reliable.",
-        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
-        "published": "Tue, 17 Nov 2026 18:04:16 +0000",
-        "source_link": "https://techcrunch.com/2026/11/17/pedestal-ai-raises-4-7-million-to-agentify-the-supply-chain/"
+        "title": "Satya Nadella says he’s AGI-pilled now",
+        "content": "Microsoft CEO Satya Nadella says he's AGI-pilled, at least when it comes to how AI might make startling changes to the structure of the economy and how politics might change because of it. \"I am AGI-pilled in the sense that at an economy level, what is the political economy's organization around AGI?\" he asked at [&#8230;]",
+        "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/Screenshot-2026-11-17-at-3.00.15-PM.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+        "published": "2026-11-17T18:41:18-05:00",
+        "source_link": "https://www.theverge.com/tech/1036111/satya-nadella-says-hes-agi-pilled-now"
     },
     {
         "category": "Tech",
@@ -744,24 +744,88 @@
         "source_link": "https://www.theverge.com/tech/1035943/instagram-creators-crack-down-copycat-videos"
     },
     {
-        "category": "Tech",
-        "title": "Democrats try to figure out how not to get swept away by the blue wave",
-        "content": "On a harried Saturday afternoon at Denver International Airport, I had the good fortune of sitting just a few feet from Minneapolis Mayor Jacob Frey. It shouldn't have come as a surprise. He, I, and 3,500 or so others had just left \"What's Next,\" a conference organized by Majority Democrats, a group dedicated to charting [&#8230;]",
-        "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/gettyimages-2304463879.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-        "published": "2026-11-17T15:30:00-05:00",
-        "source_link": "https://www.theverge.com/policy/1035869/whats-next-majority-democrats-conference-denver-jeffries"
-    },
-    {
         "category": "Business",
-        "title": "Pledged gold auctions likely to rise in Q3",
+        "title": "Ranveer Singh, boAt's Gupta start men's brand HIM",
         "content": "",
         "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
-        "published": "Wed, 18 Nov 2026 01:55:26 +0530",
-        "source_link": "https://economictimes.indiatimes.com/industry/cons-products/fashion-/-cosmetics-/-jewellery/gold-loan-companies-expect-rise-in-pledged-jewellery-auctions-as-falling-prices-hit-borrowers-repayment-capacity/articleshow/135939957.cms"
+        "published": "Wed, 18 Nov 2026 11:26:52 +0530",
+        "source_link": "https://economictimes.indiatimes.com/industry/cons-products/fashion-/-cosmetics-/-jewellery/ranveer-singh-boats-aman-gupta-launch-mens-grooming-brand-h-i-m/articleshow/135951013.cms"
     },
     {
         "category": "Business",
-        "title": "India, Japan to deepen defence ties at 2+2 talks",
+        "title": "₹50K to ₹5L salary: How to allocate your income",
+        "content": "",
+        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
+        "published": "Wed, 18 Nov 2026 10:40:23 +0530",
+        "source_link": "https://economictimes.indiatimes.com/wealth/plan/50000-to-5-lakh-monthly-salary-should-you-follow-the-50-30-20-rule-of-thumb-to-divide-your-salary-between-expenses-emis-and-investments/articleshow/135950026.cms"
+    },
+    {
+        "category": "Business",
+        "title": "Tata Trusts' vice chairmen face a 'volte-face' charge",
+        "content": "",
+        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
+        "published": "Tue, 17 Nov 2026 22:12:44 +0530",
+        "source_link": "https://economictimes.indiatimes.com/news/company/corporate-trends/darius-khambata-hits-back-at-venu-srinivasan-vijay-singh-says-control-of-tata-sons-by-trusts-essence-of-tata-model/articleshow/135933469.cms"
+    },
+    {
+        "category": "Business",
+        "title": "Gold bond turns Rs 1L investment into Rs 2.63L",
+        "content": "",
+        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
+        "published": "Wed, 18 Nov 2026 11:03:13 +0530",
+        "source_link": "https://economictimes.indiatimes.com/wealth/invest/sgb-investors-earn-163-returns-in-6-years-rs-1-lakh-investment-grows-to-rs-2-63-lakh-check-premature-redemption-price-details/articleshow/135950523.cms"
+    },
+    {
+        "category": "Business",
+        "title": "How DR for 5th, 6th, 7th CPCs is calculated",
+        "content": "",
+        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
+        "published": "Wed, 18 Nov 2026 11:00:58 +0530",
+        "source_link": "https://economictimes.indiatimes.com/wealth/save/5th-6th-7th-pay-commission-da-dr-rate-calculator-why-pensioners-are-getting-497-269-and-63-dearness-relief/articleshow/135950403.cms"
+    },
+    {
+        "category": "Business",
+        "title": "Amazon's $7 billion India bet takes a greener turn",
+        "content": "",
+        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
+        "published": "Tue, 17 Nov 2026 14:35:59 +0530",
+        "source_link": "https://economictimes.indiatimes.com/industry/renewables/amazon-plans-7-billion-renewable-energy-investment-in-india-by-2030/articleshow/135918353.cms"
+    },
+    {
+        "category": "Business",
+        "title": "Gold, silver rates today: Check prices across brands",
+        "content": "",
+        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
+        "published": "Wed, 18 Nov 2026 10:34:17 +0530",
+        "source_link": "https://economictimes.indiatimes.com/wealth/invest/gold-rate-today-check-18k-20k-24k-ibja-gold-price-malabar-gold-kalyan-jewelers-joyalukkas-delhi-hyderabad-bengaluru/articleshow/135949736.cms"
+    },
+    {
+        "category": "Business",
+        "title": "Bullet train to connect Delhi with Northeast",
+        "content": "",
+        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
+        "published": "Wed, 18 Nov 2026 11:08:24 +0530",
+        "source_link": "https://economictimes.indiatimes.com/industry/transportation/railways/cheaper-than-flight-tickets-affordable-bullet-train-from-delhi-to-dispur-to-take-under-8-hours-with-stops-at-ayodhya-varanasi-siliguri-patna-6-other-cities-assam-cm-shares-plan/articleshow/135950118.cms"
+    },
+    {
+        "category": "Business",
+        "title": "Wrong UPI transfer? Act fast to recover your money",
+        "content": "",
+        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
+        "published": "Wed, 18 Nov 2026 09:51:09 +0530",
+        "source_link": "https://economictimes.indiatimes.com/wealth/save/wrong-upi-transfer-heres-how-to-get-it-back-and-what-to-do-if-the-recipient-refuses/articleshow/135948543.cms"
+    },
+    {
+        "category": "Business",
+        "title": "Gold rate drop creates new investment opportunity",
+        "content": "",
+        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
+        "published": "Wed, 18 Nov 2026 11:01:39 +0530",
+        "source_link": "https://economictimes.indiatimes.com/industry/cons-products/fashion-/-cosmetics-/-jewellery/gold-rate-today-jewellery-prices-correct-over-25-creating-investment-opportunity-amid-volatility-for-long-term-investors/articleshow/135950482.cms"
+    },
+    {
+        "category": "Business",
+        "title": "India, Japan have a new defence game plan brewing",
         "content": "",
         "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
         "published": "Wed, 18 Nov 2026 00:32:04 +0530",
@@ -769,83 +833,67 @@
     },
     {
         "category": "Business",
-        "title": "Trump calls Modi tough, hints at a tougher leader",
+        "title": "China, India mask a growing crisis in global coal",
         "content": "",
         "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
-        "published": "Tue, 17 Nov 2026 16:45:20 +0530",
-        "source_link": "https://economictimes.indiatimes.com/news/india/trump-calls-pm-modi-very-tough-man-japanese-pm-takaichi-tougher/articleshow/135923015.cms"
+        "published": "Wed, 18 Nov 2026 10:27:40 +0530",
+        "source_link": "https://economictimes.indiatimes.com/industry/indl-goods/svs/metals-mining/china-and-india-mask-a-growing-crisis-in-global-coal/articleshow/135949549.cms"
     },
     {
-        "category": "Business",
-        "title": "Charles Schwab fixes website loading issue",
-        "content": "",
-        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
-        "published": "Tue, 17 Nov 2026 23:03:24 +0530",
-        "source_link": "https://economictimes.indiatimes.com/industry/banking/finance/banking/charles-schwab-resolves-brief-website-loading-issue-says-trading-remained-available/articleshow/135935334.cms"
+        "category": "Sports",
+        "title": "New Zealand 'trying to be a little bit fluid' with fast bowlers' workloads",
+        "content": "New Zealand have ten Tests lined up in quick succession, and captain Tom Latham hopes to look back at the end of it \"and say we had a pretty good time\"",
+        "image": "http://p.imgci.com/db/PICTURES/CMS/425400/425401.jpg",
+        "published": "Wed, 18 Nov 2026 06:20:36 GMT",
+        "source_link": "https://www.cricinfo.com/ci/content/story/1563034.html?ex_cid=OTC-RSS"
     },
     {
-        "category": "Business",
-        "title": "India Inc.’s craving for dollars is dangerous gamble",
-        "content": "",
-        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
-        "published": "Tue, 17 Nov 2026 10:25:04 +0530",
-        "source_link": "https://economictimes.indiatimes.com/news/economy/indicators/india-inc-s-sudden-craving-for-dollars-is-a-dangerous-gamble/articleshow/135910773.cms"
+        "category": "Sports",
+        "title": "CA sets up 'independent forum' into Sandpapergate but will not re-litigate the incident",
+        "content": "Interim chair David Boon and CEO Todd Greenberg made the announcement on Wednesday",
+        "image": "http://p.imgci.com/db/PICTURES/CMS/405400/405468.png",
+        "published": "Wed, 18 Nov 2026 05:38:06 GMT",
+        "source_link": "https://www.cricinfo.com/ci/content/story/1563012.html?ex_cid=OTC-RSS"
     },
     {
-        "category": "Business",
-        "title": "Dhoni quits IPL, but the throne is still his",
-        "content": "",
-        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
-        "published": "Tue, 17 Nov 2026 16:54:53 +0530",
-        "source_link": "https://economictimes.indiatimes.com/news/sports/cricket/ms-dhoni-retires-from-ipl-csks-thala-who-made-yellow-roar-is-ready-for-a-fresh-innings/articleshow/135921085.cms"
+        "category": "Sports",
+        "title": "In windy Wellington, India begin new era with history and form against them",
+        "content": "A spot in the WTC final is the big goal, and New Zealand - currently No. 1 - are well ahead on that front than India, who are well behind at No. 4",
+        "image": "http://p.imgci.com/db/PICTURES/CMS/425300/425351.jpg",
+        "published": "Wed, 18 Nov 2026 04:56:15 GMT",
+        "source_link": "https://www.cricinfo.com/ci/content/story/1563027.html?ex_cid=OTC-RSS"
     },
     {
-        "category": "Business",
-        "title": "'Be prepared for...': JD Vance as outages hit US",
-        "content": "",
-        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
-        "published": "Tue, 17 Nov 2026 22:51:28 +0530",
-        "source_link": "https://economictimes.indiatimes.com/news/international/world-news/us-cyberattack-fears-jd-vances-be-prepared-for-everything-warning-as-nsa-microsoft-outages-spark-panic-uk-and-japan-issue-emergency-alerts/articleshow/135934800.cms"
+        "category": "Sports",
+        "title": "Unchanged England bat; Zampa out with back spasms for Australia",
+        "content": "Mahli Beardman replaced Riley Meredith for the series decider in Hobart. Batter Alex Carey was also named in the XI",
+        "image": "http://p.imgci.com/db/PICTURES/CMS/425100/425164.jpg",
+        "published": "Wed, 18 Nov 2026 03:42:45 GMT",
+        "source_link": "https://www.cricinfo.com/ci/content/story/1563019.html?ex_cid=OTC-RSS"
     },
     {
-        "category": "Business",
-        "title": "IPL 2027 retention tracker: All big trades &amp; exits",
-        "content": "",
-        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
-        "published": "Tue, 17 Nov 2026 19:21:17 +0530",
-        "source_link": "https://economictimes.indiatimes.com/news/sports/cricket/ipl-2027-full-retention-list-all-big-releases-trades-exits-and-team-changes/articleshow/135927860.cms"
+        "category": "Sports",
+        "title": "Starc, Head, Bethell released by DC, SRH, RCB ahead of IPL 2027 player auction",
+        "content": "The full list of players released and retained by the IPL franchises ahead of the 2027 player auction on December 16",
+        "image": "http://p.imgci.com/db/PICTURES/CMS/416800/416895.jpg",
+        "published": "Wed, 18 Nov 2026 06:19:34 GMT",
+        "source_link": "https://www.cricinfo.com/ci/content/story/1562958.html?ex_cid=OTC-RSS"
     },
     {
-        "category": "Business",
-        "title": "America's spy agency NSA goes dark",
-        "content": "",
-        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
-        "published": "Tue, 17 Nov 2026 22:05:30 +0530",
-        "source_link": "https://economictimes.indiatimes.com/news/international/world-news/nsa-net-down-cyberattack-fears-emerge-as-us-national-security-agency-faces-network-outage-during-trumps-asia-trip/articleshow/135933260.cms"
+        "category": "Sports",
+        "title": "Heartbreak for Naseer and Afghanistan as Zimbabwe snatch late win",
+        "content": "Debutant Naseer scored a century and picked up nine wickets for the Test but Zimbabwe clinched a win with less than four overs left on the final day",
+        "image": "http://p.imgci.com/db/PICTURES/CMS/425300/425384.jpg",
+        "published": "Wed, 18 Nov 2026 02:54:39 GMT",
+        "source_link": "https://www.cricinfo.com/ci/content/story/1562975.html?ex_cid=OTC-RSS"
     },
     {
-        "category": "Business",
-        "title": "IndiGo flight hit by bird at Navi Mumbai Airport",
-        "content": "",
-        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
-        "published": "Tue, 17 Nov 2026 21:50:48 +0530",
-        "source_link": "https://economictimes.indiatimes.com/industry/transportation/airlines-/-aviation/indigo-flight-suffers-bird-strike-at-navi-mumbai-airport-aircraft-grounded-for-checks/articleshow/135932913.cms"
-    },
-    {
-        "category": "Business",
-        "title": "Gujarat Titans retained players list IPL 2027",
-        "content": "",
-        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
-        "published": "Tue, 17 Nov 2026 21:46:49 +0530",
-        "source_link": "https://economictimes.indiatimes.com/news/sports/gujarat-titans-retained-players-list-ipl-2027-shubman-gill-sai-sudharsan-rashid-khan-among-22-players-check-full-squad/articleshow/135932410.cms"
-    },
-    {
-        "category": "Business",
-        "title": "KKR Retained Players List For IPL 2027",
-        "content": "",
-        "image": "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?w=1280&q=90",
-        "published": "Tue, 17 Nov 2026 20:45:09 +0530",
-        "source_link": "https://economictimes.indiatimes.com/news/sports/cricket/kkr-retained-players-list-for-ipl-2027-rinku-singh-cameron-green-sunil-narine-among-17-players-check-full-squad/articleshow/135930977.cms"
+        "category": "Sports",
+        "title": "Bangladesh eye parity after new-ball burst on day slashed by erratic weather",
+        "content": "South Africa left with 14-run deficit after Bavuma retired hurt, and lightning, rain and hail took over",
+        "image": "http://p.imgci.com/db/PICTURES/CMS/425300/425374.jpg",
+        "published": "Wed, 18 Nov 2026 01:06:47 GMT",
+        "source_link": "https://www.cricinfo.com/ci/content/story/1562948.html?ex_cid=OTC-RSS"
     },
     {
         "category": "Sports",
@@ -886,61 +934,5 @@
         "image": "http://p.imgci.com/db/PICTURES/CMS/425300/425389.jpg",
         "published": "Tue, 17 Nov 2026 16:54:55 GMT",
         "source_link": "https://www.cricinfo.com/ci/content/story/1563003.html?ex_cid=OTC-RSS"
-    },
-    {
-        "category": "Sports",
-        "title": "Heartbreak for Naseer and Afghanistan as Zimbabwe snatch late win",
-        "content": "Debutant Naseer scored a century and picked up nine wickets for the Test but Zimbabwe clinched a win with less than four overs left on the final day",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/425300/425384.jpg",
-        "published": "Tue, 17 Nov 2026 15:59:02 GMT",
-        "source_link": "https://www.cricinfo.com/ci/content/story/1562975.html?ex_cid=OTC-RSS"
-    },
-    {
-        "category": "Sports",
-        "title": "Zimbabwe continue to push for space in WTC even as doors appear to close",
-        "content": "Cricinfo understands that the match-ups for the next two WTC cycles were decided by the ICC over the weekend but they have not been made public since negotiations are ongoing",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/425300/425326.jpg",
-        "published": "Tue, 17 Nov 2026 15:53:46 GMT",
-        "source_link": "https://www.cricinfo.com/ci/content/story/1562991.html?ex_cid=OTC-RSS"
-    },
-    {
-        "category": "Sports",
-        "title": "Bethell to miss South Africa tour and IPL in bid to recover from knee injury",
-        "content": "Batter has not played since July and will now focus on return to fitness ahead of English summer",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/418500/418525.jpg",
-        "published": "Tue, 17 Nov 2026 15:35:42 GMT",
-        "source_link": "https://www.cricinfo.com/ci/content/story/1562973.html?ex_cid=OTC-RSS"
-    },
-    {
-        "category": "Sports",
-        "title": "Starc, Head, Bethell released by DC, SRH, RCB ahead of IPL 2027 player auction",
-        "content": "The full list of players released and retained by the IPL franchises ahead of the 2027 player auction on December 16",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/416800/416895.jpg",
-        "published": "Tue, 17 Nov 2026 15:33:19 GMT",
-        "source_link": "https://www.cricinfo.com/ci/content/story/1562958.html?ex_cid=OTC-RSS"
-    },
-    {
-        "category": "Sports",
-        "title": "Bangladesh eye parity after new-ball burst on day slashed by erratic weather",
-        "content": "South Africa left with 14-run deficit after Bavuma retired hurt, and lightning, rain and hail took over",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/425300/425374.jpg",
-        "published": "Tue, 17 Nov 2026 14:24:04 GMT",
-        "source_link": "https://www.cricinfo.com/ci/content/story/1562948.html?ex_cid=OTC-RSS"
-    },
-    {
-        "category": "Sports",
-        "title": "Khulna Division win National Cricket League title for record eighth time",
-        "content": "Khulna Division has gone past Dhaka Division's seven titles to become the most successful team in Bangladesh's premier first-class competition",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/425300/425376.jpg",
-        "published": "Tue, 17 Nov 2026 14:13:17 GMT",
-        "source_link": "https://www.cricinfo.com/ci/content/story/1562964.html?ex_cid=OTC-RSS"
-    },
-    {
-        "category": "Sports",
-        "title": "MS Dhoni ends IPL career, appointed CSK mentor",
-        "content": "MS Dhoni ends his 19-year IPL playing career and becomes Chennai Super Kings' mentor for IPL 2027. He captained CSK to five IPL titles and two Champions League titles",
-        "image": "http://p.imgci.com/db/PICTURES/CMS/417200/417220.jpg",
-        "published": "Tue, 17 Nov 2026 13:16:55 GMT",
-        "source_link": "https://www.cricinfo.com/ci/content/story/1562938.html?ex_cid=OTC-RSS"
     }
 ]
